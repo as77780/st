@@ -539,7 +539,7 @@ static void MX_LTDC_Init(void)
   pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
   pLayerCfg.FBStartAdress = 0xD0200000;
   pLayerCfg.ImageWidth = 480;
-  pLayerCfg.ImageHeight = 0;
+  pLayerCfg.ImageHeight = 272;
   pLayerCfg.Backcolor.Blue = 0;
   pLayerCfg.Backcolor.Green = 0;
   pLayerCfg.Backcolor.Red = 0;
