@@ -66,7 +66,6 @@ void Error_Handler(void);
 #define DISPL_CTRL_GPIO_Port GPIOI
 #define POW_ON_Pin GPIO_PIN_5
 #define POW_ON_GPIO_Port GPIOI
-void   MX_SPI2_Init(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
