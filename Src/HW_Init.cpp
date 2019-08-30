@@ -104,11 +104,11 @@ void MX_LCD_Init(void)
   hltdc.Init.PCPolarity = LTDC_PCPOLARITY_IPC;
   hltdc.Init.HorizontalSync = 40;
   hltdc.Init.VerticalSync = 9;
-  hltdc.Init.AccumulatedHBP = 42;
+  hltdc.Init.AccumulatedHBP = 53;
   hltdc.Init.AccumulatedVBP = 11;
-  hltdc.Init.AccumulatedActiveW = 522;
+  hltdc.Init.AccumulatedActiveW = 533;
   hltdc.Init.AccumulatedActiveH = 283;
-  hltdc.Init.TotalWidth = 524;
+  hltdc.Init.TotalWidth = 565;
   hltdc.Init.TotalHeigh = 285;
   hltdc.Init.Backcolor.Blue = 0;
   hltdc.Init.Backcolor.Green = 0;
@@ -179,7 +179,7 @@ void MX_FMC_Init(void)
   SdramTiming.ExitSelfRefreshDelay = 7;
   SdramTiming.SelfRefreshTime = 4;
   SdramTiming.RowCycleDelay = 7;
-  SdramTiming.WriteRecoveryTime = 4;
+  SdramTiming.WriteRecoveryTime = 3;
   SdramTiming.RPDelay = 2;
   SdramTiming.RCDDelay = 2;
 
@@ -259,10 +259,10 @@ void MX_DMA2D_Init(void)
 
   hdma2d.Instance = DMA2D;
   hdma2d.Init.Mode = DMA2D_M2M;
-  hdma2d.Init.ColorMode = DMA2D_OUTPUT_ARGB8888;
+  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
   hdma2d.Init.OutputOffset = 0;
   hdma2d.LayerCfg[1].InputOffset = 0;
-  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_ARGB8888;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
   hdma2d.LayerCfg[1].AlphaMode = DMA2D_NO_MODIF_ALPHA;
   hdma2d.LayerCfg[1].InputAlpha = 0;
   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
@@ -691,6 +691,10 @@ void HAL_DMA2D_MspInit(DMA2D_HandleTypeDef* dma2dHandle)
   /* USER CODE END DMA2D_MspInit 0 */
     /* Enable Peripheral clock */
     __HAL_RCC_DMA2D_CLK_ENABLE();
+
+    /* Peripheral interrupt init */
+    HAL_NVIC_SetPriority(DMA2D_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(DMA2D_IRQn);
   /* USER CODE BEGIN DMA2D_MspInit 1 */
 
   /* USER CODE END DMA2D_MspInit 1 */
@@ -706,6 +710,10 @@ void HAL_DMA2D_MspDeInit(DMA2D_HandleTypeDef* dma2dHandle)
   /* USER CODE END DMA2D_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_DMA2D_CLK_DISABLE();
+
+    /* Peripheral interrupt Deinit*/
+    HAL_NVIC_DisableIRQ(DMA2D_IRQn);
+
   /* USER CODE BEGIN DMA2D_MspDeInit 1 */
 
   /* USER CODE END DMA2D_MspDeInit 1 */

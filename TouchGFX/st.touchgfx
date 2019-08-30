@@ -5,9 +5,9 @@
         "Components": [
           {
             "Color": {
-              "Red": 135,
-              "Green": 2,
-              "Blue": 2
+              "Red": 71,
+              "Green": 15,
+              "Blue": 201
             },
             "Alpha": 255,
             "Name": "box1",
@@ -26,10 +26,73 @@
             "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
             "Released": "__designer\\blue_buttons_round_edge_small.png",
             "Alpha": 255,
+            "TextId": "SingleUseId1",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "buttonWithLabel1",
+            "X": 0,
+            "Y": 0,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
             "Style": "Style4",
             "Name": "button1",
-            "X": 155,
-            "Y": 106,
+            "X": 0,
+            "Y": 212,
+            "Width": 170,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Style": "Style4",
+            "Name": "button2",
+            "X": 310,
+            "Y": 0,
+            "Width": 170,
+            "Height": 60,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "Style": "Style4",
+            "Name": "button3",
+            "X": 310,
+            "Y": 212,
             "Width": 170,
             "Height": 60,
             "Type": "Button",
@@ -45,7 +108,7 @@
             "InteractionName": "Interaction1",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button1",
+              "TriggerComponent": "buttonWithLabel1",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -85,13 +148,25 @@
             "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
             "Released": "__designer\\blue_buttons_round_edge_small.png",
             "Alpha": 255,
+            "TextId": "SingleUseId2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
             "Style": "Style4",
-            "Name": "button1",
+            "Name": "buttonWithLabel1",
             "X": 155,
             "Y": 106,
             "Width": 170,
             "Height": 60,
-            "Type": "Button",
+            "Type": "ButtonWithLabel",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -104,7 +179,7 @@
             "InteractionName": "Interaction1",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button1",
+              "TriggerComponent": "buttonWithLabel1",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -121,6 +196,16 @@
       }
     ],
     "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      }
+    ],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 480,
@@ -148,7 +233,7 @@
       "AvailableResolutions": [],
       "PhysicalButtons": [],
       "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j10",
-      "PostGenerateCommand": "touchgfx update_project --project-file=../.cproject ",
+      "PostGenerateCommand": "echo",
       "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j10",
       "RunSimulatorCommand": "build\\bin\\simulator.exe",
       "CompileTargetCommand": "",

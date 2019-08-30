@@ -73,6 +73,7 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
  gui/include/gui/screen2_screen/Screen2View.hpp \
@@ -81,7 +82,7 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/lcd/LCD24bpp.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TextureMapTypes.hpp
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/hal/simulator/sdl2/HALSDL2.hpp:
@@ -232,6 +233,8 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
 
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
@@ -248,6 +251,6 @@ generated/gui_generated/include/gui_generated/common/SimConstants.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/lcd/LCD16bpp.hpp:
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/lcd/LCD24bpp.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TextureMapTypes.hpp:

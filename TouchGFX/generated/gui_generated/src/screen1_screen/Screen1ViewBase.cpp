@@ -4,19 +4,35 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase() :
     buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(135, 2, 2));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(71, 15, 201));
 
-    button1.setXY(155, 106);
+    buttonWithLabel1.setXY(0, 0);
+    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID1));
+    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithLabel1.setAction(buttonCallback);
+
+    button1.setXY(0, 212);
     button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    button1.setAction(buttonCallback);
+
+    button2.setXY(310, 0);
+    button2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+
+    button3.setXY(310, 212);
+    button3.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
 
     add(box1);
+    add(buttonWithLabel1);
     add(button1);
+    add(button2);
+    add(button3);
 }
 
 void Screen1ViewBase::setupScreen()
@@ -26,11 +42,23 @@ void Screen1ViewBase::setupScreen()
 
 void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &button1)
+    if (&src == &buttonWithLabel1)
     {
         //Interaction1
-        //When button1 clicked change screen to Screen2
+        //When buttonWithLabel1 clicked change screen to Screen2
         //Go to Screen2 with screen transition towards East
         application().gotoScreen2ScreenSlideTransitionEast();
+    }
+    else if (&src == &button1)
+    {
+
+    }
+    else if (&src == &button2)
+    {
+
+    }
+    else if (&src == &button3)
+    {
+
     }
 }
