@@ -201,7 +201,6 @@ static void low_level_init(struct netif *netif)
 { 
   uint32_t regvalue = 0;
   HAL_StatusTypeDef hal_eth_init_status;
-  osThreadAttr_t attributes;
   
 /* Init ETH */
 
@@ -262,14 +261,12 @@ static void low_level_init(struct netif *netif)
   #endif /* LWIP_ARP */
   
 /* create a binary semaphore used for informing ethernetif of frame reception */
-  s_xSemaphore = osSemaphoreNew(1, 1, NULL);
+  osSemaphoreDef(SEM);
+  s_xSemaphore = osSemaphoreCreate(osSemaphore(SEM), 1);
 
 /* create the task that handles the ETH_MAC */
-  memset(&attributes, 0x0, sizeof(osThreadAttr_t));
-  attributes.name = "EthIf";
-  attributes.stack_size = INTERFACE_THREAD_STACK_SIZE;
-  attributes.priority = osPriorityRealtime;
-  osThreadNew(ethernetif_input, netif, &attributes);
+  osThreadDef(EthIf, ethernetif_input, osPriorityRealtime, 0, INTERFACE_THREAD_STACK_SIZE);
+  osThreadCreate (osThread(EthIf), netif);
   /* Enable MAC and DMA transmission and reception */
   HAL_ETH_Start(&heth);
 
@@ -488,14 +485,14 @@ static struct pbuf * low_level_input(struct netif *netif)
  *
  * @param netif the lwip network interface structure for this ethernetif
  */
-void ethernetif_input(void* argument)
+void ethernetif_input(void const * argument)
 {
   struct pbuf *p;
   struct netif *netif = (struct netif *) argument;
   
   for( ;; )
   {
-    if (osSemaphoreAcquire(s_xSemaphore, TIME_WAITING_FOR_INPUT) == osOK)
+    if (osSemaphoreWait(s_xSemaphore, TIME_WAITING_FOR_INPUT) == osOK)
     {
       do
       {   
