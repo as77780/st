@@ -8,8 +8,10 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/EasingEquations.hpp>
+#include <touchgfx/mixins/FadeAnimator.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -28,10 +30,17 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::TextArea textArea1;
+    touchgfx::FadeAnimator< touchgfx::Image > image1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::ButtonWithLabel buttonWithLabel2;
 
 private:
+
+    /*
+     * Interaction Handlers
+     */
+    void interaction1EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
+    void interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
 
     /*
      * Callback Handler Declarations
@@ -42,6 +51,12 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Interaction Callback Declarations
+     */
+    touchgfx::Callback < Screen1ViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& >  interaction1EndedCallback;
+    touchgfx::Callback < Screen1ViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& >  interaction2EndedCallback;
 
 };
 

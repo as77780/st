@@ -5,9 +5,9 @@
         "Components": [
           {
             "Color": {
-              "Red": 134,
-              "Green": 255,
-              "Blue": 0
+              "Red": 12,
+              "Green": 135,
+              "Blue": 135
             },
             "Alpha": 255,
             "Name": "box1",
@@ -23,22 +23,14 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
+            "RelativeFilename": "drbp_bearwarrior-e5da70bd.png",
             "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 0,
-            "Y": 0,
-            "Width": 104,
-            "Height": 25,
-            "Type": "TextArea",
+            "Name": "image1",
+            "X": 160,
+            "Y": 96,
+            "Width": 160,
+            "Height": 80,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -46,14 +38,14 @@
             "Moveable": false
           },
           {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Pressed": "__designer\\blue_buttons_square_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_square_icon_button.png",
             "Alpha": 255,
-            "TextId": "SingleUseId2",
+            "TextId": "SingleUseId1",
             "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Red": 20,
+              "Green": 18,
+              "Blue": 18
             },
             "PressedColor": {
               "Red": 255,
@@ -61,11 +53,40 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Style": "Style4",
+            "Style": "Style9",
             "Name": "buttonWithLabel1",
-            "X": 155,
-            "Y": 106,
-            "Width": 170,
+            "X": 0,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_square_icon_button_pressed.png",
+            "Released": "__designer\\blue_buttons_square_icon_button.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId2",
+            "ReleasedColor": {
+              "Red": 25,
+              "Green": 3,
+              "Blue": 3
+            },
+            "PressedColor": {
+              "Red": 31,
+              "Green": 5,
+              "Blue": 5
+            },
+            "TextRotation": "0",
+            "Style": "Style9",
+            "Name": "buttonWithLabel2",
+            "X": 70,
+            "Y": 212,
+            "Width": 60,
             "Height": 60,
             "Type": "ButtonWithLabel",
             "Visible": true,
@@ -78,114 +99,38 @@
         "Interactions": [
           {
             "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "TriggerComponent": "buttonWithLabel2",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Alpha": 0,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "Duration": 2000,
+              "ActionComponent": "image1",
+              "Type": "ActionFade"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
             "Trigger": {
               "TriggerComponent": "buttonWithLabel1",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "East",
-              "ActionComponent": "Screen2",
-              "Type": "ActionGotoScreen"
+              "Alpha": 255,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "Duration": 2000,
+              "ActionComponent": "image1",
+              "Type": "ActionFade"
             }
           }
         ],
         "Name": "Screen1",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
-      },
-      {
-        "Components": [
-          {
-            "Color": {
-              "Red": 7,
-              "Green": 29,
-              "Blue": 171
-            },
-            "Alpha": 255,
-            "Name": "box1",
-            "X": 0,
-            "Y": 0,
-            "Width": 480,
-            "Height": 272,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId3",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0",
-            "Style": "Style4",
-            "Name": "buttonWithLabel1",
-            "X": 155,
-            "Y": 106,
-            "Width": 170,
-            "Height": 60,
-            "Type": "ButtonWithLabel",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId4",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 0,
-              "Green": 0,
-              "Blue": 0
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "textArea1",
-            "X": 0,
-            "Y": 0,
-            "Width": 101,
-            "Height": 25,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "buttonWithLabel1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "West",
-              "ActionComponent": "Screen1",
-              "Type": "ActionGotoScreen"
-            }
-          }
-        ],
-        "Name": "Screen2",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -198,14 +143,6 @@
       },
       {
         "TextEntryId": "SingleUseId2",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId3",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId4",
         "IsResource": false
       }
     ],

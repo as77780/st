@@ -3,33 +3,51 @@
 /*********************************************************************************/
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase() :
-    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler),
+    interaction1EndedCallback(this, &Screen1ViewBase::interaction1EndedCallbackHandler),
+    interaction2EndedCallback(this, &Screen1ViewBase::interaction2EndedCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(134, 255, 0));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(12, 135, 135));
 
-    textArea1.setXY(0, 0);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(TypedText(T_SINGLEUSEID1));
+    image1.setXY(160, 96);
+    image1.setBitmap(Bitmap(BITMAP_DRBP_BEARWARRIOR_E5DA70BD_ID));
 
-    buttonWithLabel1.setXY(155, 106);
-    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID2));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithLabel1.setXY(0, 212);
+    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID));
+    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID1));
+    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(20, 18, 18));
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
 
+    buttonWithLabel2.setXY(70, 212);
+    buttonWithLabel2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID));
+    buttonWithLabel2.setLabelText(TypedText(T_SINGLEUSEID2));
+    buttonWithLabel2.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(25, 3, 3));
+    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(31, 5, 5));
+    buttonWithLabel2.setAction(buttonCallback);
+
     add(box1);
-    add(textArea1);
+    add(image1);
     add(buttonWithLabel1);
+    add(buttonWithLabel2);
 }
 
 void Screen1ViewBase::setupScreen()
+{
+
+}
+
+void Screen1ViewBase::interaction1EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp)
+{
+
+}
+
+void Screen1ViewBase::interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp)
 {
 
 }
@@ -38,9 +56,20 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &buttonWithLabel1)
     {
+        //Interaction2
+        //When buttonWithLabel1 clicked fade image1
+        //Fade image1 to alpha:255 with LinearInOut easing in 2000 ms (120 Ticks)
+        image1.clearFadeAnimationEndedAction();
+        image1.startFadeAnimation(255, 120, EasingEquations::linearEaseInOut);
+        image1.setFadeAnimationEndedAction(interaction2EndedCallback);
+    }
+    else if (&src == &buttonWithLabel2)
+    {
         //Interaction1
-        //When buttonWithLabel1 clicked change screen to Screen2
-        //Go to Screen2 with screen transition towards East
-        application().gotoScreen2ScreenSlideTransitionEast();
+        //When buttonWithLabel2 clicked fade image1
+        //Fade image1 to alpha:0 with LinearInOut easing in 2000 ms (120 Ticks)
+        image1.clearFadeAnimationEndedAction();
+        image1.startFadeAnimation(0, 120, EasingEquations::linearEaseInOut);
+        image1.setFadeAnimationEndedAction(interaction1EndedCallback);
     }
 }
