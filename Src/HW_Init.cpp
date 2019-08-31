@@ -127,7 +127,7 @@ void MX_LCD_Init(void)
   pLayerCfg.Alpha0 = 0;
   pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
   pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
-  pLayerCfg.FBStartAdress = 0xD0200000;
+  pLayerCfg.FBStartAdress = 0xD0000000;
   pLayerCfg.ImageWidth = 480;
   pLayerCfg.ImageHeight = 272;
   pLayerCfg.Backcolor.Blue = 0;

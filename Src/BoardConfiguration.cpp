@@ -58,7 +58,7 @@ extern "C"
 
 }
 
-static uint32_t frameBuf0 = (uint32_t)(0xd0200000);
+static uint32_t frameBuf0 = (uint32_t)(0xd0000000);
 extern "C" {
 
 uint32_t LCD_GetXSize(void)
@@ -103,7 +103,7 @@ void touchgfx_init()
   HAL& hal = touchgfx_generic_init<STM32F4HAL>(dma, display, tc, dispWidth, dispHeight,(uint16_t*) 0, 
                                                0, 0); 
 
-    hal.setFrameBufferStartAddress((uint16_t*)frameBuf0, bitdepth, false, false);
+    hal.setFrameBufferStartAddress((uint16_t*)frameBuf0, bitdepth ,true , true);
 
     hal.setTouchSampleRate(2);
     hal.setFingerSize(1);

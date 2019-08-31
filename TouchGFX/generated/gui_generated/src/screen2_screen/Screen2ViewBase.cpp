@@ -10,17 +10,23 @@ Screen2ViewBase::Screen2ViewBase() :
     buttonCallback(this, &Screen2ViewBase::buttonCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(15, 112, 4));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(7, 29, 171));
 
     buttonWithLabel1.setXY(155, 106);
     buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID2));
+    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID3));
     buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
 
+    textArea1.setXY(0, 0);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID4));
+
     add(box1);
     add(buttonWithLabel1);
+    add(textArea1);
 }
 
 void Screen2ViewBase::setupScreen()

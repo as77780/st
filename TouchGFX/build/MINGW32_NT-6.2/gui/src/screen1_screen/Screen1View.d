@@ -45,11 +45,13 @@ build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o: \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp
 
 gui/include/gui/screen1_screen/Screen1View.hpp:
 
@@ -141,12 +143,16 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
 
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
+
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
