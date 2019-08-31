@@ -39,43 +39,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f429i_discovery_io.h"
 
-/** @addtogroup BSP
-  * @{
-  */
-
-/** @addtogroup STM32F429I_DISCOVERY
-  * @{
-  */ 
-  
-/** @defgroup STM32F429I_DISCOVERY_IO
-  * @{
-  */ 
-
-/** @defgroup STM32F429I_DISCOVERY_IO_Private_Types_Definitions
-  * @{
-  */ 
-/**
-  * @}
-  */ 
-
-/** @defgroup STM32F429I_DISCOVERY_IO_Private_Defines
-  * @{
-  */ 
-/**
-  * @}
-  */ 
-
-/** @defgroup STM32F429I_DISCOVERY_IO_Private_Macros
-  * @{
-  */ 
-/**
-  * @}
-  */
 
 
-/** @defgroup STM32F429I_DISCOVERY_IO_Private_Variables
-  * @{
-  */
+
 static IO_DrvTypeDef *IoDrv;
 
 /**
@@ -212,20 +178,6 @@ void BSP_IO_TogglePin(uint16_t IoPin)
   }
 }
 
-/**
-  * @}
-  */ 
 
-/**
-  * @}
-  */ 
-
-/**
-  * @}
-  */    
-
-/**
-  * @}
-  */ 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
