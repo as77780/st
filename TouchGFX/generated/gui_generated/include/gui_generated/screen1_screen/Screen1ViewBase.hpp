@@ -33,6 +33,7 @@ protected:
     touchgfx::FadeAnimator< touchgfx::Image > image1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
     touchgfx::ButtonWithLabel buttonWithLabel2;
+    touchgfx::ButtonWithLabel buttonWithLabel3;
 
 private:
 

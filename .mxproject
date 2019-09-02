@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/as_77/git/st/Inc
+HeaderPath=D:/GitHub/st/Inc
 HeaderFiles=stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;FreeRTOSConfig.h;lwip.h;lwipopts.h;ethernetif.h;gpio.h;crc.h;dma2d.h;fmc.h;i2c.h;iwdg.h;ltdc.h;rtc.h;spi.h;tim.h;usart.h;STM32F4DMA.hpp;STM32F4HAL.hpp;STM32F4TouchController.hpp;STM32F4Instrumentation.hpp;HW_Init.hpp;ApplicationFontProvider.hpp;
-SourcePath=C:/Users/as_77/git/st/Src
+SourcePath=D:/GitHub/st/Src
 SourceFiles=stm32f4xx_it.c;stm32f4xx_hal_msp.c;main.c;freertos.c;lwip.c;ethernetif.c;stm32f4xx_hal_timebase_tim.c;gpio.c;crc.c;dma2d.c;fmc.c;i2c.c;iwdg.c;ltdc.c;rtc.c;spi.c;tim.c;usart.c;BoardConfiguration.cpp;GPIO.cpp;STM32F4DMA.cpp;STM32F4HAL.cpp;STM32F4TouchController.cpp;STM32F4Instrumentation.cpp;HW_Init.cpp;main.cpp;
 
 [PreviousLibFiles]

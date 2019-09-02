@@ -12,29 +12,37 @@ Screen1ViewBase::Screen1ViewBase() :
     interaction2EndedCallback(this, &Screen1ViewBase::interaction2EndedCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(12, 135, 135));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(25, 130, 130));
 
     image1.setXY(160, 96);
     image1.setBitmap(Bitmap(BITMAP_DRBP_BEARWARRIOR_E5DA70BD_ID));
 
     buttonWithLabel1.setXY(0, 212);
-    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID));
+    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
     buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID1));
     buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(20, 18, 18));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(148, 18, 18));
     buttonWithLabel1.setAction(buttonCallback);
 
-    buttonWithLabel2.setXY(70, 212);
-    buttonWithLabel2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID));
+    buttonWithLabel2.setXY(68, 212);
+    buttonWithLabel2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
     buttonWithLabel2.setLabelText(TypedText(T_SINGLEUSEID2));
     buttonWithLabel2.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(25, 3, 3));
-    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(31, 5, 5));
+    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(120, 18, 18));
     buttonWithLabel2.setAction(buttonCallback);
+
+    buttonWithLabel3.setXY(310, 212);
+    buttonWithLabel3.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithLabel3.setLabelText(TypedText(T_SINGLEUSEID3));
+    buttonWithLabel3.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(13, 12, 12));
+    buttonWithLabel3.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(186, 10, 10));
+    buttonWithLabel3.setAction(buttonCallback);
 
     add(box1);
     add(image1);
     add(buttonWithLabel1);
     add(buttonWithLabel2);
+    add(buttonWithLabel3);
 }
 
 void Screen1ViewBase::setupScreen()
@@ -71,5 +79,12 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         image1.clearFadeAnimationEndedAction();
         image1.startFadeAnimation(0, 120, EasingEquations::linearEaseInOut);
         image1.setFadeAnimationEndedAction(interaction1EndedCallback);
+    }
+    else if (&src == &buttonWithLabel3)
+    {
+        //Interaction3
+        //When buttonWithLabel3 clicked change screen to Screen2
+        //Go to Screen2 with screen transition towards East
+        application().gotoScreen2ScreenCoverTransitionEast();
     }
 }

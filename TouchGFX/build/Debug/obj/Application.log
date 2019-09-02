@@ -1,0 +1,3 @@
+﻿  Using ImageConvert to generate BitmapDatabase files
+  Системе не удается найти указанный путь.
+D:\GitHub\st\TouchGFX\simulator\msvs\touchgfx_prebuild.targets(95,5): error MSB3073: выход из команды ""D:\touchgfx\framework\tools\imageconvert\build\msvs\ImageConvert.exe" -dither 2 -alpha_dither yes -non_opaque_image_format ARGB8888 -opaque_image_format RGB565  -r assets\images -w generated\images" с кодом 3.
