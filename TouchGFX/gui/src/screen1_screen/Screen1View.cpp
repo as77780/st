@@ -17,14 +17,15 @@ void Screen1View::tearDownScreen()
 
 void Screen1View::FunctionUP()
 {
-	//count++;
-		Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%02d",++count);
+	if(count<=9){++count;}
+		Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%d",count);
 		textCounter.invalidate();
 }
 
 void Screen1View::FunctionDown()
 
 {
-	Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%02d",--count);
+	if(count>=1){--count;}
+	Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%d",count);
 	textCounter.invalidate();
 }
