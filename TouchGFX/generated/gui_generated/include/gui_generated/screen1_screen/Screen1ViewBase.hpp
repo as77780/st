@@ -8,10 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/EasingEquations.hpp>
-#include <touchgfx/mixins/FadeAnimator.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -21,6 +19,19 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void FunctionUP()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void FunctionDown()
+    {
+        // Override and implement this function in Screen1View
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -29,19 +40,19 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Box box1;
-    touchgfx::FadeAnimator< touchgfx::Image > image1;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
-    touchgfx::ButtonWithLabel buttonWithLabel2;
-    touchgfx::ButtonWithLabel buttonWithLabel3;
-
-private:
+    touchgfx::Box Border;
+    touchgfx::ButtonWithIcon buttonUp;
+    touchgfx::ButtonWithIcon buttonDown;
+    touchgfx::Box BackGrowndCont;
+    touchgfx::TextAreaWithOneWildcard textCounter;
 
     /*
-     * Interaction Handlers
+     * Wildcard Buffers
      */
-    void interaction1EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
-    void interaction2EndedCallbackHandler(const touchgfx::FadeAnimator<touchgfx::Image>& comp);
+    static const uint16_t TEXTCOUNTER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textCounterBuffer[TEXTCOUNTER_SIZE];
+
+private:
 
     /*
      * Callback Handler Declarations
@@ -52,12 +63,6 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
-
-    /*
-     * Interaction Callback Declarations
-     */
-    touchgfx::Callback < Screen1ViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& >  interaction1EndedCallback;
-    touchgfx::Callback < Screen1ViewBase, const touchgfx::FadeAnimator<touchgfx::Image>& >  interaction2EndedCallback;
 
 };
 
