@@ -1,0 +1,212 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "Name": "backgroundBox",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Type": "Box",
+            "Visible": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "bg.png",
+            "Alpha": 255,
+            "Name": "backgroundImage",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "counter_box.png",
+            "Alpha": 255,
+            "Name": "counterBackgroundImage",
+            "X": 293,
+            "Y": 59,
+            "Width": 152,
+            "Height": 154,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "TextId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId1",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "countTxt",
+            "X": 293,
+            "Y": 87,
+            "Width": 152,
+            "Height": 89,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "up_btn_pressed.png",
+            "Released": "up_btn.png",
+            "Alpha": 255,
+            "Name": "buttonUp",
+            "X": 52,
+            "Y": 59,
+            "Width": 130,
+            "Height": 56,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "down_btn_pressed.png",
+            "Released": "down_btn.png",
+            "Alpha": 255,
+            "Name": "buttonDown",
+            "X": 52,
+            "Y": 157,
+            "Width": 130,
+            "Height": 56,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "IncreaseValue",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonUp",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "increaseValue",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "DecreaseValue",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonDown",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "decreaseValue",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "Main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "TextId1",
+        "IsResource": true
+      },
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      }
+    ],
+    "Name": "My",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "Main",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "touchgfx",
+    "UIPath": ".",
+    "ApplicationTemplate": {
+      "Name": "Simulator",
+      "Version": "1.1.0",
+      "Description": "Simulator Application Template",
+      "AvailableColorDepths": [
+        16,
+        24
+      ],
+      "AvailableImageFormats": {
+        "16": {
+          "Opaque": "RGB565",
+          "NonOpaque": "ARGB8888"
+        },
+        "24": {
+          "Opaque": "RGB888",
+          "NonOpaque": "ARGB8888"
+        }
+      },
+      "AvailableResolutions": [
+        {
+          "Width": 480,
+          "Height": 272
+        },
+        {
+          "Width": 640,
+          "Height": 480
+        },
+        {
+          "Width": 800,
+          "Height": 480
+        }
+      ],
+      "PhysicalButtons": [],
+      "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+      "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+      "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+      "RunSimulatorCommand": "build\\bin\\simulator.exe",
+      "CompileTargetCommand": "",
+      "FlashTargetCommand": ""
+    }
+  },
+  "Version": "4.10.0",
+  "CreatedBy": "4.10.0"
+}

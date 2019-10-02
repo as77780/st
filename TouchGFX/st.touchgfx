@@ -4,85 +4,14 @@
       {
         "Components": [
           {
-            "Color": {
-              "Red": 4,
-              "Green": 101,
-              "Blue": 112
-            },
+            "RelativeFilename": "background_Screen1.png",
             "Alpha": 255,
-            "Name": "Border",
+            "Name": "image",
             "X": 0,
             "Y": 0,
             "Width": 480,
             "Height": 272,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
-            "Alpha": 255,
-            "IconPressed": "__designer\\blue_icons_up_arrow_32.png",
-            "IconReleased": "__designer\\blue_icons_up_arrow_32.png",
-            "IconX": 70,
-            "IconY": 22,
-            "IconHeight": 17,
-            "IconWidth": 30,
-            "ButtonStyle": "Style4",
-            "IconStyle": "Icon67",
-            "Name": "buttonUp",
-            "X": 41,
-            "Y": 58,
-            "Width": 170,
-            "Height": 60,
-            "Type": "ButtonWithIcon",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
-            "Released": "__designer\\blue_buttons_round_edge_small.png",
-            "Alpha": 255,
-            "IconPressed": "__designer\\blue_icons_down_arrow_32.png",
-            "IconReleased": "__designer\\blue_icons_down_arrow_32.png",
-            "IconX": 70,
-            "IconY": 22,
-            "IconHeight": 17,
-            "IconWidth": 30,
-            "ButtonStyle": "Style4",
-            "IconStyle": "Icon13",
-            "Name": "buttonDown",
-            "X": 41,
-            "Y": 136,
-            "Width": 170,
-            "Height": 60,
-            "Type": "ButtonWithIcon",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Color": {
-              "Red": 18,
-              "Green": 1,
-              "Blue": 1
-            },
-            "Alpha": 255,
-            "Name": "BackGrowndCont",
-            "X": 282,
-            "Y": 58,
-            "Width": 143,
-            "Height": 138,
-            "Type": "Box",
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -93,24 +22,246 @@
             "TextId": "SingleUseId1",
             "TextRotation": "0",
             "Color": {
-              "Red": 252,
-              "Green": 246,
-              "Blue": 246
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "textAreaHourCaption",
+            "X": 86,
+            "Y": 46,
+            "Width": 85,
+            "Height": 24,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
             },
             "Alpha": 255,
             "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "TextId": "SingleUseId2",
+              "TextId": "SingleUseId3",
               "UseBuffer": true,
-              "BufferSize": 10
+              "BufferSize": 3
             },
-            "Name": "textCounter",
-            "X": 282,
-            "Y": 75,
-            "Width": 143,
-            "Height": 104,
+            "Name": "textAreaHour",
+            "X": 88,
+            "Y": 70,
+            "Width": 83,
+            "Height": 50,
             "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Name": "textAreaMinuteCaption",
+            "X": 309,
+            "Y": 46,
+            "Width": 85,
+            "Height": 24,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId5",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId6",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "textAreaMinute",
+            "X": 311,
+            "Y": 70,
+            "Width": 83,
+            "Height": 50,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "up_arrow_pressed.png",
+            "Released": "up_arrow.png",
+            "Alpha": 255,
+            "Name": "buttonHourUp",
+            "X": 184,
+            "Y": 51,
+            "Width": 32,
+            "Height": 19,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "down_arrow_pressed.png",
+            "Released": "down_arrow.png",
+            "Alpha": 255,
+            "Name": "buttonHourDown",
+            "X": 184,
+            "Y": 93,
+            "Width": 32,
+            "Height": 19,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "up_arrow_pressed.png",
+            "Released": "up_arrow.png",
+            "Alpha": 255,
+            "Name": "buttonMinuteUp",
+            "X": 266,
+            "Y": 51,
+            "Width": 32,
+            "Height": 19,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "down_arrow_pressed.png",
+            "Released": "down_arrow.png",
+            "Alpha": 255,
+            "Name": "buttonMinuteDown",
+            "X": 266,
+            "Y": 93,
+            "Width": 32,
+            "Height": 19,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "btn_round_pressed.png",
+            "Released": "btn_round.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId7",
+            "ReleasedColor": {
+              "Red": 66,
+              "Green": 66,
+              "Blue": 66
+            },
+            "PressedColor": {
+              "Red": 166,
+              "Green": 166,
+              "Blue": 166
+            },
+            "TextRotation": "0",
+            "Name": "buttonSaveHour",
+            "X": 80,
+            "Y": 137,
+            "Width": 97,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "btn_round_pressed.png",
+            "Released": "btn_round.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId8",
+            "ReleasedColor": {
+              "Red": 66,
+              "Green": 66,
+              "Blue": 66
+            },
+            "PressedColor": {
+              "Red": 166,
+              "Green": 166,
+              "Blue": 166
+            },
+            "TextRotation": "0",
+            "Name": "buttonSaveMinute",
+            "X": 303,
+            "Y": 137,
+            "Width": 97,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "btn_round_pressed.png",
+            "Released": "btn_round.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId9",
+            "ReleasedColor": {
+              "Red": 66,
+              "Green": 66,
+              "Blue": 66
+            },
+            "PressedColor": {
+              "Red": 166,
+              "Green": 166,
+              "Blue": 166
+            },
+            "TextRotation": "0",
+            "Name": "buttonClock",
+            "X": 192,
+            "Y": 204,
+            "Width": 97,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -120,33 +271,241 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "InteractionButtonUP",
+            "InteractionName": "HourUpButtonIsClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "buttonUp",
+              "TriggerComponent": "buttonHourUp",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "FunctionName": "FunctionUP",
+              "FunctionName": "buttonHourUpClicked",
               "Type": "ActionCustom"
             }
           },
           {
-            "InteractionName": "InteractionButtonDown",
+            "InteractionName": "HourDownButtonIsClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "buttonDown",
+              "TriggerComponent": "buttonHourDown",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "FunctionName": "FunctionDown",
+              "FunctionName": "buttonHourDownClicked",
               "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "MinuteDownButtonIsClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonMinuteDown",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonMinuteDownClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "MinuteUpButtonIsClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonMinuteUp",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonMinuteUpClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SaveHourButtonIsClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonSaveHour",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonSaveHourClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "SaveMinuteButtonIsClicked",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonSaveMinute",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonSaveMinuteClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ChangeToScreen2",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonClock",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "Screen2",
+              "Type": "ActionGotoScreen"
             }
           }
         ],
         "Name": "Screen1",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "RelativeFilename": "background_Screen2.png",
+            "Alpha": 255,
+            "Name": "background_Screen21",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "configuration.png",
+            "Released": "configuration.png",
+            "Alpha": 255,
+            "Name": "buttonSettings",
+            "X": 422,
+            "Y": 10,
+            "Width": 48,
+            "Height": 48,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId10",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 186,
+              "Green": 186,
+              "Blue": 186
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId11",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Wildcard2": {
+              "TextId": "SingleUseId12",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "textClock",
+            "X": -156,
+            "Y": 109,
+            "Width": 156,
+            "Height": 54,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileNameImage": "",
+            "Color": {
+              "Red": 186,
+              "Green": 186,
+              "Blue": 186
+            },
+            "CenterX": 100,
+            "CenterY": 100,
+            "Radius": 72,
+            "LineWidth": 6,
+            "StartAngle": 0,
+            "EndAngle": 180,
+            "CapPrecision": "Triangle",
+            "Alpha": 255,
+            "Name": "circle",
+            "X": 479,
+            "Y": 36,
+            "Width": 200,
+            "Height": 200,
+            "Type": "Circle",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "ChangeToScreen1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonSettings",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Screen1",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "MoveCircleIntoPlace",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 140,
+              "Y": 36,
+              "Easing": "Cubic",
+              "EasingOption": "Out",
+              "Duration": 750,
+              "ActionComponent": "circle",
+              "Type": "ActionMove"
+            }
+          },
+          {
+            "InteractionName": "MoveTextClockIntoPlace",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "X": 162,
+              "Y": 109,
+              "Easing": "Cubic",
+              "EasingOption": "Out",
+              "Duration": 750,
+              "ActionComponent": "textClock",
+              "Type": "ActionMove"
+            }
+          }
+        ],
+        "Name": "Screen2",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 7200
       }
     ],
     "CustomContainerDefinitions": [],
@@ -157,6 +516,46 @@
       },
       {
         "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId6",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId7",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId8",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId9",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId10",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId11",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId12",
         "IsResource": false
       }
     ],

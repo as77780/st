@@ -7,9 +7,11 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -22,12 +24,32 @@ public:
     /*
      * Custom Action Handlers
      */
-    virtual void FunctionUP()
+    virtual void buttonHourUpClicked()
     {
         // Override and implement this function in Screen1View
     }
 
-    virtual void FunctionDown()
+    virtual void buttonHourDownClicked()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void buttonMinuteDownClicked()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void buttonMinuteUpClicked()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void buttonSaveHourClicked()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void buttonSaveMinuteClicked()
     {
         // Override and implement this function in Screen1View
     }
@@ -40,17 +62,26 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Box Border;
-    touchgfx::ButtonWithIcon buttonUp;
-    touchgfx::ButtonWithIcon buttonDown;
-    touchgfx::Box BackGrowndCont;
-    touchgfx::TextAreaWithOneWildcard textCounter;
+    touchgfx::Image image;
+    touchgfx::TextArea textAreaHourCaption;
+    touchgfx::TextAreaWithOneWildcard textAreaHour;
+    touchgfx::TextArea textAreaMinuteCaption;
+    touchgfx::TextAreaWithOneWildcard textAreaMinute;
+    touchgfx::Button buttonHourUp;
+    touchgfx::Button buttonHourDown;
+    touchgfx::Button buttonMinuteUp;
+    touchgfx::Button buttonMinuteDown;
+    touchgfx::ButtonWithLabel buttonSaveHour;
+    touchgfx::ButtonWithLabel buttonSaveMinute;
+    touchgfx::ButtonWithLabel buttonClock;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTCOUNTER_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar textCounterBuffer[TEXTCOUNTER_SIZE];
+    static const uint16_t TEXTAREAHOUR_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar textAreaHourBuffer[TEXTAREAHOUR_SIZE];
+    static const uint16_t TEXTAREAMINUTE_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar textAreaMinuteBuffer[TEXTAREAMINUTE_SIZE];
 
 private:
 

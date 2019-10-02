@@ -43,17 +43,32 @@ build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o: \
  gui/include/gui/model/Model.hpp \
  gui/include/gui/screen2_screen/Screen2Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithIcon.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/Circle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/Canvas.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/transforms/DisplayTransformation.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Renderer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/RenderingBuffer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Scanline.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp
 
 gui/include/gui/screen2_screen/Screen2View.hpp:
 
@@ -141,24 +156,54 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithIcon.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/Circle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/Canvas.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/transforms/DisplayTransformation.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Renderer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/RenderingBuffer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/Scanline.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:

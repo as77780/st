@@ -11,10 +11,22 @@ public:
     virtual ~Screen1View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
-    virtual void FunctionUP();
-    virtual void FunctionDown();
-protected:
-   int count;
+    virtual void buttonHourUpClicked();
+    virtual void buttonHourDownClicked();
+    virtual void buttonMinuteUpClicked();
+    virtual void buttonMinuteDownClicked();
+    virtual void buttonSaveHourClicked()
+    {
+        presenter->saveHour(hour);
+    }
+
+    virtual void buttonSaveMinuteClicked()
+    {
+        presenter->saveMinute(minute);
+    }
+    protected:
+    int16_t hour;
+    int16_t minute;
 };
 
 #endif // SCREEN1_VIEW_HPP

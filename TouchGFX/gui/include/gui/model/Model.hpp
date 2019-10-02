@@ -30,7 +30,25 @@ public:
     {
         modelListener = listener;
     }
+    void saveHour(int16_t saveHour)
+       {
+           hour = saveHour;
+       }
 
+       void saveMinute(int16_t saveMinute)
+       {
+           minute = saveMinute;
+       }
+
+       int16_t getHour()
+       {
+           return hour;
+       }
+
+       int16_t getMinute()
+       {
+           return minute;
+       }
     /**
      * This function will be called automatically every frame. Can be used to e.g. sample hardware
      * peripherals or read events from the surrounding system and inject events to the GUI through
@@ -42,6 +60,8 @@ protected:
      * Pointer to the currently active presenter.
      */
     ModelListener* modelListener;
+    int16_t hour;
+    int16_t minute;
 };
 
 #endif /* MODEL_HPP */
