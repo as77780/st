@@ -7,7 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -62,7 +62,9 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Image image;
+    touchgfx::Box box1;
+    touchgfx::Box box2;
+    touchgfx::Box box2_1;
     touchgfx::TextArea textAreaHourCaption;
     touchgfx::TextAreaWithOneWildcard textAreaHour;
     touchgfx::TextArea textAreaMinuteCaption;

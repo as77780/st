@@ -42,7 +42,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screen1_screen/Screen1ViewBase.
  gui/include/gui/model/Model.hpp \
  gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
@@ -52,9 +52,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screen1_screen/Screen1ViewBase.
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
- generated/images/include/BitmapDatabase.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp
+ generated/images/include/BitmapDatabase.hpp
 
 generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 
@@ -140,7 +140,7 @@ gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
 
@@ -160,8 +160,8 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
-generated/images/include/BitmapDatabase.hpp:
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:
+generated/images/include/BitmapDatabase.hpp:

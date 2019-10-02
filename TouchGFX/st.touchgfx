@@ -4,14 +4,56 @@
       {
         "Components": [
           {
-            "RelativeFilename": "background_Screen1.png",
+            "Color": {
+              "Red": 79,
+              "Green": 124,
+              "Blue": 143
+            },
             "Alpha": 255,
-            "Name": "image",
+            "Name": "box1",
             "X": 0,
             "Y": 0,
             "Width": 480,
             "Height": 272,
-            "Type": "Image",
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 41,
+              "Green": 39,
+              "Blue": 39
+            },
+            "Alpha": 255,
+            "Name": "box2",
+            "X": 80,
+            "Y": 35,
+            "Width": 97,
+            "Height": 96,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 41,
+              "Green": 39,
+              "Blue": 39
+            },
+            "Alpha": 255,
+            "Name": "box2_1",
+            "X": 303,
+            "Y": 35,
+            "Width": 97,
+            "Height": 96,
+            "Type": "Box",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -110,7 +152,7 @@
             },
             "Name": "textAreaMinute",
             "X": 311,
-            "Y": 70,
+            "Y": 68,
             "Width": 83,
             "Height": 50,
             "Type": "TextArea",
@@ -364,14 +406,18 @@
       {
         "Components": [
           {
-            "RelativeFilename": "background_Screen2.png",
+            "Color": {
+              "Red": 79,
+              "Green": 124,
+              "Blue": 143
+            },
             "Alpha": 255,
-            "Name": "background_Screen21",
+            "Name": "box1",
             "X": 0,
             "Y": 0,
             "Width": 480,
             "Height": 272,
-            "Type": "Image",
+            "Type": "Box",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
