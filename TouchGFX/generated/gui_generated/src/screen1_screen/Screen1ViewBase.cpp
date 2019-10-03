@@ -10,7 +10,7 @@ Screen1ViewBase::Screen1ViewBase() :
     buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(79, 124, 143));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(7, 62, 87));
 
     box2.setPosition(80, 35, 97, 96);
     box2.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 39, 39));

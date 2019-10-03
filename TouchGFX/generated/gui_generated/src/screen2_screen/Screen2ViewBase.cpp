@@ -12,13 +12,13 @@ Screen2ViewBase::Screen2ViewBase() :
     CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(79, 124, 143));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(7, 62, 87));
 
     buttonSettings.setXY(422, 10);
     buttonSettings.setBitmaps(Bitmap(BITMAP_CONFIGURATION_ID), Bitmap(BITMAP_CONFIGURATION_ID));
     buttonSettings.setAction(buttonCallback);
 
-    textClock.setPosition(-156, 109, 156, 54);
+    textClock.setPosition(-295, 85, 295, 103);
     textClock.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
     textClock.setLinespacing(0);
     Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%s", TypedText(T_SINGLEUSEID11).getText());
@@ -27,11 +27,11 @@ Screen2ViewBase::Screen2ViewBase() :
     textClock.setWildcard2(textClockBuffer2);
     textClock.setTypedText(TypedText(T_SINGLEUSEID10));
 
-    circle.setPosition(479, 36, 200, 200);
-    circle.setCenter(100, 100);
-    circle.setRadius(72);
+    circle.setPosition(480, 0, 339, 272);
+    circle.setCenter(130, 130);
+    circle.setRadius(125);
     circle.setLineWidth(6);
-    circle.setArc(0, 180);
+    circle.setArc(0, 0);
     circle.setCapPrecision(90);
     circlePainter.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
     circle.setPainter(circlePainter);
@@ -52,15 +52,15 @@ void Screen2ViewBase::afterTransition()
 {
     //MoveCircleIntoPlace
     //When screen is entered move circle
-    //Move circle to x:140, y:36 with CubicOut easing in 750 ms (45 Ticks)
+    //Move circle to x:114, y:5 with CubicOut easing in 750 ms (45 Ticks)
     circle.clearMoveAnimationEndedAction();
-    circle.startMoveAnimation(140, 36, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
+    circle.startMoveAnimation(114, 5, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
 
     //MoveTextClockIntoPlace
     //When screen is entered move textClock
-    //Move textClock to x:162, y:109 with CubicOut easing in 750 ms (45 Ticks)
+    //Move textClock to x:95, y:85 with CubicOut easing in 750 ms (45 Ticks)
     textClock.clearMoveAnimationEndedAction();
-    textClock.startMoveAnimation(162, 109, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
+    textClock.startMoveAnimation(95, 85, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
 }
 
 void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

@@ -5,9 +5,9 @@
         "Components": [
           {
             "Color": {
-              "Red": 79,
-              "Green": 124,
-              "Blue": 143
+              "Red": 7,
+              "Green": 62,
+              "Blue": 87
             },
             "Alpha": 255,
             "Name": "box1",
@@ -407,9 +407,9 @@
         "Components": [
           {
             "Color": {
-              "Red": 79,
-              "Green": 124,
-              "Blue": 143
+              "Red": 7,
+              "Green": 62,
+              "Blue": 87
             },
             "Alpha": 255,
             "Name": "box1",
@@ -462,10 +462,10 @@
               "BufferSize": 3
             },
             "Name": "textClock",
-            "X": -156,
-            "Y": 109,
-            "Width": 156,
-            "Height": 54,
+            "X": -295,
+            "Y": 85,
+            "Width": 295,
+            "Height": 103,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -480,19 +480,19 @@
               "Green": 186,
               "Blue": 186
             },
-            "CenterX": 100,
-            "CenterY": 100,
-            "Radius": 72,
+            "CenterX": 130,
+            "CenterY": 130,
+            "Radius": 125,
             "LineWidth": 6,
             "StartAngle": 0,
-            "EndAngle": 180,
+            "EndAngle": 0,
             "CapPrecision": "Triangle",
             "Alpha": 255,
             "Name": "circle",
-            "X": 479,
-            "Y": 36,
-            "Width": 200,
-            "Height": 200,
+            "X": 480,
+            "Y": 0,
+            "Width": 339,
+            "Height": 272,
             "Type": "Circle",
             "Visible": true,
             "Draggable": false,
@@ -523,8 +523,8 @@
               "Type": "TriggerScreenEntered"
             },
             "Action": {
-              "X": 140,
-              "Y": 36,
+              "X": 114,
+              "Y": 5,
               "Easing": "Cubic",
               "EasingOption": "Out",
               "Duration": 750,
@@ -539,8 +539,8 @@
               "Type": "TriggerScreenEntered"
             },
             "Action": {
-              "X": 162,
-              "Y": 109,
+              "X": 95,
+              "Y": 85,
               "Easing": "Cubic",
               "EasingOption": "Out",
               "Duration": 750,
@@ -611,7 +611,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Screen2",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/TouchGFX/touchgfx/",

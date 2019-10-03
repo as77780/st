@@ -16,12 +16,12 @@ public:
     virtual ~FrontendApplicationBase() { }
 
     // Screen1
-    void gotoScreen1ScreenNoTransition();
-
     void gotoScreen1ScreenSlideTransitionSouth();
 
 
     // Screen2
+    void gotoScreen2ScreenNoTransition();
+
     void gotoScreen2ScreenCoverTransitionNorth();
 
 protected:
@@ -30,12 +30,12 @@ protected:
     Model& model;
 
     // Screen1
-    void gotoScreen1ScreenNoTransitionImpl();
-
     void gotoScreen1ScreenSlideTransitionSouthImpl();
 
 
     // Screen2
+    void gotoScreen2ScreenNoTransitionImpl();
+
     void gotoScreen2ScreenCoverTransitionNorthImpl();
 };
 

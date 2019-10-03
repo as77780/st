@@ -8,6 +8,7 @@ using namespace touchgfx;
 FONT_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_verdana_80_4bpp[] FONT_LOCATION_FLASH_ATTRIBUTE =
 {
+    {     0,  32,   0,   0,   0,   0,  28, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {     0,  48,  41,  61,  60,   5,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {  1281,  49,  33,  59,  59,  10,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {  2284,  50,  40,  60,  60,   6,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
@@ -18,6 +19,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdana_80_4bpp[] FONT_LOCATION_FLA
     {  8483,  55,  40,  59,  59,   6,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {  9663,  56,  43,  61,  60,   4,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     { 11005,  57,  42,  61,  60,   4,  51, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
-    { 12286,  63,  34,  60,  60,   6,  44, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0}
+    { 12286,  58,  10,  44,  44,  13,  36, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
+    { 12506,  63,  34,  60,  60,   6,  44, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0}
 };
 

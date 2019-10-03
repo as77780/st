@@ -3,6 +3,7 @@
 
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
+#include "main.h"
 
 class Screen2View : public Screen2ViewBase
 {
@@ -20,4 +21,5 @@ protected:
     int16_t addEnd;
 };
 
+extern  RTC_HandleTypeDef hrtc;
 #endif // SCREEN2_VIEW_HPP
