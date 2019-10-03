@@ -58,7 +58,7 @@ extern "C"
 
 }
 
-static uint32_t frameBuf0 = (uint32_t)(0xd0000000);
+static uint32_t frameBuf0 = (uint32_t)(0xd0200000);
 extern "C" {
 
 uint32_t LCD_GetXSize(void)
