@@ -59,21 +59,14 @@ Screen1ViewBase::Screen1ViewBase() :
     buttonMinuteDown.setBitmaps(Bitmap(BITMAP_DOWN_ARROW_ID), Bitmap(BITMAP_DOWN_ARROW_PRESSED_ID));
     buttonMinuteDown.setAction(buttonCallback);
 
-    buttonSaveHour.setXY(80, 137);
-    buttonSaveHour.setBitmaps(Bitmap(BITMAP_BTN_ROUND_ID), Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
-    buttonSaveHour.setLabelText(TypedText(T_SINGLEUSEID7));
-    buttonSaveHour.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(66, 66, 66));
-    buttonSaveHour.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(166, 166, 166));
-    buttonSaveHour.setAction(buttonCallback);
+    buttonSave.setXY(80, 172);
+    buttonSave.setBitmaps(Bitmap(BITMAP_BTN_ROUND_ID), Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
+    buttonSave.setLabelText(TypedText(T_SINGLEUSEID7));
+    buttonSave.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(66, 66, 66));
+    buttonSave.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(166, 166, 166));
+    buttonSave.setAction(buttonCallback);
 
-    buttonSaveMinute.setXY(303, 137);
-    buttonSaveMinute.setBitmaps(Bitmap(BITMAP_BTN_ROUND_ID), Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
-    buttonSaveMinute.setLabelText(TypedText(T_SINGLEUSEID8));
-    buttonSaveMinute.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(66, 66, 66));
-    buttonSaveMinute.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(166, 166, 166));
-    buttonSaveMinute.setAction(buttonCallback);
-
-    buttonClock.setXY(192, 204);
+    buttonClock.setXY(303, 172);
     buttonClock.setBitmaps(Bitmap(BITMAP_BTN_ROUND_ID), Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
     buttonClock.setLabelText(TypedText(T_SINGLEUSEID9));
     buttonClock.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(66, 66, 66));
@@ -91,8 +84,7 @@ Screen1ViewBase::Screen1ViewBase() :
     add(buttonHourDown);
     add(buttonMinuteUp);
     add(buttonMinuteDown);
-    add(buttonSaveHour);
-    add(buttonSaveMinute);
+    add(buttonSave);
     add(buttonClock);
 }
 
@@ -131,19 +123,12 @@ void Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call buttonMinuteDownClicked
         buttonMinuteDownClicked();
     }
-    else if (&src == &buttonSaveHour)
+    else if (&src == &buttonSave)
     {
-        //SaveHourButtonIsClicked
-        //When buttonSaveHour clicked call virtual function
-        //Call buttonSaveHourClicked
-        buttonSaveHourClicked();
-    }
-    else if (&src == &buttonSaveMinute)
-    {
-        //SaveMinuteButtonIsClicked
-        //When buttonSaveMinute clicked call virtual function
-        //Call buttonSaveMinuteClicked
-        buttonSaveMinuteClicked();
+        //SaveButtonIsClicked
+        //When buttonSave clicked call virtual function
+        //Call buttonSaveClicked
+        buttonSaveClicked();
     }
     else if (&src == &buttonClock)
     {

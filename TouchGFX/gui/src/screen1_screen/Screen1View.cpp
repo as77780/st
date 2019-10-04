@@ -49,4 +49,21 @@ void Screen1View::buttonMinuteDownClicked()
     Unicode::snprintf(textAreaMinuteBuffer, TEXTAREAMINUTE_SIZE, "%02d", minute);
     textAreaMinute.invalidate();
 }
+void Screen1View::buttonSaveClicked()
+{
+	 RTC_TimeTypeDef sTime ;
+	/*
+	 * RTC_DateTypeDef sDate;
+	 HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+		HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+	 *
+	 */
+
+
+	 sTime.Hours = hour-1;
+	 sTime.Minutes = minute;
+	 sTime.Seconds = 5;
+	 HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) ;
+
+}
 

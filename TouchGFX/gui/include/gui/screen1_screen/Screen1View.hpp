@@ -3,7 +3,7 @@
 
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
-
+#include "main.h"
 class Screen1View : public Screen1ViewBase
 {
 public:
@@ -15,18 +15,14 @@ public:
     virtual void buttonHourDownClicked();
     virtual void buttonMinuteUpClicked();
     virtual void buttonMinuteDownClicked();
-    virtual void buttonSaveHourClicked()
-    {
-        presenter->saveHour(hour);
-    }
+    virtual void buttonSaveClicked();
+    //{ presenter->saveHour(hour);}
 
-    virtual void buttonSaveMinuteClicked()
-    {
-        presenter->saveMinute(minute);
-    }
-    protected:
+
+
+protected:
     int16_t hour;
     int16_t minute;
 };
-
+extern  RTC_HandleTypeDef hrtc;
 #endif // SCREEN1_VIEW_HPP

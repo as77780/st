@@ -45,12 +45,7 @@ public:
         // Override and implement this function in Screen1View
     }
 
-    virtual void buttonSaveHourClicked()
-    {
-        // Override and implement this function in Screen1View
-    }
-
-    virtual void buttonSaveMinuteClicked()
+    virtual void buttonSaveClicked()
     {
         // Override and implement this function in Screen1View
     }
@@ -74,8 +69,7 @@ protected:
     touchgfx::Button buttonHourDown;
     touchgfx::Button buttonMinuteUp;
     touchgfx::Button buttonMinuteDown;
-    touchgfx::ButtonWithLabel buttonSaveHour;
-    touchgfx::ButtonWithLabel buttonSaveMinute;
+    touchgfx::ButtonWithLabel buttonSave;
     touchgfx::ButtonWithLabel buttonClock;
 
     /*

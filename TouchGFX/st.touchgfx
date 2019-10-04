@@ -241,37 +241,9 @@
               "Blue": 166
             },
             "TextRotation": "0",
-            "Name": "buttonSaveHour",
+            "Name": "buttonSave",
             "X": 80,
-            "Y": 137,
-            "Width": 97,
-            "Height": 60,
-            "Type": "ButtonWithLabel",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "btn_round_pressed.png",
-            "Released": "btn_round.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId8",
-            "ReleasedColor": {
-              "Red": 66,
-              "Green": 66,
-              "Blue": 66
-            },
-            "PressedColor": {
-              "Red": 166,
-              "Green": 166,
-              "Blue": 166
-            },
-            "TextRotation": "0",
-            "Name": "buttonSaveMinute",
-            "X": 303,
-            "Y": 137,
+            "Y": 172,
             "Width": 97,
             "Height": 60,
             "Type": "ButtonWithLabel",
@@ -298,8 +270,8 @@
             },
             "TextRotation": "0",
             "Name": "buttonClock",
-            "X": 192,
-            "Y": 204,
+            "X": 303,
+            "Y": 172,
             "Width": 97,
             "Height": 60,
             "Type": "ButtonWithLabel",
@@ -360,26 +332,14 @@
             }
           },
           {
-            "InteractionName": "SaveHourButtonIsClicked",
+            "InteractionName": "SaveButtonIsClicked",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "buttonSaveHour",
+              "TriggerComponent": "buttonSave",
               "Type": "TriggerClicked"
             },
             "Action": {
-              "FunctionName": "buttonSaveHourClicked",
-              "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "SaveMinuteButtonIsClicked",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "buttonSaveMinute",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "FunctionName": "buttonSaveMinuteClicked",
+              "FunctionName": "buttonSaveClicked",
               "Type": "ActionCustom"
             }
           },
@@ -580,10 +540,6 @@
       },
       {
         "TextEntryId": "SingleUseId7",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId8",
         "IsResource": false
       },
       {
