@@ -42,8 +42,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screen2_screen/Screen2ViewBase.
  gui/include/gui/model/Model.hpp \
  gui/include/gui/screen2_screen/Screen2Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
@@ -68,9 +69,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/screen2_screen/Screen2ViewBase.
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/EasingEquations.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp \
  generated/images/include/BitmapDatabase.hpp \
- generated/texts/include/texts/TextKeysAndLanguages.hpp
+ generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp
 
 generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 
@@ -156,9 +157,11 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TiledImage.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
 
@@ -208,8 +211,8 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/mixins/MoveAnimator.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:
-
 generated/images/include/BitmapDatabase.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:

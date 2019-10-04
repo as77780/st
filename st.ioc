@@ -1,6 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
-DMA2D.ColorMode=DMA2D_OUTPUT_RGB888
-DMA2D.IPParameters=ColorMode,Mode
+DMA2D.AlphaModeForeground=DMA2D_NO_MODIF_ALPHA
+DMA2D.ColorMode=DMA2D_OUTPUT_ARGB8888
+DMA2D.IPParameters=ColorMode,Mode,AlphaModeForeground
 DMA2D.Mode=DMA2D_M2M
 FMC.CASLatency1=FMC_SDRAM_CAS_LATENCY_3
 FMC.ExitSelfRefreshDelay1=7
@@ -65,8 +66,8 @@ LTDC.ActiveH=272
 LTDC.ActiveW=480
 LTDC.Alpha0_L0=0
 LTDC.Alpha_L0=255
-LTDC.BlendingFactor1_L0=LTDC_BLENDING_FACTOR1_PAxCA
-LTDC.BlendingFactor2_L0=LTDC_BLENDING_FACTOR2_PAxCA
+LTDC.BlendingFactor1_L0=LTDC_BLENDING_FACTOR1_CA
+LTDC.BlendingFactor2_L0=LTDC_BLENDING_FACTOR2_CA
 LTDC.Blue_L0=0
 LTDC.FBStartAdress_L0=0xD0200000
 LTDC.Green=0

@@ -7,7 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
-#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
@@ -32,7 +32,7 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Box box1;
+    touchgfx::TiledImage tiledImage1;
     touchgfx::Button buttonSettings;
     touchgfx::MoveAnimator< touchgfx::TextAreaWithTwoWildcards > textClock;
     touchgfx::MoveAnimator< touchgfx::Circle > circle;
