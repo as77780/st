@@ -9,6 +9,7 @@ Screen2View::Screen2View()
 
 void Screen2View::setupScreen()
 {
+	  TIM5->CCR1=10;
 	/*
     Screen2ViewBase::setupScreen();
 
@@ -46,6 +47,7 @@ void Screen2View::handleTickEvent()
         textClock.invalidate();
         if (!textClock.isMoveAnimationRunning())
             {
+        	/*
                if (circle.getArcStart() + 340 == circle.getArcEnd())
                 {
                     addStart = 2;
@@ -56,8 +58,9 @@ void Screen2View::handleTickEvent()
                     addStart = 1;
                     addEnd = 2;
                 }
+              */
                 circle.invalidate();
-                circle.setArc(circle.getArcStart() + addStart, circle.getArcEnd() + addEnd);
+             //   circle.setArc(circle.getArcStart() + addStart, circle.getArcEnd() + addEnd);
                 circle.setArc(sTime.Seconds*6,0);
                 circle.invalidate();
             }

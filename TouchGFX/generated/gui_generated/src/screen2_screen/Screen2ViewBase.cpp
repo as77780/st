@@ -32,15 +32,20 @@ Screen2ViewBase::Screen2ViewBase() :
     circle.setCenter(130, 130);
     circle.setRadius(125);
     circle.setLineWidth(6);
-    circle.setArc(0, 0);
+    circle.setArc(0, 180);
     circle.setCapPrecision(90);
     circlePainter.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
     circle.setPainter(circlePainter);
+
+    Power.setXY(20, 205);
+    Power.setBitmaps(Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
+    Power.setAction(buttonCallback);
 
     add(tiledImage1);
     add(buttonSettings);
     add(textClock);
     add(circle);
+    add(Power);
 }
 
 void Screen2ViewBase::setupScreen()
@@ -72,5 +77,12 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When buttonSettings clicked change screen to Screen1
         //Go to Screen1 with screen transition towards South
         application().gotoScreen1ScreenSlideTransitionSouth();
+    }
+    else if (&src == &Power)
+    {
+        //PowerOn
+        //When Power clicked change screen to Main
+        //Go to Main with screen transition towards East
+        application().gotoMainScreenCoverTransitionEast();
     }
 }

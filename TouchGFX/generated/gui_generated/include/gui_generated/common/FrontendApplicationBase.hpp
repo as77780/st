@@ -24,6 +24,12 @@ public:
 
     void gotoScreen2ScreenCoverTransitionNorth();
 
+    void gotoScreen2ScreenCoverTransitionWest();
+
+
+    // Main
+    void gotoMainScreenCoverTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -37,6 +43,12 @@ protected:
     void gotoScreen2ScreenNoTransitionImpl();
 
     void gotoScreen2ScreenCoverTransitionNorthImpl();
+
+    void gotoScreen2ScreenCoverTransitionWestImpl();
+
+
+    // Main
+    void gotoMainScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

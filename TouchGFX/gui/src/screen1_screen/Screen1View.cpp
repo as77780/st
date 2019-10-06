@@ -8,7 +8,7 @@ Screen1View::Screen1View()
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
-
+    TIM5->CCR1=100;
     hour = presenter->getHour();
     minute = presenter->getMinute();
 
@@ -62,7 +62,7 @@ void Screen1View::buttonSaveClicked()
 
 	 sTime.Hours = hour-1;
 	 sTime.Minutes = minute;
-	 sTime.Seconds = 5;
+	 sTime.Seconds = 0;
 	 HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) ;
 
 }

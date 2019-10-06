@@ -14,6 +14,7 @@ const uint16_t BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID = 4; // Size: 24x22 pixels
 const uint16_t BITMAP_BTN_ROUND_ID = 5; // Size: 97x60 pixels
 const uint16_t BITMAP_BTN_ROUND_PRESSED_ID = 6; // Size: 97x60 pixels
 const uint16_t BITMAP_CONFIGURATION_ID = 7; // Size: 48x48 pixels
+const uint16_t BITMAP_DARK_ICONS_POWER_48_ID = 8; // Size: 48x48 pixels
 
 namespace BitmapDatabase
 {

@@ -16,10 +16,7 @@ public:
 protected:
     int16_t hour;
     int16_t minute;
-    int16_t tickCount;
-    int16_t addStart;
-    int16_t addEnd;
-};
+   };
 
 extern  RTC_HandleTypeDef hrtc;
 #endif // SCREEN2_VIEW_HPP

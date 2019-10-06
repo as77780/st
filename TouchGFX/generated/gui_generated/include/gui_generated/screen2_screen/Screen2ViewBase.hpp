@@ -37,6 +37,7 @@ protected:
     touchgfx::MoveAnimator< touchgfx::TextAreaWithTwoWildcards > textClock;
     touchgfx::MoveAnimator< touchgfx::Circle > circle;
     touchgfx::PainterRGB888 circlePainter;
+    touchgfx::Button Power;
 
     /*
      * Wildcard Buffers

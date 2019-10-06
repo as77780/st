@@ -443,7 +443,7 @@
             "Radius": 125,
             "LineWidth": 6,
             "StartAngle": 0,
-            "EndAngle": 0,
+            "EndAngle": 180,
             "CapPrecision": "Triangle",
             "Alpha": 255,
             "Name": "circle",
@@ -452,6 +452,22 @@
             "Width": 339,
             "Height": 272,
             "Type": "Circle",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\dark_icons_power_48.png",
+            "Released": "__designer\\dark_icons_power_48.png",
+            "Alpha": 255,
+            "Name": "Power",
+            "X": 20,
+            "Y": 205,
+            "Width": 48,
+            "Height": 48,
+            "Type": "Button",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -505,11 +521,115 @@
               "ActionComponent": "textClock",
               "Type": "ActionMove"
             }
+          },
+          {
+            "InteractionName": "PowerOn",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "Power",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Main",
+              "Type": "ActionGotoScreen"
+            }
           }
         ],
         "Name": "Screen2",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 7200
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_carbon_fibre.png",
+            "Alpha": 255,
+            "Style": "Texture3",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId13",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId14",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Wildcard2": {
+              "TextId": "SingleUseId15",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "clock_m",
+            "X": 5,
+            "Y": 16,
+            "Width": 145,
+            "Height": 49,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\dark_icons_power_48.png",
+            "Released": "__designer\\dark_icons_power_48.png",
+            "Alpha": 255,
+            "Name": "Power_main",
+            "X": 20,
+            "Y": 205,
+            "Width": 48,
+            "Height": 48,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "PowerOff",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "Power_main",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Screen2",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "Main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
       }
     ],
     "CustomContainerDefinitions": [],
@@ -556,6 +676,18 @@
       },
       {
         "TextEntryId": "SingleUseId12",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId13",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId14",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId15",
         "IsResource": false
       }
     ],
