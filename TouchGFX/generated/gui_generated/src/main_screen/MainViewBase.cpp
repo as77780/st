@@ -26,9 +26,14 @@ MainViewBase::MainViewBase() :
     Power_main.setBitmaps(Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
     Power_main.setAction(buttonCallback);
 
+    ButtonEqualizer.setXY(416, 205);
+    ButtonEqualizer.setBitmaps(Bitmap(BITMAP_EQUALIZER_ID), Bitmap(BITMAP_EQUALIZER_ID));
+    ButtonEqualizer.setAction(buttonCallback);
+
     add(tiledImage1);
     add(clock_m);
     add(Power_main);
+    add(ButtonEqualizer);
 }
 
 void MainViewBase::setupScreen()
@@ -44,5 +49,12 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When Power_main clicked change screen to Screen2
         //Go to Screen2 with screen transition towards West
         application().gotoScreen2ScreenCoverTransitionWest();
+    }
+    else if (&src == &ButtonEqualizer)
+    {
+        //IntEqu
+        //When ButtonEqualizer clicked change screen to Equalizer
+        //Go to Equalizer with screen transition towards East
+        application().gotoEqualizerScreenCoverTransitionEast();
     }
 }

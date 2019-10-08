@@ -30,6 +30,12 @@ public:
     // Main
     void gotoMainScreenCoverTransitionEast();
 
+    void gotoMainScreenCoverTransitionWest();
+
+
+    // Equalizer
+    void gotoEqualizerScreenCoverTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -49,6 +55,12 @@ protected:
 
     // Main
     void gotoMainScreenCoverTransitionEastImpl();
+
+    void gotoMainScreenCoverTransitionWestImpl();
+
+
+    // Equalizer
+    void gotoEqualizerScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

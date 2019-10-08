@@ -30,6 +30,7 @@ protected:
     touchgfx::TiledImage tiledImage1;
     touchgfx::TextAreaWithTwoWildcards clock_m;
     touchgfx::Button Power_main;
+    touchgfx::Button ButtonEqualizer;
 
     /*
      * Wildcard Buffers

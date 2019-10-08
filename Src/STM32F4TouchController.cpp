@@ -31,8 +31,10 @@ bool STM32F4TouchController::sampleTouch(int32_t& x, int32_t& y)
     BSP_TS_GetState(&state);
     if (state.TouchDetected)
     {
-        x = state.X;
-        y = state.Y;
+    	x=(((1081 * state.X) + (-18666))/1000);
+    	y=(((1163 * state.Y) + (-21053))/1000);
+       // x = state.X;
+       // y = state.Y;
         return true;
     }
     return false;

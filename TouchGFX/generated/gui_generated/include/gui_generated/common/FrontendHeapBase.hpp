@@ -12,6 +12,8 @@
 #include <touchgfx/transitions/SlideTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
@@ -22,6 +24,8 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/main_screen/MainView.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
+#include <gui/equalizer_screen/EqualizerView.hpp>
+#include <gui/equalizer_screen/EqualizerPresenter.hpp>
 
 
 /**
@@ -47,7 +51,8 @@ public:
     typedef meta::TypeList< Screen1View,
             meta::TypeList< Screen2View,
             meta::TypeList< MainView,
-            meta::Nil > >
+            meta::TypeList< EqualizerView,
+            meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -62,7 +67,8 @@ public:
     typedef meta::TypeList< Screen1Presenter,
             meta::TypeList< Screen2Presenter,
             meta::TypeList< MainPresenter,
-            meta::Nil > >
+            meta::TypeList< EqualizerPresenter,
+            meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

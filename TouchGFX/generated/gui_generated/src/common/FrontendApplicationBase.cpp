@@ -13,6 +13,8 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/main_screen/MainView.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
+#include <gui/equalizer_screen/EqualizerView.hpp>
+#include <gui/equalizer_screen/EqualizerPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -90,5 +92,30 @@ void FrontendApplicationBase::gotoMainScreenCoverTransitionEast()
 void FrontendApplicationBase::gotoMainScreenCoverTransitionEastImpl()
 {
     makeTransition<MainView, MainPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+
+void FrontendApplicationBase::gotoMainScreenCoverTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenCoverTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenCoverTransitionWestImpl()
+{
+    makeTransition<MainView, MainPresenter, touchgfx::CoverTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Equalizer
+
+void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoEqualizerScreenCoverTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEastImpl()
+{
+    makeTransition<EqualizerView, EqualizerPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 

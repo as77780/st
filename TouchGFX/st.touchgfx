@@ -609,6 +609,22 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Pressed": "equalizer.png",
+            "Released": "equalizer.png",
+            "Alpha": 255,
+            "Name": "ButtonEqualizer",
+            "X": 416,
+            "Y": 205,
+            "Width": 48,
+            "Height": 48,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -625,9 +641,325 @@
               "ActionComponent": "Screen2",
               "Type": "ActionGotoScreen"
             }
+          },
+          {
+            "InteractionName": "IntEqu",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "ButtonEqualizer",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Equalizer",
+              "Type": "ActionGotoScreen"
+            }
           }
         ],
         "Name": "Main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\blue_textures_carbon_fibre.png",
+            "Alpha": 255,
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\dark_slider_horizontal_medium_slider_round_back.png",
+            "BackgroundSelected": "__designer\\dark_slider_horizontal_medium_slider_round_fill.png",
+            "Indicator": "__designer\\dark_slider_horizontal_medium_indicators_slider2_round_nob.png",
+            "BackgroundX": 0,
+            "BackgroundY": 10,
+            "IndicatorPos": 0,
+            "IndicatorMax": 300,
+            "IndicatorMin": 0,
+            "ValueMax": 16,
+            "ValueMin": 0,
+            "InitValue": 0,
+            "Name": "SliderAmplified",
+            "X": 6,
+            "Y": 220,
+            "Width": 354,
+            "Height": 34,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "btn_round_pressed.png",
+            "Released": "btn_round.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId16",
+            "ReleasedColor": {
+              "Red": 66,
+              "Green": 66,
+              "Blue": 66
+            },
+            "PressedColor": {
+              "Red": 166,
+              "Green": 166,
+              "Blue": 166
+            },
+            "TextRotation": "0",
+            "Name": "ButtonBack",
+            "X": 370,
+            "Y": 197,
+            "Width": 97,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\dark_slider_horizontal_medium_slider_round_back.png",
+            "BackgroundSelected": "__designer\\dark_slider_horizontal_medium_slider_round_fill.png",
+            "Indicator": "__designer\\dark_slider_horizontal_medium_indicators_slider2_round_nob.png",
+            "BackgroundX": 0,
+            "BackgroundY": 10,
+            "IndicatorPos": 0,
+            "IndicatorMax": 300,
+            "IndicatorMin": 0,
+            "ValueMax": 16,
+            "ValueMin": 0,
+            "InitValue": 8,
+            "Name": "SliderBass",
+            "X": 6,
+            "Y": 168,
+            "Width": 354,
+            "Height": 34,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\dark_slider_horizontal_medium_slider_round_back.png",
+            "BackgroundSelected": "__designer\\dark_slider_horizontal_medium_slider_round_fill.png",
+            "Indicator": "__designer\\dark_slider_horizontal_medium_indicators_slider2_round_nob.png",
+            "BackgroundX": 0,
+            "BackgroundY": 10,
+            "IndicatorPos": 0,
+            "IndicatorMax": 300,
+            "IndicatorMin": 0,
+            "ValueMax": 16,
+            "ValueMin": 0,
+            "InitValue": 8,
+            "Name": "SliderMid",
+            "X": 6,
+            "Y": 119,
+            "Width": 354,
+            "Height": 34,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "__designer\\dark_slider_horizontal_medium_slider_round_back.png",
+            "BackgroundSelected": "__designer\\dark_slider_horizontal_medium_slider_round_fill.png",
+            "Indicator": "__designer\\dark_slider_horizontal_medium_indicators_slider2_round_nob.png",
+            "BackgroundX": 0,
+            "BackgroundY": 10,
+            "IndicatorPos": 0,
+            "IndicatorMax": 300,
+            "IndicatorMin": 0,
+            "ValueMax": 16,
+            "ValueMin": 0,
+            "InitValue": 8,
+            "Name": "SliderTreble",
+            "X": 6,
+            "Y": 62,
+            "Width": 354,
+            "Height": 34,
+            "Type": "Slider",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 43,
+              "Green": 39,
+              "Blue": 39
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 345,
+            "Y": 0,
+            "Width": 135,
+            "Height": 36,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId17",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 357,
+            "Y": 0,
+            "Width": 123,
+            "Height": 31,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId18",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2",
+            "X": 260,
+            "Y": 198,
+            "Width": 100,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2_1",
+            "X": 307,
+            "Y": 147,
+            "Width": 47,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId20",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2_2",
+            "X": 289,
+            "Y": 96,
+            "Width": 65,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId21",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea2_3",
+            "X": 295,
+            "Y": 40,
+            "Width": 63,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "IntBack",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "ButtonBack",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "Equalizer",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -688,6 +1020,30 @@
       },
       {
         "TextEntryId": "SingleUseId15",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId16",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId17",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId18",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId20",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId21",
         "IsResource": false
       }
     ],
