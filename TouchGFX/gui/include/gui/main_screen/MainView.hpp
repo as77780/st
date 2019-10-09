@@ -13,6 +13,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex);
+    virtual void scrollWheelInputUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex);
 protected:
     int16_t hour;
     int16_t minute;

@@ -550,7 +550,7 @@
             "OffsetX": 0,
             "OffsetY": 0,
             "Name": "tiledImage1",
-            "X": 0,
+            "X": 2,
             "Y": 0,
             "Width": 480,
             "Height": 272,
@@ -625,6 +625,128 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 46,
+              "Green": 42,
+              "Blue": 42
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 176,
+            "Y": 16,
+            "Width": 160,
+            "Height": 52,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "SelectedItemOffset": 52,
+            "UseSelectedStyle": true,
+            "SelectedItemTemplateName": "InputCenterContainer",
+            "ExtraSizeBefore": 0,
+            "ExtraSizeAfter": 0,
+            "MarginBefore": 0,
+            "MarginAfter": 0,
+            "IsHorizontal": true,
+            "IsCircular": true,
+            "ItemTemplateName": "InputContainer1",
+            "NumberofItems": 4,
+            "InitialElement": 0,
+            "ItemMargin": 0,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "Name": "scrollWheelInput",
+            "X": 174,
+            "Y": 13,
+            "Width": 162,
+            "Height": 55,
+            "Type": "ScrollWheel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId26",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 227,
+            "Y": 68,
+            "Width": 54,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 10,
+              "Green": 10,
+              "Blue": 10
+            },
+            "Alpha": 255,
+            "StartX": 6,
+            "StartY": 5,
+            "EndX": 6,
+            "EndY": 57,
+            "LineWidth": 5,
+            "LineEndingStyle": "Square",
+            "Name": "line1",
+            "X": 217,
+            "Y": 16,
+            "Width": 10,
+            "Height": 50,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 10,
+              "Green": 10,
+              "Blue": 10
+            },
+            "Alpha": 255,
+            "StartX": 6,
+            "StartY": 5,
+            "EndX": 6,
+            "EndY": 57,
+            "LineWidth": 5,
+            "LineEndingStyle": "Square",
+            "Name": "line1_1",
+            "X": 275,
+            "Y": 16,
+            "Width": 10,
+            "Height": 50,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -659,7 +781,7 @@
         ],
         "Name": "Main",
         "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        "CanvasBufferSize": 7200
       },
       {
         "Components": [
@@ -964,7 +1086,96 @@
         "CanvasBufferSize": 0
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Components": [
+          {
+            "TextId": "SingleUseId22",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 92,
+              "Green": 92,
+              "Blue": 92
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId23",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "TextInput",
+            "X": 14,
+            "Y": 2,
+            "Width": 25,
+            "Height": 49,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "InputContainer1",
+        "X": 0,
+        "Y": 0,
+        "Width": 55,
+        "Height": 55,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      },
+      {
+        "Components": [
+          {
+            "TextId": "SingleUseId24",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 213,
+              "Green": 115,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId25",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "TextInputCenter",
+            "X": 11,
+            "Y": -4,
+            "Width": 32,
+            "Height": 61,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "InputCenterContainer",
+        "X": 0,
+        "Y": 0,
+        "Width": 55,
+        "Height": 55,
+        "Type": "CustomContainerDefinition",
+        "Visible": true,
+        "Draggable": false,
+        "Clickable": false,
+        "Fadeable": false,
+        "Moveable": false
+      }
+    ],
     "TextEntries": [
       {
         "TextEntryId": "SingleUseId1",
@@ -1044,6 +1255,26 @@
       },
       {
         "TextEntryId": "SingleUseId21",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId22",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId23",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId24",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId25",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId26",
         "IsResource": false
       }
     ],

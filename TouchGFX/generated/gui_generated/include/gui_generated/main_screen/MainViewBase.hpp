@@ -10,7 +10,14 @@
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp>
+#include <gui/containers/InputContainer1.hpp>
+#include <gui/containers/InputCenterContainer.hpp>
 
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
@@ -18,6 +25,16 @@ public:
     virtual ~MainViewBase() {}
 
     virtual void setupScreen();
+
+    virtual void scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex)
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void scrollWheelInputUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex)
+    {
+        // Override and implement this function in Main
+    }
 
 protected:
     FrontendApplication& application() {
@@ -31,6 +48,16 @@ protected:
     touchgfx::TextAreaWithTwoWildcards clock_m;
     touchgfx::Button Power_main;
     touchgfx::Button ButtonEqualizer;
+    touchgfx::Box box1;
+    touchgfx::ScrollWheelWithSelectionStyle scrollWheelInput;
+    touchgfx::DrawableListItems<InputContainer1, 4> scrollWheelInputListItems;
+    touchgfx::DrawableListItems<InputCenterContainer, 2> scrollWheelInputSelectedListItems;
+
+    touchgfx::TextArea textArea1;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB888 line1Painter;
+    touchgfx::Line line1_1;
+    touchgfx::PainterRGB888 line1_1Painter;
 
     /*
      * Wildcard Buffers
@@ -46,11 +73,19 @@ private:
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void updateItemCallbackHandler(DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
     /*
      * Callback Declarations
      */
     touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<MainViewBase, DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

@@ -9,6 +9,7 @@ void MainView::setupScreen()
 {
     MainViewBase::setupScreen();
     TIM5->CCR1=100;
+  // scrollWheelInput.animateToItem(1);
 }
 
 void MainView::tearDownScreen()
@@ -34,3 +35,12 @@ void MainView::handleTickEvent()
 	        Unicode::snprintf(clock_mBuffer2, CLOCK_MBUFFER2_SIZE, "%02d",minute);
 	        clock_m.invalidate();
 }
+ void MainView::scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex)
+    {
+	 item.updateText(itemIndex);
+    }
+
+ void MainView::scrollWheelInputUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex)
+    {
+	 item.updateText(itemIndex);
+    }
