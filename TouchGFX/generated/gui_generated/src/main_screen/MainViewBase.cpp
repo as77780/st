@@ -12,9 +12,8 @@ MainViewBase::MainViewBase() :
 {
     CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
-    tiledImage1.setBitmap(Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
-    tiledImage1.setPosition(2, 0, 480, 272);
-    tiledImage1.setOffset(0, 0);
+    image.setXY(0, 0);
+    image.setBitmap(Bitmap(BITMAP_GOLD_P1_ID));
 
     clock_m.setPosition(5, 16, 145, 49);
     clock_m.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
@@ -72,7 +71,7 @@ MainViewBase::MainViewBase() :
     line1_1.setLineWidth(5);
     line1_1.setLineEndingStyle(Line::SQUARE_CAP_ENDING);
 
-    add(tiledImage1);
+    add(image);
     add(clock_m);
     add(Power_main);
     add(ButtonEqualizer);

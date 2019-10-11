@@ -7,7 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
-#include <touchgfx/widgets/TiledImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/Box.hpp>
@@ -44,7 +44,7 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::TiledImage tiledImage1;
+    touchgfx::Image image;
     touchgfx::TextAreaWithTwoWildcards clock_m;
     touchgfx::Button Power_main;
     touchgfx::Button ButtonEqualizer;

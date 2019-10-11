@@ -21,7 +21,8 @@ const uint16_t BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_INDICATORS_SLIDER2_ROUND_NOB
 const uint16_t BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_BACK_ID = 12; // Size: 352x15 pixels
 const uint16_t BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_FILL_ID = 13; // Size: 352x15 pixels
 const uint16_t BITMAP_EQUALIZER_ID = 14; // Size: 48x48 pixels
-const uint16_t BITMAP_MEDIA_EQUALIZER_ID = 15; // Size: 48x48 pixels
+const uint16_t BITMAP_GOLD_P1_ID = 15; // Size: 480x272 pixels
+const uint16_t BITMAP_MEDIA_EQUALIZER_ID = 16; // Size: 48x48 pixels
 
 namespace BitmapDatabase
 {

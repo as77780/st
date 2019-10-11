@@ -60,7 +60,7 @@ void Screen1View::buttonSaveClicked()
 	 */
 
 
-	 sTime.Hours = hour-1;
+	 sTime.Hours = hour+1;
 	 sTime.Minutes = minute;
 	 sTime.Seconds = 0;
 	 HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) ;

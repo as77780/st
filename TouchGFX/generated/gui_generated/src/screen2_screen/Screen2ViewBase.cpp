@@ -32,7 +32,7 @@ Screen2ViewBase::Screen2ViewBase() :
     circle.setCenter(130, 130);
     circle.setRadius(125);
     circle.setLineWidth(6);
-    circle.setArc(0, 180);
+    circle.setArc(0, 0);
     circle.setCapPrecision(90);
     circlePainter.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
     circle.setPainter(circlePainter);
