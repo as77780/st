@@ -28,7 +28,7 @@ Screen2ViewBase::Screen2ViewBase() :
     textClock.setWildcard2(textClockBuffer2);
     textClock.setTypedText(TypedText(T_SINGLEUSEID10));
 
-    circle.setPosition(480, 0, 339, 272);
+    circle.setPosition(114, 5, 339, 267);
     circle.setCenter(130, 130);
     circle.setRadius(125);
     circle.setLineWidth(6);
@@ -56,12 +56,6 @@ void Screen2ViewBase::setupScreen()
 //Called when the screen is done with transition/load
 void Screen2ViewBase::afterTransition()
 {
-    //MoveCircleIntoPlace
-    //When screen is entered move circle
-    //Move circle to x:114, y:5 with CubicOut easing in 750 ms (45 Ticks)
-    circle.clearMoveAnimationEndedAction();
-    circle.startMoveAnimation(114, 5, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
-
     //MoveTextClockIntoPlace
     //When screen is entered move textClock
     //Move textClock to x:95, y:85 with CubicOut easing in 750 ms (45 Ticks)

@@ -52,13 +52,6 @@ void Screen1View::buttonMinuteDownClicked()
 void Screen1View::buttonSaveClicked()
 {
 	 RTC_TimeTypeDef sTime ;
-	/*
-	 * RTC_DateTypeDef sDate;
-	 HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
-		HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
-	 *
-	 */
-
 
 	 sTime.Hours = hour+1;
 	 sTime.Minutes = minute;

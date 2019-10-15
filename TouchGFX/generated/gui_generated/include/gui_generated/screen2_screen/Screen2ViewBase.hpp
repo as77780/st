@@ -35,7 +35,7 @@ protected:
     touchgfx::TiledImage tiledImage1;
     touchgfx::Button buttonSettings;
     touchgfx::MoveAnimator< touchgfx::TextAreaWithTwoWildcards > textClock;
-    touchgfx::MoveAnimator< touchgfx::Circle > circle;
+    touchgfx::Circle circle;
     touchgfx::PainterRGB888 circlePainter;
     touchgfx::Button Power;
 

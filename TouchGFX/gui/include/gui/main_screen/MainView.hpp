@@ -15,9 +15,11 @@ public:
     virtual void handleTickEvent();
     virtual void scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex);
     virtual void scrollWheelInputUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex);
+    virtual void GetTimeOut();
 protected:
     int16_t hour;
     int16_t minute;
+    int16_t tickCount ;
 };
 extern  RTC_HandleTypeDef hrtc;
 #endif // MAIN_VIEW_HPP

@@ -447,10 +447,10 @@
             "CapPrecision": "Triangle",
             "Alpha": 255,
             "Name": "circle",
-            "X": 480,
-            "Y": 0,
+            "X": 114,
+            "Y": 5,
             "Width": 339,
-            "Height": 272,
+            "Height": 267,
             "Type": "Circle",
             "Visible": true,
             "Draggable": false,
@@ -491,22 +491,6 @@
             }
           },
           {
-            "InteractionName": "MoveCircleIntoPlace",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "X": 114,
-              "Y": 5,
-              "Easing": "Cubic",
-              "EasingOption": "Out",
-              "Duration": 750,
-              "ActionComponent": "circle",
-              "Type": "ActionMove"
-            }
-          },
-          {
             "InteractionName": "MoveTextClockIntoPlace",
             "HasCompletedTrigger": false,
             "Trigger": {
@@ -544,14 +528,17 @@
       {
         "Components": [
           {
-            "RelativeFilename": "gold_p1.png",
+            "FileName": "__designer\\blue_textures_carbon_fibre.png",
             "Alpha": 255,
-            "Name": "image",
+            "Style": "Texture3",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
             "X": 0,
             "Y": 0,
             "Width": 480,
             "Height": 272,
-            "Type": "Image",
+            "Type": "TiledImage",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -1283,7 +1270,7 @@
     "SelectedColorDepth": 24,
     "StartupScreenName": "Screen2",
     "SelectedStartupLanguage": "GB",
-    "Skin": "Blue",
+    "Skin": "Dark",
     "TouchGfxPath": "../Middlewares/ST/TouchGFX/touchgfx/",
     "UIPath": ".",
     "ApplicationTemplate": {
