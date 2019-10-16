@@ -2,7 +2,9 @@
 #define MODEL_HPP
 
 #include <touchgfx/Utils.hpp>
+#include "main.h"
 
+extern  RTC_HandleTypeDef hrtc;
 class ModelListener;
 
 /**

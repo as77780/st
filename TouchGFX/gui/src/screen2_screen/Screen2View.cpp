@@ -9,16 +9,14 @@ Screen2View::Screen2View()
 
 void Screen2View::setupScreen()
 {
+	Screen2ViewBase::setupScreen();
 	  TIM5->CCR1=10;
-	/*
-    Screen2ViewBase::setupScreen();
+	  hour = presenter->getHour();
+	  minute = presenter->getMinute();
+	     Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d", hour);
+	     Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d", minute);
+	     textClock.invalidate();
 
-    hour = presenter->getHour();
-    minute = presenter->getMinute();
-
-    //Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d", hour);
-    //Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d", minute);
-	 */
 
 }
 
@@ -39,12 +37,6 @@ void Screen2View::handleTickEvent()
     	hour =sTime.Hours;
     	minute =sTime.Minutes ;
 
-
-
-    	Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
-        Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
-
-        textClock.invalidate();
         if (!textClock.isMoveAnimationRunning())
             {
         	/*
@@ -63,6 +55,9 @@ void Screen2View::handleTickEvent()
              //   circle.setArc(circle.getArcStart() + addStart, circle.getArcEnd() + addEnd);
                 circle.setArc(sTime.Seconds*6,0);
                 circle.invalidate();
+                Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
+                Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
+                textClock.invalidate();
             }
 
 
