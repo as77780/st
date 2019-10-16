@@ -17,6 +17,7 @@ public:
 protected:
     int16_t hour;
     int16_t minute;
+    int16_t second;
    };
 
 extern  RTC_HandleTypeDef hrtc;

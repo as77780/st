@@ -15,6 +15,7 @@ void Model::tick()
 		 	    	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
 		 	    	hour =sTime.Hours;
 		 	    	minute =sTime.Minutes ;
+		 	    	second=sTime.Seconds;
 		 	    	//saveHour(hour);
 		 	    	//saveMinute(minute);
 
