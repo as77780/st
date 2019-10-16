@@ -13,6 +13,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void TimeView();
 protected:
     int16_t hour;
     int16_t minute;
