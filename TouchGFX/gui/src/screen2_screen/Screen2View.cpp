@@ -31,12 +31,12 @@ void Screen2View::handleTickEvent()
 	RTC_TimeTypeDef sTime = {0};
 	RTC_DateTypeDef sDate = {0};
 
-
+/*
        	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
     	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
     	hour =sTime.Hours;
     	minute =sTime.Minutes ;
-
+*/
         if (!textClock.isMoveAnimationRunning())
             {
         	/*
@@ -51,6 +51,10 @@ void Screen2View::handleTickEvent()
                     addEnd = 2;
                 }
               */
+        	HAL_RTC_GetTime(&hrtc, &sTime, RTC_FORMAT_BIN);
+        	    	HAL_RTC_GetDate(&hrtc, &sDate, RTC_FORMAT_BIN);
+        	    	hour =sTime.Hours;
+        	    	minute =sTime.Minutes ;
                 circle.invalidate();
              //   circle.setArc(circle.getArcStart() + addStart, circle.getArcEnd() + addEnd);
                 circle.setArc(sTime.Seconds*6,0);

@@ -9,12 +9,14 @@ void MainView::setupScreen()
 {
     MainViewBase::setupScreen();
     TIM5->CCR1=100;
+
     hour = presenter->getHour();
-    	  minute = presenter->getMinute();
+    minute = presenter->getMinute();
     	  Unicode::snprintf(clock_mBuffer1, CLOCK_MBUFFER1_SIZE, "%02d",hour);
-    	  	 	    	Unicode::snprintf(clock_mBuffer2, CLOCK_MBUFFER2_SIZE, "%02d",minute);
+    		Unicode::snprintf(clock_mBuffer2, CLOCK_MBUFFER2_SIZE, "%02d",minute);
     	  	 	    	clock_m.invalidate();
- //  scrollWheelInput.animateToItem(1);
+
+    	  	 	    	//  scrollWheelInput.animateToItem(1);
   //  GetTimeOut();
 
 }
