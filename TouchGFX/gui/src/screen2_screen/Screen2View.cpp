@@ -25,7 +25,7 @@ void Screen2View::handleTickEvent()
         	    circle.invalidate();
                 circle.setArc(presenter->getSecond()*6,0);
                 circle.invalidate();
-
+                textClock.invalidate();
             }
 
 }
@@ -34,5 +34,5 @@ void Screen2View:: TimeView(){
 		  minute = presenter->getMinute();
 	       Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
 	       Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
-	       textClock.invalidate();
+	     //  textClock.invalidate();
 }

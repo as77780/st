@@ -14,6 +14,7 @@
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
+#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -62,7 +63,7 @@ private:
     /*
      * Canvas Buffer Size
      */
-    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    static const uint16_t CANVAS_BUFFER_SIZE = 8000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };

@@ -18,6 +18,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
+#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
@@ -84,7 +85,7 @@ private:
     /*
      * Canvas Buffer Size
      */
-    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    static const uint16_t CANVAS_BUFFER_SIZE = 8000;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };

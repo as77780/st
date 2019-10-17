@@ -1,74 +1,125 @@
 Converting images
-Compiling gui/src/screen2_screen/Screen2View.cpp
+Compiling gui/src/equalizer_screen/EqualizerView.cpp
+Compiling gui/src/equalizer_screen/EqualizerPresenter.cpp
+Compiling gui/src/containers/InputCenterContainer.cpp
 Compiling gui/src/screen2_screen/Screen2Presenter.cpp
+Compiling gui/src/screen2_screen/Screen2View.cpp
 Compiling gui/src/main_screen/MainPresenter.cpp
-Compiling gui/src/main_screen/MainView.cpp
-Compiling gui/src/screen1_screen/Screen1View.cpp
 Compiling gui/src/screen1_screen/Screen1Presenter.cpp
-Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
-Compiling simulator/main.cpp
-In file included from gui/src/screen1_screen/Screen1View.cpp:1:0:
-gui/include/gui/screen1_screen/Screen1View.hpp:6:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-In file included from gui/src/screen1_screen/Screen1Presenter.cpp:1:0:
-gui/include/gui/screen1_screen/Screen1View.hpp:6:18: fatal error: main.h: No such file or directory
+Compiling gui/src/containers/InputContainer1.cpp
+Compiling gui/src/screen1_screen/Screen1View.cpp
+Compiling gui/src/main_screen/MainView.cpp
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:7,
+                 from gui/include/gui/screen2_screen/Screen2View.hpp:4,
+                 from gui/src/screen2_screen/Screen2View.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
  #include "main.h"
                   ^
 compilation terminated.
-compilation terminated.
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o] Error 1
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o] Error 1
 make[2]: *** Waiting for unfinished jobs....
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/equalizer_screen/EqualizerViewBase.hpp:7,
+                 from gui/include/gui/equalizer_screen/EqualizerView.hpp:4,
+                 from gui/src/equalizer_screen/EqualizerView.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/equalizer_screen/EqualizerView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/equalizer_screen/EqualizerView.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/containers/InputCenterContainerBase.hpp:7,
+                 from gui/include/gui/containers/InputCenterContainer.hpp:4,
+                 from gui/src/containers/InputCenterContainer.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/containers/InputCenterContainer.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/containers/InputCenterContainer.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/equalizer_screen/EqualizerViewBase.hpp:7,
+                 from gui/include/gui/equalizer_screen/EqualizerView.hpp:4,
+                 from gui/src/equalizer_screen/EqualizerPresenter.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/equalizer_screen/EqualizerPresenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/equalizer_screen/EqualizerPresenter.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp:7,
+                 from gui/include/gui/main_screen/MainView.hpp:4,
+                 from gui/src/main_screen/MainPresenter.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:7,
+                 from gui/include/gui/screen1_screen/Screen1View.hpp:4,
+                 from gui/src/screen1_screen/Screen1Presenter.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp:7,
+                 from gui/include/gui/main_screen/MainView.hpp:4,
+                 from gui/src/main_screen/MainView.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
 simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o' failed
 make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o] Error 1
-In file included from gui/src/screen2_screen/Screen2Presenter.cpp:1:0:
-gui/include/gui/screen2_screen/Screen2View.hpp:6:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-In file included from gui/src/screen2_screen/Screen2View.cpp:1:0:
-gui/include/gui/screen2_screen/Screen2View.hpp:6:18: fatal error: main.h: No such file or directory
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o] Error 1
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/main_screen/MainView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/main_screen/MainView.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:7,
+                 from gui/include/gui/screen2_screen/Screen2View.hpp:4,
+                 from gui/src/screen2_screen/Screen2Presenter.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
  #include "main.h"
                   ^
 compilation terminated.
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:7,
+                 from gui/include/gui/screen1_screen/Screen1View.hpp:4,
+                 from gui/src/screen1_screen/Screen1View.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
 compilation terminated.
 simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2Presenter.o' failed
 make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2Presenter.o] Error 1
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen2_screen/Screen2View.o] Error 1
-In file included from generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:21:0,
-                 from gui/include/gui/common/FrontendHeap.hpp:4,
-                 from generated/gui_generated/src/common/FrontendApplicationBase.cpp:6:
-gui/include/gui/screen1_screen/Screen1View.hpp:6:18: fatal error: main.h: No such file or directory
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o] Error 1
+In file included from generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:8:0,
+                 from gui/include/gui/common/FrontendApplication.hpp:4,
+                 from generated/gui_generated/include/gui_generated/containers/InputContainer1Base.hpp:7,
+                 from gui/include/gui/containers/InputContainer1.hpp:4,
+                 from gui/src/containers/InputContainer1.cpp:1:
+gui/include/gui/model/Model.hpp:5:18: fatal error: main.h: No such file or directory
  #include "main.h"
                   ^
 compilation terminated.
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.o' failed
-In file included from gui/src/main_screen/MainView.cpp:1:0:
-gui/include/gui/main_screen/MainView.hpp:6:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-make[2]: *** [build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.o] Error 1
-compilation terminated.
-In file included from gui/src/main_screen/MainPresenter.cpp:1:0:
-gui/include/gui/main_screen/MainView.hpp:6:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-compilation terminated.
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/main_screen/MainView.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/main_screen/MainView.o] Error 1
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/main_screen/MainPresenter.o] Error 1
-In file included from generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:21:0,
-                 from gui/include/gui/common/FrontendHeap.hpp:4,
-                 from ../Middlewares/ST/TouchGFX/touchgfx///framework/include/common/TouchGFXInit.hpp:25,
-                 from simulator/main.cpp:3:
-gui/include/gui/screen1_screen/Screen1View.hpp:6:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-compilation terminated.
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/simulator/main.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/simulator/main.o] Error 1
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/containers/InputContainer1.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/containers/InputContainer1.o] Error 1
 simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
 make[1]: *** [generate_assets] Error 2
 simulator/gcc/Makefile:40: recipe for target 'all' failed

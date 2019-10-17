@@ -522,8 +522,8 @@
           }
         ],
         "Name": "Screen2",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 7200
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 8000
       },
       {
         "Components": [
@@ -764,8 +764,8 @@
           }
         ],
         "Name": "Main",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 7200
+        "OverrideDefaultBufferSize": true,
+        "CanvasBufferSize": 8000
       },
       {
         "Components": [
