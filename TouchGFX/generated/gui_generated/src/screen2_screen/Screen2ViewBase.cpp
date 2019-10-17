@@ -29,6 +29,7 @@ Screen2ViewBase::Screen2ViewBase() :
     analogClock1.setupHourHand(BITMAP_DARK_CLOCKS_HANDS_CLOCK_CLASSIC_HOUR_HAND_ID, 2, 44);
     analogClock1.setHourHandMinuteCorrection(false);
     analogClock1.initializeTime24Hour(10, 10, 0);
+    analogClock1.setAnimation(30, touchgfx::EasingEquations::backEaseOut);
 
     add(tiledImage1);
     add(buttonSettings);

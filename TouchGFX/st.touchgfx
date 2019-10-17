@@ -419,8 +419,8 @@
             "RotationCenterX": 116,
             "RotationCenterY": 116,
             "Style": "Style2",
-            "UseAnimation": false,
-            "Duration": 0,
+            "UseAnimation": true,
+            "Duration": 30,
             "Easing": "Back",
             "EasingOption": "Out",
             "ClockHands": [

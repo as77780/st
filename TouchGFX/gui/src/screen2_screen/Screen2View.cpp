@@ -33,7 +33,7 @@ void Screen2View:: TimeView(){
 	      hour = presenter->getHour();
 		  minute = presenter->getMinute();
 		  second = presenter->getSecond();
-		  analogClock1.initializeTime24Hour(hour, minute, second);
+		  analogClock1.setTime24Hour(hour, minute, second);
 		//  analogClock1.invalidate();
 
 	//       Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
