@@ -13,10 +13,10 @@ InputContainer1Base::InputContainer1Base()
     TextInput.setXY(14, 2);
     TextInput.setColor(touchgfx::Color::getColorFrom24BitRGB(92, 92, 92));
     TextInput.setLinespacing(0);
-    Unicode::snprintf(TextInputBuffer, TEXTINPUT_SIZE, "%s", TypedText(T_SINGLEUSEID23).getText());
+    Unicode::snprintf(TextInputBuffer, TEXTINPUT_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID23).getText());
     TextInput.setWildcard(TextInputBuffer);
     TextInput.resizeToCurrentText();
-    TextInput.setTypedText(TypedText(T_SINGLEUSEID22));
+    TextInput.setTypedText(touchgfx::TypedText(T_SINGLEUSEID22));
 
     add(TextInput);
 }

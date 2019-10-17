@@ -7,7 +7,7 @@
 # in ST-TouchGFX Designer or in your ST-TouchGFX installation directory.
 ###############################################################################
 # Relative location of the TouchGFX framework from root of application
-touchgfx_path := ../Middlewares/ST/TouchGFX/touchgfx//
+touchgfx_path := ../Middlewares/ST/TouchGFX/touchgfx
 
 # Optional additional compiler flags
 user_cflags := -DUSE_BPP=24
@@ -34,4 +34,6 @@ text_data_format := A4
 # are mapped to the same memory region to save internal flash memory
 remap_identical_texts := yes
 # Location of the TouchGFX Environment
-touchgfx_env := D:/TouchGFX/4.10.0/env
+touchgfx_env := D:/TouchGFX/4.12.3/env
+
+text_converter_options := remap A4 BPP24

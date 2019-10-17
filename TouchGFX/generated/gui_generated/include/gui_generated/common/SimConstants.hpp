@@ -6,6 +6,6 @@
 
 static unsigned short SIM_WIDTH = 480;
 static unsigned short SIM_HEIGHT = 272;
-static const char* SIM_TITLE = "MyApplication";
+#define SIM_TITLE "MyApplication"
 
 #endif // SIMCONSTANTS_HPP

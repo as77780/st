@@ -399,66 +399,6 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId10",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 186,
-              "Green": 186,
-              "Blue": 186
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId11",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Wildcard2": {
-              "TextId": "SingleUseId12",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Name": "textClock",
-            "X": -295,
-            "Y": 85,
-            "Width": 295,
-            "Height": 103,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "FileNameImage": "",
-            "Color": {
-              "Red": 186,
-              "Green": 186,
-              "Blue": 186
-            },
-            "CenterX": 130,
-            "CenterY": 130,
-            "Radius": 125,
-            "LineWidth": 6,
-            "StartAngle": 0,
-            "EndAngle": 0,
-            "CapPrecision": "Triangle",
-            "Alpha": 255,
-            "Name": "circle",
-            "X": 114,
-            "Y": 5,
-            "Width": 339,
-            "Height": 267,
-            "Type": "Circle",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "Pressed": "__designer\\dark_icons_power_48.png",
             "Released": "__designer\\dark_icons_power_48.png",
             "Alpha": 255,
@@ -468,6 +408,53 @@
             "Width": 48,
             "Height": 48,
             "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "FileNameBackground": "__designer\\Dark_Clocks_Backgrounds_clock_classic_background.png",
+            "RotationCenterX": 116,
+            "RotationCenterY": 116,
+            "Style": "Style2",
+            "UseAnimation": false,
+            "Duration": 0,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "ClockHands": [
+              {
+                "Type": "HourClockHand",
+                "FileNameHandImage": "__designer\\Dark_Clocks_Hands_clock_classic_hour_hand.png",
+                "RotationCenterX": 2,
+                "RotationCenterY": 44,
+                "HourHandMinuteCorrection": false
+              },
+              {
+                "Type": "MinuteClockHand",
+                "FileNameHandImage": "__designer\\Dark_Clocks_Hands_clock_classic_minute_hand.png",
+                "RotationCenterX": 2,
+                "RotationCenterY": 64,
+                "MinuteHandSecondCorrection": false
+              },
+              {
+                "Type": "SecondClockHand",
+                "FileNameHandImage": "__designer\\Dark_Clocks_Hands_clock_classic_second_hand.png",
+                "RotationCenterX": 4,
+                "RotationCenterY": 79
+              }
+            ],
+            "UseAmPm": false,
+            "InitialHour": 10,
+            "InitialMinute": 10,
+            "InitialSecond": 0,
+            "Name": "analogClock1",
+            "X": 124,
+            "Y": 20,
+            "Width": 233,
+            "Height": 243,
+            "Type": "AnalogClock",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -488,22 +475,6 @@
               "ScreenTransitionDirection": "South",
               "ActionComponent": "Screen1",
               "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "MoveTextClockIntoPlace",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "Type": "TriggerScreenEntered"
-            },
-            "Action": {
-              "X": 95,
-              "Y": 85,
-              "Easing": "Cubic",
-              "EasingOption": "Out",
-              "Duration": 750,
-              "ActionComponent": "textClock",
-              "Type": "ActionMove"
             }
           },
           {
@@ -539,39 +510,6 @@
             "Width": 480,
             "Height": 272,
             "Type": "TiledImage",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId13",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 171,
-              "Green": 171,
-              "Blue": 171
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId14",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Wildcard2": {
-              "TextId": "SingleUseId15",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Name": "clock_m",
-            "X": 5,
-            "Y": 16,
-            "Width": 145,
-            "Height": 49,
-            "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -726,6 +664,32 @@
             "Width": 10,
             "Height": 50,
             "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextColor": {
+              "Red": 171,
+              "Green": 171,
+              "Blue": 171
+            },
+            "TextId": "SingleUseId27",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
+            "Alpha": 255,
+            "UseAmPm": false,
+            "InitialHour": 10,
+            "InitialMinute": 10,
+            "InitialSecond": 0,
+            "Name": "digitalClock1",
+            "X": 20,
+            "Y": 28,
+            "Width": 122,
+            "Height": 30,
+            "Type": "DigitalClock",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -1107,13 +1071,7 @@
         "X": 0,
         "Y": 0,
         "Width": 55,
-        "Height": 55,
-        "Type": "CustomContainerDefinition",
-        "Visible": true,
-        "Draggable": false,
-        "Clickable": false,
-        "Fadeable": false,
-        "Moveable": false
+        "Height": 55
       },
       {
         "Components": [
@@ -1151,13 +1109,7 @@
         "X": 0,
         "Y": 0,
         "Width": 55,
-        "Height": 55,
-        "Type": "CustomContainerDefinition",
-        "Visible": true,
-        "Draggable": false,
-        "Clickable": false,
-        "Fadeable": false,
-        "Moveable": false
+        "Height": 55
       }
     ],
     "TextEntries": [
@@ -1191,30 +1143,6 @@
       },
       {
         "TextEntryId": "SingleUseId9",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId10",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId11",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId12",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId13",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId14",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId15",
         "IsResource": false
       },
       {
@@ -1260,6 +1188,10 @@
       {
         "TextEntryId": "SingleUseId26",
         "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId27",
+        "IsResource": false
       }
     ],
     "Name": "MyApplication",
@@ -1280,12 +1212,10 @@
       "AvailableColorDepths": [
         24
       ],
-      "AvailableImageFormats": {
-        "24": {
-          "Opaque": "RGB888",
-          "NonOpaque": "ARGB8888"
-        }
-      },
+      "AvailableSections": [
+        "ExtFlashSection",
+        "IntFlashSection"
+      ],
       "AvailableResolutions": [],
       "PhysicalButtons": [],
       "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j10",
@@ -1294,7 +1224,12 @@
       "RunSimulatorCommand": "build\\bin\\simulator.exe",
       "CompileTargetCommand": "",
       "FlashTargetCommand": ""
-    }
+    },
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape"
   },
-  "Version": "4.10.0"
+  "Version": "4.12.3"
 }

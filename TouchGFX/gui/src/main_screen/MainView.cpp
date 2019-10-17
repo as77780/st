@@ -28,7 +28,7 @@ void MainView::handleTickEvent()
 	    tickCount = 0;
 	    }
 	tickCount++;
-	clock_m.invalidate();
+//	clock_m.invalidate();
 }
  void MainView::scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex)
     {
@@ -42,7 +42,9 @@ void MainView::handleTickEvent()
  void  MainView::GetTimeOut(){
           	   hour = presenter->getHour();
 	            minute = presenter->getMinute();
-	 	    	Unicode::snprintf(clock_mBuffer1, CLOCK_MBUFFER1_SIZE, "%02d",hour);
-	 	    	Unicode::snprintf(clock_mBuffer2, CLOCK_MBUFFER2_SIZE, "%02d",minute);
+	            second= presenter->getSecond();
+	            digitalClock1.setTime24Hour(hour, minute, second);
+	 	    //	Unicode::snprintf(clock_mBuffer1, CLOCK_MBUFFER1_SIZE, "%02d",hour);
+	 	    //	Unicode::snprintf(clock_mBuffer2, CLOCK_MBUFFER2_SIZE, "%02d",minute);
 	 	    //	clock_m.invalidate();
  }

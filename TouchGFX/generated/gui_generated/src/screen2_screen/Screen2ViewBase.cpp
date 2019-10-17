@@ -3,64 +3,42 @@
 /*********************************************************************************/
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
-#include <touchgfx/Color.hpp>
 
 Screen2ViewBase::Screen2ViewBase() :
     buttonCallback(this, &Screen2ViewBase::buttonCallbackHandler)
 {
-    CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
+    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
-    tiledImage1.setBitmap(Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
+    tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
     buttonSettings.setXY(422, 10);
-    buttonSettings.setBitmaps(Bitmap(BITMAP_CONFIGURATION_ID), Bitmap(BITMAP_CONFIGURATION_ID));
+    buttonSettings.setBitmaps(touchgfx::Bitmap(BITMAP_CONFIGURATION_ID), touchgfx::Bitmap(BITMAP_CONFIGURATION_ID));
     buttonSettings.setAction(buttonCallback);
 
-    textClock.setPosition(-295, 85, 295, 103);
-    textClock.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
-    textClock.setLinespacing(0);
-    Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%s", TypedText(T_SINGLEUSEID11).getText());
-    textClock.setWildcard1(textClockBuffer1);
-    Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%s", TypedText(T_SINGLEUSEID12).getText());
-    textClock.setWildcard2(textClockBuffer2);
-    textClock.setTypedText(TypedText(T_SINGLEUSEID10));
-
-    circle.setPosition(114, 5, 339, 267);
-    circle.setCenter(130, 130);
-    circle.setRadius(125);
-    circle.setLineWidth(6);
-    circle.setArc(0, 0);
-    circle.setCapPrecision(90);
-    circlePainter.setColor(touchgfx::Color::getColorFrom24BitRGB(186, 186, 186));
-    circle.setPainter(circlePainter);
-
     Power.setXY(20, 205);
-    Power.setBitmaps(Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
+    Power.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
     Power.setAction(buttonCallback);
+
+    analogClock1.setXY(124, 20);
+    analogClock1.setBackground(BITMAP_DARK_CLOCKS_BACKGROUNDS_CLOCK_CLASSIC_BACKGROUND_ID, 116, 116);
+    analogClock1.setupSecondHand(BITMAP_DARK_CLOCKS_HANDS_CLOCK_CLASSIC_SECOND_HAND_ID, 4, 79);
+    analogClock1.setupMinuteHand(BITMAP_DARK_CLOCKS_HANDS_CLOCK_CLASSIC_MINUTE_HAND_ID, 2, 64);
+    analogClock1.setMinuteHandSecondCorrection(false);
+    analogClock1.setupHourHand(BITMAP_DARK_CLOCKS_HANDS_CLOCK_CLASSIC_HOUR_HAND_ID, 2, 44);
+    analogClock1.setHourHandMinuteCorrection(false);
+    analogClock1.initializeTime24Hour(10, 10, 0);
 
     add(tiledImage1);
     add(buttonSettings);
-    add(textClock);
-    add(circle);
     add(Power);
+    add(analogClock1);
 }
 
 void Screen2ViewBase::setupScreen()
 {
 
-}
-
-//Called when the screen is done with transition/load
-void Screen2ViewBase::afterTransition()
-{
-    //MoveTextClockIntoPlace
-    //When screen is entered move textClock
-    //Move textClock to x:95, y:85 with CubicOut easing in 750 ms (45 Ticks)
-    textClock.clearMoveAnimationEndedAction();
-    textClock.startMoveAnimation(95, 85, 45, EasingEquations::cubicEaseOut, EasingEquations::cubicEaseOut);
 }
 
 void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)

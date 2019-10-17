@@ -9,7 +9,7 @@ Screen2View::Screen2View()
 void Screen2View::setupScreen()
 {
 	Screen2ViewBase::setupScreen();
-	  TIM5->CCR1=10;
+	  TIM5->CCR1=100;
 	  TimeView();
 }
 
@@ -19,20 +19,24 @@ void Screen2View::tearDownScreen()
 }
 void Screen2View::handleTickEvent()
 {
-        if (!textClock.isMoveAnimationRunning())
+ //       if (!textClock.isMoveAnimationRunning())
             {
         	   TimeView();
-        	    circle.invalidate();
-                circle.setArc(presenter->getSecond()*6,0);
-                circle.invalidate();
-                textClock.invalidate();
+ //       	    circle.invalidate();
+     //           circle.setArc(presenter->getSecond()*6,0);
+      //          circle.invalidate();
+     //           textClock.invalidate();
             }
 
 }
 void Screen2View:: TimeView(){
 	      hour = presenter->getHour();
 		  minute = presenter->getMinute();
-	       Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
-	       Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
+		  second = presenter->getSecond();
+		  analogClock1.initializeTime24Hour(hour, minute, second);
+		//  analogClock1.invalidate();
+
+	//       Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
+	//       Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
 	     //  textClock.invalidate();
 }
