@@ -19,24 +19,9 @@ void Screen2View::tearDownScreen()
 }
 void Screen2View::handleTickEvent()
 {
- //       if (!textClock.isMoveAnimationRunning())
-            {
-        	   TimeView();
- //       	    circle.invalidate();
-     //           circle.setArc(presenter->getSecond()*6,0);
-      //          circle.invalidate();
-     //           textClock.invalidate();
-            }
-
+    TimeView();
 }
-void Screen2View:: TimeView(){
-	      hour = presenter->getHour();
-		  minute = presenter->getMinute();
-		  second = presenter->getSecond();
-		  analogClock1.setTime24Hour(hour, minute, second);
-		//  analogClock1.invalidate();
-
-	//       Unicode::snprintf(textClockBuffer1, TEXTCLOCKBUFFER1_SIZE, "%02d",hour);
-	//       Unicode::snprintf(textClockBuffer2, TEXTCLOCKBUFFER2_SIZE, "%02d",minute);
-	     //  textClock.invalidate();
+void Screen2View:: TimeView()
+{
+	analogClock1.setTime24Hour(presenter->getHour(), presenter->getMinute(), presenter->getSecond());
 }

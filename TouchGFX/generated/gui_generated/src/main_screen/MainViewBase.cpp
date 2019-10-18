@@ -3,15 +3,13 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <touchgfx/Color.hpp>
 
 MainViewBase::MainViewBase() :
     buttonCallback(this, &MainViewBase::buttonCallbackHandler),
     updateItemCallback(this, &MainViewBase::updateItemCallbackHandler)
 {
-    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
-
     tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
@@ -24,73 +22,62 @@ MainViewBase::MainViewBase() :
     ButtonEqualizer.setBitmaps(touchgfx::Bitmap(BITMAP_EQUALIZER_ID), touchgfx::Bitmap(BITMAP_EQUALIZER_ID));
     ButtonEqualizer.setAction(buttonCallback);
 
-    box1.setPosition(176, 16, 160, 52);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(46, 42, 42));
-
-    scrollWheelInput.setPosition(174, 13, 162, 55);
-    scrollWheelInput.setHorizontal(true);
-    scrollWheelInput.setCircular(true);
-    scrollWheelInput.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
-    scrollWheelInput.setSwipeAcceleration(10);
-    scrollWheelInput.setDragAcceleration(10);
-    scrollWheelInput.setNumberOfItems(4);
-    scrollWheelInput.setSelectedItemOffset(52);
-    scrollWheelInput.setSelectedItemExtraSize(0, 0);
-    scrollWheelInput.setSelectedItemMargin(0, 0);
-    scrollWheelInput.setDrawableSize(55, 0);
-    scrollWheelInput.setDrawables(scrollWheelInputListItems, updateItemCallback,
-                              scrollWheelInputSelectedListItems, updateItemCallback);
-    scrollWheelInput.animateToItem(0, 0);
-
-    textArea1.setXY(227, 68);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID26));
-
-    line1.setPosition(217, 16, 10, 50);
-    line1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(10, 10, 10));
-    line1.setPainter(line1Painter);
-    line1.setStart(6, 5);
-    line1.setEnd(6, 57);
-    line1.setLineWidth(5);
-    line1.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
-
-    line1_1.setPosition(275, 16, 10, 50);
-    line1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(10, 10, 10));
-    line1_1.setPainter(line1_1Painter);
-    line1_1.setStart(6, 5);
-    line1_1.setEnd(6, 57);
-    line1_1.setLineWidth(5);
-    line1_1.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
-
-    digitalClock1.setPosition(20, 28, 122, 30);
+    digitalClock1.setPosition(0, 0, 125, 54);
     digitalClock1.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
     digitalClock1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID27));
     digitalClock1.displayLeadingZeroForHourIndicator(true);
-    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
+    digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
     digitalClock1.setTime24Hour(10, 10, 0);
+
+    buttonInput.setXY(344, 205);
+    buttonInput.setBitmaps(touchgfx::Bitmap(BITMAP_ICO_ID), touchgfx::Bitmap(BITMAP_ICO_ID));
+    buttonInput.setAction(buttonCallback);
+
+    boxWithBorder1.setPosition(283, 132, 197, 53);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFrom24BitRGB(20, 16, 16));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(240, 171, 1));
+    boxWithBorder1.setBorderSize(5);
+
+    scrollWheelVolume.setPosition(283, 133, 192, 51);
+    scrollWheelVolume.setHorizontal(true);
+    scrollWheelVolume.setCircular(false);
+    scrollWheelVolume.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
+    scrollWheelVolume.setSwipeAcceleration(40);
+    scrollWheelVolume.setDragAcceleration(10);
+    scrollWheelVolume.setNumberOfItems(80);
+    scrollWheelVolume.setSelectedItemOffset(62);
+    scrollWheelVolume.setSelectedItemExtraSize(0, 0);
+    scrollWheelVolume.setSelectedItemMargin(0, 0);
+    scrollWheelVolume.setDrawableSize(73, 0);
+    scrollWheelVolume.setDrawables(scrollWheelVolumeListItems, updateItemCallback,
+                              scrollWheelVolumeSelectedListItems, updateItemCallback);
+    scrollWheelVolume.animateToItem(0, 0);
+
+    textArea1.setXY(401, 105);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(51, 158, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID33));
 
     add(tiledImage1);
     add(Power_main);
     add(ButtonEqualizer);
-    add(box1);
-    add(scrollWheelInput);
-    add(textArea1);
-    add(line1);
-    add(line1_1);
     add(digitalClock1);
+    add(buttonInput);
+    add(boxWithBorder1);
+    add(scrollWheelVolume);
+    add(textArea1);
 }
 
 void MainViewBase::setupScreen()
 {
-    scrollWheelInput.initialize();
-    for (int i = 0; i < scrollWheelInputListItems.getNumberOfDrawables(); i++)
+    scrollWheelVolume.initialize();
+    for (int i = 0; i < scrollWheelVolumeListItems.getNumberOfDrawables(); i++)
     {
-        scrollWheelInputListItems[i].initialize();
+        scrollWheelVolumeListItems[i].initialize();
     }
-    for (int i = 0; i < scrollWheelInputSelectedListItems.getNumberOfDrawables(); i++)
+    for (int i = 0; i < scrollWheelVolumeSelectedListItems.getNumberOfDrawables(); i++)
     {
-        scrollWheelInputSelectedListItems[i].initialize();
+        scrollWheelVolumeSelectedListItems[i].initialize();
     }
 }
 
@@ -110,20 +97,27 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Go to Equalizer with screen transition towards East
         application().gotoEqualizerScreenCoverTransitionEast();
     }
+    else if (&src == &buttonInput)
+    {
+        //InteractionToInput
+        //When buttonInput clicked change screen to ScreenInputMenu
+        //Go to ScreenInputMenu with screen transition towards South
+        application().gotoScreenInputMenuScreenSlideTransitionSouth();
+    }
 }
 
 void MainViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
 {
-    if (items == &scrollWheelInputListItems)
+    if (items == &scrollWheelVolumeListItems)
     {
         touchgfx::Drawable* d = items->getDrawable(containerIndex);
         InputContainer1* cc = (InputContainer1*)d;
-        scrollWheelInputUpdateItem(*cc, itemIndex);
+        scrollWheelVolumeUpdateItem(*cc, itemIndex);
     }
-    else if (items == &scrollWheelInputSelectedListItems)
+    else if (items == &scrollWheelVolumeSelectedListItems)
     {
         touchgfx::Drawable* d = items->getDrawable(containerIndex);
         InputCenterContainer* cc = (InputCenterContainer*)d;
-        scrollWheelInputUpdateCenterItem(*cc, itemIndex);
+        scrollWheelVolumeUpdateCenterItem(*cc, itemIndex);
     }
 }

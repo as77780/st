@@ -15,3 +15,4 @@ void InputContainer1::updateText(int16_t value)
     Unicode::snprintf(TextInputBuffer, TEXTINPUT_SIZE, "%d", value);
     TextInput.invalidate();
 }
+

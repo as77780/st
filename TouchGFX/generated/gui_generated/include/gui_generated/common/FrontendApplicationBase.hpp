@@ -32,9 +32,15 @@ public:
 
     void gotoMainScreenCoverTransitionWest();
 
+    void gotoMainScreenSlideTransitionNorth();
+
 
     // Equalizer
     void gotoEqualizerScreenCoverTransitionEast();
+
+
+    // ScreenInputMenu
+    void gotoScreenInputMenuScreenSlideTransitionSouth();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -58,9 +64,15 @@ protected:
 
     void gotoMainScreenCoverTransitionWestImpl();
 
+    void gotoMainScreenSlideTransitionNorthImpl();
+
 
     // Equalizer
     void gotoEqualizerScreenCoverTransitionEastImpl();
+
+
+    // ScreenInputMenu
+    void gotoScreenInputMenuScreenSlideTransitionSouthImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

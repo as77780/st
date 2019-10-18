@@ -7,6 +7,8 @@
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #elif USE_BPP==24
 #include <platform/driver/lcd/LCD24bpp.hpp>
+#elif USE_BPP==8
+#include <platform/driver/lcd/LCD8bpp_ARGB2222.hpp>
 #elif USE_BPP==4
 #include <platform/driver/lcd/LCD4bpp.hpp>
 #elif USE_BPP==2
@@ -17,6 +19,7 @@
 #error Unknown USE_BPP
 #endif
 #include <stdlib.h>
+#include <simulator/mainBase.hpp>
 
 //#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 //#define CANVAS_BUFFER_SIZE (3600)
@@ -34,34 +37,31 @@ int main(int argc, char** argv)
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
     int argc;
-    char** argv = HALSDL2::getArgv(&argc);
+    char** argv = touchgfx::HALSDL2::getArgv(&argc);
 #endif
-    NoDMA dma; //For windows/linux, DMA transfers are simulated
+
+    touchgfx::NoDMA dma; //For windows/linux, DMA transfers are simulated
 #if !defined(USE_BPP) || USE_BPP==16
-    LCD16bpp lcd;
+    touchgfx::LCD16bpp lcd;
 #elif USE_BPP==24
-    LCD24bpp lcd;
+    touchgfx::LCD24bpp lcd;
+#elif USE_BPP==8
+    touchgfx::LCD8bpp_ARGB2222 lcd;
 #elif USE_BPP==4
-    LCD4bpp lcd;
+    touchgfx::LCD4bpp lcd;
 #elif USE_BPP==2
-    LCD2bpp lcd;
+    touchgfx::LCD2bpp lcd;
 #elif USE_BPP==1
-    LCD1bpp lcd;
+    touchgfx::LCD1bpp lcd;
 #else
 #error Unknown USE_BPP
 #endif
-    SDL2TouchController tc;
+    touchgfx::SDL2TouchController tc;
 
-    // Create hardware layer. Display size is defined in SimConstants.hpp
-    HAL& hal = touchgfx_generic_init<HALSDL2>(dma, lcd, tc, SIM_WIDTH, SIM_HEIGHT, 0, 0);
+    // Create hardware layer. Use a display size of 480x272.
+	touchgfx::HAL& hal = touchgfx::touchgfx_generic_init<touchgfx::HALSDL2>(dma, lcd, tc, SIM_WIDTH, SIM_HEIGHT, 0, 0);
 
-    // Simulate hardware running at 60Hz generating a vsync every 16.6667 ms
-    static_cast<HALSDL2&>(hal).setVsyncInterval(16.6667f);
-    static_cast<HALSDL2&>(hal).setWindowTitle(SIM_TITLE);
-
-    // Initialize SDL
-    bool sdl_init_result = static_cast<HALSDL2&>(hal).sdl_init(argc, argv);
-    assert(sdl_init_result && "Error during SDL initialization");
+    setupSimulator(argc, argv, hal);
 
     // Ensure there is a console window to print to using printf() or
     // std::cout, and read from using e.g. fgets or std::cin.
@@ -75,7 +75,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
     // your needs in performance vs. RAM usage. Read more on this in the
     // TouchGFX Manual.
     //static uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
-    //CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
+    //touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
     touchgfx::HAL::getInstance()->taskEntry(); //Never returns
 

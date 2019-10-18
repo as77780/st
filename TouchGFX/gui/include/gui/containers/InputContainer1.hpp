@@ -11,6 +11,7 @@ public:
 
     virtual void initialize();
     virtual void updateText(int16_t value);
+
 protected:
 };
 

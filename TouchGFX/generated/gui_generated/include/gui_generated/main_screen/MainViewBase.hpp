@@ -9,16 +9,13 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp>
 #include <gui/containers/InputContainer1.hpp>
 #include <gui/containers/InputCenterContainer.hpp>
 
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/canvas/Line.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
-#include <touchgfx/containers/clock/DigitalClock.hpp>#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
-
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
@@ -26,12 +23,12 @@ public:
     virtual ~MainViewBase() {}
     virtual void setupScreen();
 
-    virtual void scrollWheelInputUpdateItem(InputContainer1& item, int16_t itemIndex)
+    virtual void scrollWheelVolumeUpdateItem(InputContainer1& item, int16_t itemIndex)
     {
         // Override and implement this function in Main
     }
 
-    virtual void scrollWheelInputUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex)
+    virtual void scrollWheelVolumeUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex)
     {
         // Override and implement this function in Main
     }
@@ -47,17 +44,14 @@ protected:
     touchgfx::TiledImage tiledImage1;
     touchgfx::Button Power_main;
     touchgfx::Button ButtonEqualizer;
-    touchgfx::Box box1;
-    touchgfx::ScrollWheelWithSelectionStyle scrollWheelInput;
-    touchgfx::DrawableListItems<InputContainer1, 4> scrollWheelInputListItems;
-    touchgfx::DrawableListItems<InputCenterContainer, 2> scrollWheelInputSelectedListItems;
+    touchgfx::DigitalClock digitalClock1;
+    touchgfx::Button buttonInput;
+    touchgfx::BoxWithBorder boxWithBorder1;
+    touchgfx::ScrollWheelWithSelectionStyle scrollWheelVolume;
+    touchgfx::DrawableListItems<InputContainer1, 4> scrollWheelVolumeListItems;
+    touchgfx::DrawableListItems<InputCenterContainer, 2> scrollWheelVolumeSelectedListItems;
 
     touchgfx::TextArea textArea1;
-    touchgfx::Line line1;
-    touchgfx::PainterRGB888 line1Painter;
-    touchgfx::Line line1_1;
-    touchgfx::PainterRGB888 line1_1Painter;
-    touchgfx::DigitalClock digitalClock1;
 
 private:
 
@@ -72,12 +66,6 @@ private:
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
     void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint16_t CANVAS_BUFFER_SIZE = 8000;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

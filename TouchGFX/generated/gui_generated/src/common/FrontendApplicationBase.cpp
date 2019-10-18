@@ -16,6 +16,8 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <gui/equalizer_screen/EqualizerView.hpp>
 #include <gui/equalizer_screen/EqualizerPresenter.hpp>
+#include <gui/screeninputmenu_screen/ScreenInputMenuView.hpp>
+#include <gui/screeninputmenu_screen/ScreenInputMenuPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -108,6 +110,18 @@ void FrontendApplicationBase::gotoMainScreenCoverTransitionWestImpl()
     touchgfx::makeTransition<MainView, MainPresenter, touchgfx::CoverTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
+
+void FrontendApplicationBase::gotoMainScreenSlideTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenSlideTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenSlideTransitionNorthImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
 // Equalizer
 
 void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEast()
@@ -119,5 +133,18 @@ void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEast()
 void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEastImpl()
 {
     touchgfx::makeTransition<EqualizerView, EqualizerPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ScreenInputMenu
+
+void FrontendApplicationBase::gotoScreenInputMenuScreenSlideTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreenInputMenuScreenSlideTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreenInputMenuScreenSlideTransitionSouthImpl()
+{
+    touchgfx::makeTransition<ScreenInputMenuView, ScreenInputMenuPresenter, touchgfx::SlideTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 

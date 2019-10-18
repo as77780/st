@@ -5,20 +5,8 @@
       <UniqueIdentifier>{4D1BFFCC-9CEB-4ABF-A951-582870FE71FD}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Header Files\gui">
-      <UniqueIdentifier>{5644F851-5939-40E6-A122-EFA7098E4DA9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\TouchGFX">
       <UniqueIdentifier>{29C60541-803D-4F43-8683-028D9DA5E0CB}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\common">
-      <UniqueIdentifier>{E2A7ABA8-8AF0-48AC-A4AA-9381772F94FB}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\model">
-      <UniqueIdentifier>{40E11662-6300-4B91-923D-6D597797CF8B}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\template_screen">
-      <UniqueIdentifier>{93B8EAE6-8280-45E8-8F74-E3FD713703AB}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\common">
       <UniqueIdentifier>{AF2BF67C-89EC-4545-B0D2-5BD6803628D4}</UniqueIdentifier>
@@ -86,6 +74,12 @@
     <Filter Include="Header Files\TouchGFX\platform\hal\simulator\sdl2">
       <UniqueIdentifier>{EA3962C0-553C-4CFD-A89B-A116A9493818}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\generated">
+      <UniqueIdentifier>{29C60541-803D-4F44-8783-028D9DA5E0CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator">
+      <UniqueIdentifier>{29C60541-803D-4F43-8683-028D9DA5E0CC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{92BBFF14-FBDB-4755-BA47-A830D863D92B}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;ttf;otf;bdf;png;wav;xlsx;props;mfcribbon-ms</Extensions>
@@ -106,23 +100,8 @@
       <UniqueIdentifier>{2F3FC0AA-97C4-4366-9939-94A0FF4E028C}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\gui">
-      <UniqueIdentifier>{F165C009-527B-4B97-865D-A382A1027794}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\TouchGFX">
       <UniqueIdentifier>{C07B02A9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\common">
-      <UniqueIdentifier>{F40B05D2-D0EE-446F-9975-C46124E2EAA2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\model">
-      <UniqueIdentifier>{EA416F46-F0AC-40BC-AC87-250F6BC80ACF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\simulator">
-      <UniqueIdentifier>{C774999B-1C41-42A2-AB0E-3F39375C7CD8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\template_screen">
-      <UniqueIdentifier>{F8841A51-F871-4D58-8547-397229A5DE9D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\TouchGFX\platform">
       <UniqueIdentifier>{33EDC2DB-AF72-480C-92E5-2A2833BCAB6F}</UniqueIdentifier>
@@ -142,6 +121,15 @@
     <Filter Include="Source Files\TouchGFX\platform\hal\simulator\sdl2">
       <UniqueIdentifier>{B48CB42B-0F9E-4815-BFE1-1ACC1150ED8A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\simulator">
+      <UniqueIdentifier>{C07B03A9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated">
+      <UniqueIdentifier>{C07B02B9-A55E-47AB-AD61-59A6AAD754E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\simulator">
+      <UniqueIdentifier>{C07B02B9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -156,27 +144,18 @@
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\hal\simulator\sdl2\OSWrappers.cpp">
       <Filter>Source Files\TouchGFX\platform\hal\simulator\sdl2</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp">
-      <Filter>Source Files\gui\common</Filter>
+    <ClCompile Include="$(ApplicationRoot)\simulator\main.cpp">
+      <Filter>Source Files\simulator</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\model\Model.cpp">
-      <Filter>Source Files\gui\model</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\template_screen\TemplatePresenter.cpp">
-      <Filter>Source Files\gui\template_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\template_screen\TemplateView.cpp">
-      <Filter>Source Files\gui\template_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\simulator\main.cpp">
-      <Filter>Source Files\gui\simulator</Filter>
+    <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp">
+      <Filter>Source Files\generated\simulator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\assets\texts\texts.xlsx">
+    <None Include="$(ApplicationRoot)\assets\texts\texts.xlsx">
       <Filter>Resource Files\assets\texts</Filter>
     </None>
-    <None Include="..\..\config\msvs\Application.props">
+    <None Include="$(ApplicationRoot)\config\msvs\Application.props">
       <Filter>Resource Files\config\msvs</Filter>
     </None>
   </ItemGroup>
@@ -580,27 +559,12 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Widget.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\FrontendApplication.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp">
-      <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\model\Model.hpp">
-      <Filter>Header Files\gui\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp">
-      <Filter>Header Files\gui\model</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\template_screen\TemplatePresenter.hpp">
-      <Filter>Header Files\gui\template_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\template_screen\TemplateView.hpp">
-      <Filter>Header Files\gui\template_screen</Filter>
+    <ClInclude Include="$(ApplicationRoot)\generated\simulator\include\simulator\mainBase.hpp">
+      <Filter>Header Files\generated\simulator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\touchgfx.rc">
+    <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

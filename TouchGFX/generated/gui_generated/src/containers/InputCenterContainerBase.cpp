@@ -7,15 +7,14 @@
 
 InputCenterContainerBase::InputCenterContainerBase()
 {
-    setWidth(55);
-    setHeight(55);
+    setWidth(72);
+    setHeight(57);
 
-    TextInputCenter.setXY(11, -4);
+    TextInputCenter.setPosition(0, -4, 72, 57);
     TextInputCenter.setColor(touchgfx::Color::getColorFrom24BitRGB(213, 115, 0));
     TextInputCenter.setLinespacing(0);
     Unicode::snprintf(TextInputCenterBuffer, TEXTINPUTCENTER_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID25).getText());
     TextInputCenter.setWildcard(TextInputCenterBuffer);
-    TextInputCenter.resizeToCurrentText();
     TextInputCenter.setTypedText(touchgfx::TypedText(T_SINGLEUSEID24));
 
     add(TextInputCenter);

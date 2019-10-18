@@ -13,7 +13,9 @@
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
@@ -26,6 +28,8 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <gui/equalizer_screen/EqualizerView.hpp>
 #include <gui/equalizer_screen/EqualizerPresenter.hpp>
+#include <gui/screeninputmenu_screen/ScreenInputMenuView.hpp>
+#include <gui/screeninputmenu_screen/ScreenInputMenuPresenter.hpp>
 
 
 /**
@@ -52,7 +56,8 @@ public:
             touchgfx::meta::TypeList< Screen2View,
             touchgfx::meta::TypeList< MainView,
             touchgfx::meta::TypeList< EqualizerView,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< ScreenInputMenuView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -68,7 +73,8 @@ public:
             touchgfx::meta::TypeList< Screen2Presenter,
             touchgfx::meta::TypeList< MainPresenter,
             touchgfx::meta::TypeList< EqualizerPresenter,
-            touchgfx::meta::Nil > > >
+            touchgfx::meta::TypeList< ScreenInputMenuPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -85,7 +91,8 @@ public:
             touchgfx::meta::TypeList< SlideTransition<SOUTH>,
             touchgfx::meta::TypeList< CoverTransition<EAST>,
             touchgfx::meta::TypeList< CoverTransition<WEST>,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< SlideTransition<NORTH>,
+            touchgfx::meta::Nil > > > > >
             > GeneratedTransitionTypes;
 
     /**
