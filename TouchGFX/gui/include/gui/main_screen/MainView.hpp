@@ -22,6 +22,8 @@ protected:
     int16_t second;
     int16_t tickCount ;
 
+    Callback<MainView, int16_t> scrollWheelAnimateToCallback;
+    void scrollWheelAnimateToHandler(int16_t itemSelected);
 
 };
 extern  RTC_HandleTypeDef hrtc;

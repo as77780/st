@@ -1,12 +1,14 @@
 #include <gui/main_screen/MainView.hpp>
 
-MainView::MainView()
+MainView::MainView():
+scrollWheelAnimateToCallback(this, &MainView::scrollWheelAnimateToHandler)
 {
 
 }
 
 void MainView::setupScreen()
 {
+	scrollWheelVolume.setAnimateToCallback(scrollWheelAnimateToCallback);
     MainViewBase::setupScreen();
     TIM5->CCR1=100;
   	 GetTimeOut();
@@ -39,3 +41,18 @@ void MainView::handleTickEvent()
     {
 	 item.updateText(itemIndex);
     }
+
+ void  MainView::scrollWheelAnimateToHandler(int16_t itemSelected)
+ {
+	switch (itemSelected)
+	     {
+	     case 0:
+	    	 GetTimeOut();
+	         break;
+
+	 case 1:
+	   	 GetTimeOut();
+	        break;
+	     }
+ }
+

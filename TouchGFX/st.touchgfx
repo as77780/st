@@ -592,22 +592,22 @@
           },
           {
             "Color": {
-              "Red": 20,
-              "Green": 16,
-              "Blue": 16
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
             },
             "BorderColor": {
-              "Red": 240,
-              "Green": 171,
-              "Blue": 1
+              "Red": 251,
+              "Green": 255,
+              "Blue": 0
             },
             "BorderSize": 5,
             "Alpha": 255,
             "Name": "boxWithBorder1",
-            "X": 283,
-            "Y": 132,
-            "Width": 197,
-            "Height": 53,
+            "X": 257,
+            "Y": 105,
+            "Width": 207,
+            "Height": 94,
             "Type": "BoxWithBorder",
             "Visible": true,
             "Draggable": false,
@@ -616,7 +616,7 @@
             "Moveable": false
           },
           {
-            "SelectedItemOffset": 62,
+            "SelectedItemOffset": 60,
             "UseSelectedStyle": true,
             "SelectedItemTemplateName": "InputCenterContainer",
             "ExtraSizeBefore": 0,
@@ -627,17 +627,17 @@
             "IsCircular": false,
             "ItemTemplateName": "InputContainer1",
             "NumberofItems": 80,
-            "InitialElement": 0,
+            "InitialElement": 10,
             "ItemMargin": 0,
             "Easing": "Back",
             "EasingOption": "Out",
-            "SwipeAcceleration": 4.0,
-            "DragAcceleration": 1.0,
+            "SwipeAcceleration": 2.0,
+            "DragAcceleration": 2.0,
             "Name": "scrollWheelVolume",
-            "X": 283,
-            "Y": 133,
+            "X": 264,
+            "Y": 119,
             "Width": 192,
-            "Height": 51,
+            "Height": 67,
             "Type": "ScrollWheel",
             "Visible": true,
             "Draggable": false,
@@ -649,18 +649,18 @@
             "TextId": "SingleUseId33",
             "TextRotation": "0",
             "Color": {
-              "Red": 51,
-              "Green": 158,
+              "Red": 82,
+              "Green": 255,
               "Blue": 0
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "textArea1",
-            "X": 401,
-            "Y": 105,
-            "Width": 75,
-            "Height": 25,
+            "X": 257,
+            "Y": 74,
+            "Width": 94,
+            "Height": 31,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -755,34 +755,6 @@
             "Width": 354,
             "Height": 34,
             "Type": "Slider",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "btn_round_pressed.png",
-            "Released": "btn_round.png",
-            "Alpha": 255,
-            "TextId": "SingleUseId16",
-            "ReleasedColor": {
-              "Red": 66,
-              "Green": 66,
-              "Blue": 66
-            },
-            "PressedColor": {
-              "Red": 166,
-              "Green": 166,
-              "Blue": 166
-            },
-            "TextRotation": "0",
-            "Name": "ButtonBack",
-            "X": 370,
-            "Y": 197,
-            "Width": 97,
-            "Height": 60,
-            "Type": "ButtonWithLabel",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -992,6 +964,22 @@
             "Width": 63,
             "Height": 25,
             "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "ic.png",
+            "Released": "ic.png",
+            "Alpha": 255,
+            "Name": "ButtonBack",
+            "X": 412,
+            "Y": 205,
+            "Width": 64,
+            "Height": 64,
+            "Type": "Button",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -1287,9 +1275,9 @@
             "TextId": "SingleUseId22",
             "TextRotation": "0",
             "Color": {
-              "Red": 92,
-              "Green": 92,
-              "Blue": 92
+              "Red": 31,
+              "Green": 158,
+              "Blue": 35
             },
             "Alpha": 255,
             "AutoSize": false,
@@ -1301,7 +1289,7 @@
             },
             "Name": "TextInput",
             "X": 7,
-            "Y": 3,
+            "Y": 10,
             "Width": 57,
             "Height": 51,
             "Type": "TextArea",
@@ -1316,8 +1304,8 @@
         "Name": "InputContainer1",
         "X": 0,
         "Y": 0,
-        "Width": 73,
-        "Height": 51
+        "Width": 72,
+        "Height": 67
       },
       {
         "Components": [
@@ -1339,9 +1327,9 @@
             },
             "Name": "TextInputCenter",
             "X": 0,
-            "Y": -4,
-            "Width": 72,
-            "Height": 57,
+            "Y": 0,
+            "Width": 73,
+            "Height": 67,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1355,7 +1343,7 @@
         "X": 0,
         "Y": 0,
         "Width": 72,
-        "Height": 57
+        "Height": 67
       }
     ],
     "TextEntries": [
@@ -1389,10 +1377,6 @@
       },
       {
         "TextEntryId": "SingleUseId9",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId16",
         "IsResource": false
       },
       {

@@ -8,9 +8,9 @@
 InputCenterContainerBase::InputCenterContainerBase()
 {
     setWidth(72);
-    setHeight(57);
+    setHeight(67);
 
-    TextInputCenter.setPosition(0, -4, 72, 57);
+    TextInputCenter.setPosition(0, 0, 73, 67);
     TextInputCenter.setColor(touchgfx::Color::getColorFrom24BitRGB(213, 115, 0));
     TextInputCenter.setLinespacing(0);
     Unicode::snprintf(TextInputCenterBuffer, TEXTINPUTCENTER_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID25).getText());

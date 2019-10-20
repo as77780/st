@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/equalizer_screen/EqualizerViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 EqualizerViewBase::EqualizerViewBase() :
     buttonCallback(this, &EqualizerViewBase::buttonCallbackHandler)
@@ -18,13 +18,6 @@ EqualizerViewBase::EqualizerViewBase() :
     SliderAmplified.setupHorizontalSlider(0, 10, 0, 0, 300);
     SliderAmplified.setValueRange(0, 16);
     SliderAmplified.setValue(0);
-
-    ButtonBack.setXY(370, 197);
-    ButtonBack.setBitmaps(touchgfx::Bitmap(BITMAP_BTN_ROUND_ID), touchgfx::Bitmap(BITMAP_BTN_ROUND_PRESSED_ID));
-    ButtonBack.setLabelText(touchgfx::TypedText(T_SINGLEUSEID16));
-    ButtonBack.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(66, 66, 66));
-    ButtonBack.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(166, 166, 166));
-    ButtonBack.setAction(buttonCallback);
 
     SliderBass.setXY(6, 168);
     SliderBass.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_BACK_ID), touchgfx::Bitmap(BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_FILL_ID), touchgfx::Bitmap(BITMAP_DARK_SLIDER_HORIZONTAL_MEDIUM_INDICATORS_SLIDER2_ROUND_NOB_ID));
@@ -72,9 +65,12 @@ EqualizerViewBase::EqualizerViewBase() :
     textArea2_3.setLinespacing(0);
     textArea2_3.setTypedText(touchgfx::TypedText(T_SINGLEUSEID21));
 
+    ButtonBack.setXY(412, 205);
+    ButtonBack.setBitmaps(touchgfx::Bitmap(BITMAP_IC_ID), touchgfx::Bitmap(BITMAP_IC_ID));
+    ButtonBack.setAction(buttonCallback);
+
     add(tiledImage1);
     add(SliderAmplified);
-    add(ButtonBack);
     add(SliderBass);
     add(SliderMid);
     add(SliderTreble);
@@ -84,6 +80,7 @@ EqualizerViewBase::EqualizerViewBase() :
     add(textArea2_1);
     add(textArea2_2);
     add(textArea2_3);
+    add(ButtonBack);
 }
 
 void EqualizerViewBase::setupScreen()

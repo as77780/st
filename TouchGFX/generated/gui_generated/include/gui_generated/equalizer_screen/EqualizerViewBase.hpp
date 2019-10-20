@@ -9,9 +9,9 @@
 #include <gui/equalizer_screen/EqualizerPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/containers/Slider.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class EqualizerViewBase : public touchgfx::View<EqualizerPresenter>
 {
@@ -30,7 +30,6 @@ protected:
      */
     touchgfx::TiledImage tiledImage1;
     touchgfx::Slider SliderAmplified;
-    touchgfx::ButtonWithLabel ButtonBack;
     touchgfx::Slider SliderBass;
     touchgfx::Slider SliderMid;
     touchgfx::Slider SliderTreble;
@@ -40,6 +39,7 @@ protected:
     touchgfx::TextArea textArea2_1;
     touchgfx::TextArea textArea2_2;
     touchgfx::TextArea textArea2_3;
+    touchgfx::Button ButtonBack;
 
 private:
 

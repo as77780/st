@@ -33,28 +33,28 @@ MainViewBase::MainViewBase() :
     buttonInput.setBitmaps(touchgfx::Bitmap(BITMAP_ICO_ID), touchgfx::Bitmap(BITMAP_ICO_ID));
     buttonInput.setAction(buttonCallback);
 
-    boxWithBorder1.setPosition(283, 132, 197, 53);
-    boxWithBorder1.setColor(touchgfx::Color::getColorFrom24BitRGB(20, 16, 16));
-    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(240, 171, 1));
+    boxWithBorder1.setPosition(257, 105, 207, 94);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(251, 255, 0));
     boxWithBorder1.setBorderSize(5);
 
-    scrollWheelVolume.setPosition(283, 133, 192, 51);
+    scrollWheelVolume.setPosition(264, 119, 192, 67);
     scrollWheelVolume.setHorizontal(true);
     scrollWheelVolume.setCircular(false);
     scrollWheelVolume.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
-    scrollWheelVolume.setSwipeAcceleration(40);
-    scrollWheelVolume.setDragAcceleration(10);
+    scrollWheelVolume.setSwipeAcceleration(20);
+    scrollWheelVolume.setDragAcceleration(20);
     scrollWheelVolume.setNumberOfItems(80);
-    scrollWheelVolume.setSelectedItemOffset(62);
+    scrollWheelVolume.setSelectedItemOffset(60);
     scrollWheelVolume.setSelectedItemExtraSize(0, 0);
     scrollWheelVolume.setSelectedItemMargin(0, 0);
-    scrollWheelVolume.setDrawableSize(73, 0);
+    scrollWheelVolume.setDrawableSize(72, 0);
     scrollWheelVolume.setDrawables(scrollWheelVolumeListItems, updateItemCallback,
                               scrollWheelVolumeSelectedListItems, updateItemCallback);
-    scrollWheelVolume.animateToItem(0, 0);
+    scrollWheelVolume.animateToItem(10, 0);
 
-    textArea1.setXY(401, 105);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(51, 158, 0));
+    textArea1.setXY(257, 74);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(82, 255, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID33));
 
