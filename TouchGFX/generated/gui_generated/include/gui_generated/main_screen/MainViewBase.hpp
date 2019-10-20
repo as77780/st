@@ -10,12 +10,10 @@
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/containers/scrollers/ScrollWheelWithSelectionStyle.hpp>
-#include <gui/containers/InputContainer1.hpp>
-#include <gui/containers/InputCenterContainer.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/RepeatButton.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
-#include <touchgfx/widgets/TextArea.hpp>
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
 public:
@@ -23,12 +21,15 @@ public:
     virtual ~MainViewBase() {}
     virtual void setupScreen();
 
-    virtual void scrollWheelVolumeUpdateItem(InputContainer1& item, int16_t itemIndex)
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void FunVolUP()
     {
         // Override and implement this function in Main
     }
 
-    virtual void scrollWheelVolumeUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex)
+    virtual void FunVolDown()
     {
         // Override and implement this function in Main
     }
@@ -46,12 +47,16 @@ protected:
     touchgfx::Button ButtonEqualizer;
     touchgfx::DigitalClock digitalClock1;
     touchgfx::Button buttonInput;
-    touchgfx::BoxWithBorder boxWithBorder1;
-    touchgfx::ScrollWheelWithSelectionStyle scrollWheelVolume;
-    touchgfx::DrawableListItems<InputContainer1, 4> scrollWheelVolumeListItems;
-    touchgfx::DrawableListItems<InputCenterContainer, 2> scrollWheelVolumeSelectedListItems;
+    touchgfx::Box box1;
+    touchgfx::RepeatButton ButVolUP;
+    touchgfx::RepeatButton ButVolDown;
+    touchgfx::TextAreaWithOneWildcard textVolume;
 
-    touchgfx::TextArea textArea1;
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTVOLUME_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar textVolumeBuffer[TEXTVOLUME_SIZE];
 
 private:
 
@@ -59,13 +64,11 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;
-    touchgfx::Callback<MainViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
-    void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
 
 };
 

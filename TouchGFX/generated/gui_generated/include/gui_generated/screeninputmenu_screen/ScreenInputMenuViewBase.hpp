@@ -20,6 +20,29 @@ public:
     virtual ~ScreenInputMenuViewBase() {}
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void FunInterButInt()
+    {
+        // Override and implement this function in ScreenInputMenu
+    }
+
+    virtual void FunInterBut1()
+    {
+        // Override and implement this function in ScreenInputMenu
+    }
+
+    virtual void FunInterBut2()
+    {
+        // Override and implement this function in ScreenInputMenu
+    }
+
+    virtual void FunInterBut3()
+    {
+        // Override and implement this function in ScreenInputMenu
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -29,10 +52,10 @@ protected:
      * Member Declarations
      */
     touchgfx::TiledImage tiledImage1;
-    touchgfx::RadioButton radioButton1;
-    touchgfx::RadioButton radioButton2;
-    touchgfx::RadioButton radioButton3;
-    touchgfx::RadioButton radioButton4;
+    touchgfx::RadioButton InternalBut;
+    touchgfx::RadioButton ButInput_1;
+    touchgfx::RadioButton ButInput_2;
+    touchgfx::RadioButton ButInput_3;
     touchgfx::Button buttonBack;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
@@ -47,11 +70,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<ScreenInputMenuViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<ScreenInputMenuViewBase, const touchgfx::AbstractButton&> radioButtonSelectedCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void radioButtonSelectedCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

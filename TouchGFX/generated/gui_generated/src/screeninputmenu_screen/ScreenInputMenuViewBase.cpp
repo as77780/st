@@ -7,31 +7,32 @@
 #include <touchgfx/Color.hpp>
 
 ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
-    buttonCallback(this, &ScreenInputMenuViewBase::buttonCallbackHandler)
+    buttonCallback(this, &ScreenInputMenuViewBase::buttonCallbackHandler),
+    radioButtonSelectedCallback(this, &ScreenInputMenuViewBase::radioButtonSelectedCallbackHandler)
 {
     tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_TEXTURES_CARBON_FIBRE_ID));
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
-    radioButton1.setXY(41, 22);
-    radioButton1.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
-    radioButton1.setSelected(true);
-    radioButton1.setDeselectionEnabled(false);
+    InternalBut.setXY(41, 22);
+    InternalBut.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
+    InternalBut.setSelected(true);
+    InternalBut.setDeselectionEnabled(false);
 
-    radioButton2.setXY(41, 78);
-    radioButton2.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
-    radioButton2.setSelected(false);
-    radioButton2.setDeselectionEnabled(false);
+    ButInput_1.setXY(41, 78);
+    ButInput_1.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
+    ButInput_1.setSelected(false);
+    ButInput_1.setDeselectionEnabled(false);
 
-    radioButton3.setXY(41, 136);
-    radioButton3.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
-    radioButton3.setSelected(false);
-    radioButton3.setDeselectionEnabled(false);
+    ButInput_2.setXY(41, 136);
+    ButInput_2.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
+    ButInput_2.setSelected(false);
+    ButInput_2.setDeselectionEnabled(false);
 
-    radioButton4.setXY(41, 193);
-    radioButton4.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
-    radioButton4.setSelected(false);
-    radioButton4.setDeselectionEnabled(false);
+    ButInput_3.setXY(41, 193);
+    ButInput_3.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_INACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
+    ButInput_3.setSelected(false);
+    ButInput_3.setDeselectionEnabled(false);
 
     buttonBack.setXY(404, 193);
     buttonBack.setBitmaps(touchgfx::Bitmap(BITMAP_IC_ID), touchgfx::Bitmap(BITMAP_IC_ID));
@@ -52,7 +53,7 @@ ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
     textArea2_1.setLinespacing(0);
     textArea2_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID30));
 
-    textArea2_1_1.setXY(113, 146);
+    textArea2_1_1.setXY(112, 146);
     textArea2_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
     textArea2_1_1.setLinespacing(0);
     textArea2_1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID31));
@@ -63,20 +64,21 @@ ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
     textArea2_1_2.setTypedText(touchgfx::TypedText(T_SINGLEUSEID32));
 
     add(tiledImage1);
-    add(radioButton1);
-    add(radioButton2);
-    add(radioButton3);
-    add(radioButton4);
+    add(InternalBut);
+    add(ButInput_1);
+    add(ButInput_2);
+    add(ButInput_3);
     add(buttonBack);
     add(textArea1);
     add(textArea2);
     add(textArea2_1);
     add(textArea2_1_1);
     add(textArea2_1_2);
-    radioButtonGroup1.add(radioButton1);
-    radioButtonGroup1.add(radioButton2);
-    radioButtonGroup1.add(radioButton3);
-    radioButtonGroup1.add(radioButton4);
+    radioButtonGroup1.add(InternalBut);
+    radioButtonGroup1.add(ButInput_1);
+    radioButtonGroup1.add(ButInput_2);
+    radioButtonGroup1.add(ButInput_3);
+    radioButtonGroup1.setRadioButtonSelectedHandler(radioButtonSelectedCallback);
 }
 
 void ScreenInputMenuViewBase::setupScreen()
@@ -92,5 +94,37 @@ void ScreenInputMenuViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //When buttonBack clicked change screen to Main
         //Go to Main with screen transition towards North
         application().gotoMainScreenSlideTransitionNorth();
+    }
+}
+
+void ScreenInputMenuViewBase::radioButtonSelectedCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &InternalBut)
+    {
+        //InterButInt
+        //When InternalBut selected call virtual function
+        //Call FunInterButInt
+        FunInterButInt();
+    }
+    else if (&src == &ButInput_1)
+    {
+        //InterBut1
+        //When ButInput_1 selected call virtual function
+        //Call FunInterBut1
+        FunInterBut1();
+    }
+    else if (&src == &ButInput_2)
+    {
+        //InterBut2
+        //When ButInput_2 selected call virtual function
+        //Call FunInterBut2
+        FunInterBut2();
+    }
+    else if (&src == &ButInput_3)
+    {
+        //InterBut3
+        //When ButInput_3 selected call virtual function
+        //Call FunInterBut3
+        FunInterBut3();
     }
 }

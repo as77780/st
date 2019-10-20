@@ -13,14 +13,19 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
-    virtual void scrollWheelVolumeUpdateItem(InputContainer1& item, int16_t itemIndex);
-    virtual void scrollWheelVolumeUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex);
+  //  virtual void scrollWheelVolumeUpdateItem(InputContainer1& item, int16_t itemIndex);
+  //  virtual void scrollWheelVolumeUpdateCenterItem(InputCenterContainer& item, int16_t itemIndex);
+    virtual void FunVolUP();
+    virtual void FunVolDown();
+
+
     virtual void GetTimeOut();
 protected:
     int16_t hour;
     int16_t minute;
     int16_t second;
     int16_t tickCount ;
+    int16_t Count=0 ;
 
     Callback<MainView, int16_t> scrollWheelAnimateToCallback;
     void scrollWheelAnimateToHandler(int16_t itemSelected);

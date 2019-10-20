@@ -11,6 +11,12 @@ public:
     virtual ~ScreenInputMenuView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    virtual void FunInterButInt();
+    virtual void FunInterBut1();
+    virtual void FunInterBut2();
+    virtual void FunInterBut3();
+
 protected:
 };
 
