@@ -8,11 +8,14 @@
 #include <mvp/View.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
-#include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/RepeatButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
+#include <touchgfx/containers/progress_indicators/LineProgress.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -43,14 +46,25 @@ protected:
      * Member Declarations
      */
     touchgfx::TiledImage tiledImage1;
+    touchgfx::BoxWithBorder boxWithBorder1_1;
     touchgfx::Button Power_main;
     touchgfx::Button ButtonEqualizer;
+    touchgfx::BoxWithBorder boxWithBorder3;
     touchgfx::DigitalClock digitalClock1;
     touchgfx::Button buttonInput;
-    touchgfx::Box box1;
+    touchgfx::BoxWithBorder boxWithBorder2;
     touchgfx::RepeatButton ButVolUP;
     touchgfx::RepeatButton ButVolDown;
+    touchgfx::BoxWithBorder boxWithBorder1;
     touchgfx::TextAreaWithOneWildcard textVolume;
+    touchgfx::CircleProgress circleProgress2;
+    touchgfx::PainterRGB888 circleProgress2Painter;
+    touchgfx::CircleProgress circleProgress2_1;
+    touchgfx::PainterRGB888 circleProgress2_1Painter;
+    touchgfx::LineProgress lineProgress1;
+    touchgfx::PainterRGB888 lineProgress1Painter;
+    touchgfx::LineProgress lineProgress1_1;
+    touchgfx::PainterRGB888 lineProgress1_1Painter;
 
     /*
      * Wildcard Buffers
@@ -69,6 +83,12 @@ private:
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

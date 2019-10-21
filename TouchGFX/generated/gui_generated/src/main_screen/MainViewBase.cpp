@@ -3,37 +3,51 @@
 /*********************************************************************************/
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 MainViewBase::MainViewBase() :
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
+    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
+
     tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
+
+    boxWithBorder1_1.setPosition(7, 194, 183, 68);
+    boxWithBorder1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder1_1.setBorderSize(5);
 
     Power_main.setXY(20, 205);
     Power_main.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
     Power_main.setAction(buttonCallback);
 
-    ButtonEqualizer.setXY(416, 205);
+    ButtonEqualizer.setXY(132, 205);
     ButtonEqualizer.setBitmaps(touchgfx::Bitmap(BITMAP_EQUALIZER_ID), touchgfx::Bitmap(BITMAP_EQUALIZER_ID));
     ButtonEqualizer.setAction(buttonCallback);
 
-    digitalClock1.setPosition(0, 0, 125, 54);
-    digitalClock1.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
+    boxWithBorder3.setPosition(7, 7, 149, 55);
+    boxWithBorder3.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder3.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder3.setBorderSize(5);
+
+    digitalClock1.setPosition(20, 9, 125, 54);
+    digitalClock1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 252, 252));
     digitalClock1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID27));
     digitalClock1.displayLeadingZeroForHourIndicator(true);
     digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
     digitalClock1.setTime24Hour(10, 10, 0);
 
-    buttonInput.setXY(344, 205);
+    buttonInput.setXY(77, 205);
     buttonInput.setBitmaps(touchgfx::Bitmap(BITMAP_ICO_ID), touchgfx::Bitmap(BITMAP_ICO_ID));
     buttonInput.setAction(buttonCallback);
 
-    box1.setPosition(368, 71, 101, 95);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(46, 43, 43));
+    boxWithBorder2.setPosition(292, 62, 69, 110);
+    boxWithBorder2.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder2.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder2.setBorderSize(5);
 
     ButVolUP.setXY(302, 71);
     ButVolUP.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_UP_ARROW_48_ID));
@@ -47,23 +61,85 @@ MainViewBase::MainViewBase() :
     ButVolDown.setInterval(12);
     ButVolDown.setAction(buttonCallback);
 
+    boxWithBorder1.setPosition(361, 62, 116, 109);
+    boxWithBorder1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(217, 114, 7));
+    boxWithBorder1.setBorderSize(5);
+
     textVolume.setXY(368, 68);
-    textVolume.setColor(touchgfx::Color::getColorFrom24BitRGB(189, 189, 194));
+    textVolume.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textVolume.setLinespacing(0);
     Unicode::snprintf(textVolumeBuffer, TEXTVOLUME_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID35).getText());
     textVolume.setWildcard(textVolumeBuffer);
     textVolume.resizeToCurrentText();
     textVolume.setTypedText(touchgfx::TypedText(T_SINGLEUSEID34));
 
+    circleProgress2.setXY(227, 7);
+    circleProgress2.setProgressIndicatorPosition(0, 0, 54, 54);
+    circleProgress2.setRange(0, 100);
+    circleProgress2.setCenter(27, 27);
+    circleProgress2.setRadius(20);
+    circleProgress2.setLineWidth(10);
+    circleProgress2.setStartEndAngle(0, 360);
+    circleProgress2.setCapPrecision(180);
+    circleProgress2.setBackground(touchgfx::Bitmap(BITMAP_DARK_PROGRESSINDICATORS_BG_SMALL_CIRCLE_INDICATOR_BG_LINE_FULL_ID));
+    circleProgress2Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(49, 105, 41));
+    circleProgress2.setPainter(circleProgress2Painter);
+    circleProgress2.setValue(32);
+
+    circleProgress2_1.setXY(163, 7);
+    circleProgress2_1.setProgressIndicatorPosition(0, 0, 54, 54);
+    circleProgress2_1.setRange(0, 100);
+    circleProgress2_1.setCenter(27, 27);
+    circleProgress2_1.setRadius(20);
+    circleProgress2_1.setLineWidth(10);
+    circleProgress2_1.setStartEndAngle(0, 360);
+    circleProgress2_1.setCapPrecision(180);
+    circleProgress2_1.setBackground(touchgfx::Bitmap(BITMAP_DARK_PROGRESSINDICATORS_BG_SMALL_CIRCLE_INDICATOR_BG_LINE_FULL_ID));
+    circleProgress2_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(105, 41, 41));
+    circleProgress2_1.setPainter(circleProgress2_1Painter);
+    circleProgress2_1.setValue(60);
+
+    lineProgress1.setXY(292, 34);
+    lineProgress1.setProgressIndicatorPosition(0, 0, 184, 20);
+    lineProgress1.setRange(0, 100);
+    lineProgress1.setBackground(touchgfx::Bitmap(BITMAP_DARK_PROGRESSINDICATORS_BG_MEDIUM_PROGRESS_INDICATOR_BG_ROUND_0_DEGREES_ID));
+    lineProgress1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(43, 255, 0));
+    lineProgress1.setPainter(lineProgress1Painter);
+    lineProgress1.setStart(174, 10);
+    lineProgress1.setEnd(9, 10);
+    lineProgress1.setLineWidth(16);
+    lineProgress1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    lineProgress1.setValue(46);
+
+    lineProgress1_1.setXY(293, 7);
+    lineProgress1_1.setProgressIndicatorPosition(0, 0, 184, 20);
+    lineProgress1_1.setRange(0, 100);
+    lineProgress1_1.setBackground(touchgfx::Bitmap(BITMAP_DARK_PROGRESSINDICATORS_BG_MEDIUM_PROGRESS_INDICATOR_BG_ROUND_0_DEGREES_ID));
+    lineProgress1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(6, 119, 196));
+    lineProgress1_1.setPainter(lineProgress1_1Painter);
+    lineProgress1_1.setStart(174, 10);
+    lineProgress1_1.setEnd(9, 10);
+    lineProgress1_1.setLineWidth(16);
+    lineProgress1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    lineProgress1_1.setValue(70);
+
     add(tiledImage1);
+    add(boxWithBorder1_1);
     add(Power_main);
     add(ButtonEqualizer);
+    add(boxWithBorder3);
     add(digitalClock1);
     add(buttonInput);
-    add(box1);
+    add(boxWithBorder2);
     add(ButVolUP);
     add(ButVolDown);
+    add(boxWithBorder1);
     add(textVolume);
+    add(circleProgress2);
+    add(circleProgress2_1);
+    add(lineProgress1);
+    add(lineProgress1_1);
 }
 
 void MainViewBase::setupScreen()

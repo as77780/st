@@ -34,16 +34,20 @@ void MainView::handleTickEvent()
 	 	 }
  void  MainView::FunVolUP()
  {
-	 Count = (Count + 1) % 50;
+if(Count<80){
+	 Count++;
 	 Unicode::snprintf(textVolumeBuffer,TEXTVOLUME_SIZE,"%02d", Count);
 	 textVolume.invalidate();
+}
  }
 
  void  MainView::FunVolDown()
  {
-	 Count = (Count + 50 - 1) % 50;
+	 if(Count>0){
+	 Count--;
 	 Unicode::snprintf(textVolumeBuffer,TEXTVOLUME_SIZE,"%02d", Count);
 	 textVolume.invalidate();
+	      }
  }
 
 
