@@ -41,7 +41,7 @@ EqualizerViewBase::EqualizerViewBase() :
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(43, 39, 39));
 
     textArea1.setXY(357, 0);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(171, 171, 171));
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(69, 250, 121));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID17));
 

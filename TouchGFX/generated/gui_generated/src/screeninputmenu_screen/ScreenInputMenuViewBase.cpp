@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/screeninputmenu_screen/ScreenInputMenuViewBase.hpp>
 #include "BitmapDatabase.hpp"
-#include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
     buttonCallback(this, &ScreenInputMenuViewBase::buttonCallbackHandler),
@@ -38,7 +38,10 @@ ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
     buttonBack.setBitmaps(touchgfx::Bitmap(BITMAP_IC_ID), touchgfx::Bitmap(BITMAP_IC_ID));
     buttonBack.setAction(buttonCallback);
 
-    textArea1.setXY(360, 10);
+    box1.setPosition(393, 0, 87, 32);
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(43, 39, 39));
+
+    textArea1.setXY(400, 0);
     textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(69, 250, 121));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID28));
@@ -69,6 +72,7 @@ ScreenInputMenuViewBase::ScreenInputMenuViewBase() :
     add(ButInput_2);
     add(ButInput_3);
     add(buttonBack);
+    add(box1);
     add(textArea1);
     add(textArea2);
     add(textArea2_1);

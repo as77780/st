@@ -562,7 +562,7 @@
             "Released": "equalizer.png",
             "Alpha": 255,
             "Name": "ButtonEqualizer",
-            "X": 132,
+            "X": 134,
             "Y": 205,
             "Width": 48,
             "Height": 48,
@@ -828,9 +828,9 @@
           },
           {
             "Color": {
-              "Red": 43,
-              "Green": 255,
-              "Blue": 0
+              "Red": 6,
+              "Green": 119,
+              "Blue": 196
             },
             "Alpha": 255,
             "StartX": 174,
@@ -890,6 +890,288 @@
             "Width": 184,
             "Height": 20,
             "Type": "LineProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 3,
+              "Green": 80,
+              "Blue": 94
+            },
+            "Alpha": 255,
+            "StartX": 10,
+            "StartY": 5,
+            "EndX": 42,
+            "EndY": 5,
+            "LineWidth": 4,
+            "LineEndingStyle": "Round",
+            "Name": "line1",
+            "X": 300,
+            "Y": 112,
+            "Width": 52,
+            "Height": 10,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 3,
+              "Green": 80,
+              "Blue": 94
+            },
+            "Alpha": 255,
+            "StartX": 5,
+            "StartY": 12,
+            "EndX": 5,
+            "EndY": 45,
+            "LineWidth": 4,
+            "LineEndingStyle": "Round",
+            "Name": "line1_1",
+            "X": 71,
+            "Y": 200,
+            "Width": 11,
+            "Height": 57,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 3,
+              "Green": 80,
+              "Blue": 94
+            },
+            "Alpha": 255,
+            "StartX": 5,
+            "StartY": 12,
+            "EndX": 5,
+            "EndY": 45,
+            "LineWidth": 4,
+            "LineEndingStyle": "Round",
+            "Name": "line1_1_1",
+            "X": 124,
+            "Y": 200,
+            "Width": 11,
+            "Height": 57,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 41,
+              "Green": 37,
+              "Blue": 37
+            },
+            "BorderColor": {
+              "Red": 3,
+              "Green": 80,
+              "Blue": 94
+            },
+            "BorderSize": 5,
+            "Alpha": 255,
+            "Name": "boxWithBorder1_1_1",
+            "X": 292,
+            "Y": 194,
+            "Width": 178,
+            "Height": 68,
+            "Type": "BoxWithBorder",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 3,
+              "Green": 80,
+              "Blue": 94
+            },
+            "Alpha": 255,
+            "StartX": 5,
+            "StartY": 12,
+            "EndX": 5,
+            "EndY": 45,
+            "LineWidth": 4,
+            "LineEndingStyle": "Round",
+            "Name": "line1_1_1_1",
+            "X": 378,
+            "Y": 200,
+            "Width": 11,
+            "Height": 57,
+            "Type": "Line",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\Dark_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Dark_Buttons_Round_Edge_icon_button.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\Dark_Icons_Play_48.png",
+            "IconReleased": "__designer\\Dark_Icons_Play_48.png",
+            "IconX": 14,
+            "IconY": 7,
+            "IconHeight": 46,
+            "IconWidth": 33,
+            "ButtonStyle": "Style1",
+            "IconStyle": "Icon46",
+            "Name": "buttonPlay",
+            "X": 309,
+            "Y": 199,
+            "Width": 60,
+            "Height": 60,
+            "Type": "ButtonWithIcon",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "i64.png",
+            "Released": "i64.png",
+            "Alpha": 255,
+            "Name": "buttonMus",
+            "X": 395,
+            "Y": 197,
+            "Width": 64,
+            "Height": 64,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId36",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 242,
+              "Blue": 242
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId37",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "textTempPower",
+            "X": 396,
+            "Y": 10,
+            "Width": 72,
+            "Height": 13,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId38",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId39",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "textTempSound",
+            "X": 389,
+            "Y": 38,
+            "Width": 82,
+            "Height": 13,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId40",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 184,
+            "Y": 21,
+            "Width": 12,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId41",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1_1",
+            "X": 247,
+            "Y": 21,
+            "Width": 14,
+            "Height": 25,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "RelativeFilename": "ethOn.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 213,
+            "Y": 197,
+            "Width": 64,
+            "Height": 64,
+            "Type": "Image",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -962,6 +1244,20 @@
             "Action": {
               "FunctionName": "FunVolDown",
               "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "InteractionMus",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonMus",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "ScreenPlayer",
+              "Type": "ActionGotoScreen"
             }
           }
         ],
@@ -1111,9 +1407,9 @@
             "TextId": "SingleUseId17",
             "TextRotation": "0",
             "Color": {
-              "Red": 171,
-              "Green": 171,
-              "Blue": 171
+              "Red": 69,
+              "Green": 250,
+              "Blue": 121
             },
             "Alpha": 255,
             "AutoSize": true,
@@ -1384,6 +1680,25 @@
             "Moveable": false
           },
           {
+            "Color": {
+              "Red": 43,
+              "Green": 39,
+              "Blue": 39
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 393,
+            "Y": 0,
+            "Width": 87,
+            "Height": 32,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
             "TextId": "SingleUseId28",
             "TextRotation": "0",
             "Color": {
@@ -1395,10 +1710,10 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "textArea1",
-            "X": 360,
-            "Y": 10,
-            "Width": 108,
-            "Height": 49,
+            "X": 400,
+            "Y": 0,
+            "Width": 68,
+            "Height": 31,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -1564,6 +1879,63 @@
           }
         ],
         "Name": "ScreenInputMenu",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "FileName": "__designer\\Dark_Textures_carbon_fibre.png",
+            "Alpha": 255,
+            "Style": "Texture3",
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Name": "tiledImage1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "TiledImage",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "ic.png",
+            "Released": "ic.png",
+            "Alpha": 255,
+            "Name": "buttonBack",
+            "X": 404,
+            "Y": 193,
+            "Width": 64,
+            "Height": 64,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionBack",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonBack",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Main",
+              "Type": "ActionGotoScreen"
+            }
+          }
+        ],
+        "Name": "ScreenPlayer",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
       }
@@ -1745,6 +2117,30 @@
       },
       {
         "TextEntryId": "SingleUseId35",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId36",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId37",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId38",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId39",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId40",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId41",
         "IsResource": false
       }
     ],

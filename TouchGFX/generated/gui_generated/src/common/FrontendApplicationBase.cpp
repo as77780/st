@@ -18,6 +18,8 @@
 #include <gui/equalizer_screen/EqualizerPresenter.hpp>
 #include <gui/screeninputmenu_screen/ScreenInputMenuView.hpp>
 #include <gui/screeninputmenu_screen/ScreenInputMenuPresenter.hpp>
+#include <gui/screenplayer_screen/ScreenPlayerView.hpp>
+#include <gui/screenplayer_screen/ScreenPlayerPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -122,6 +124,18 @@ void FrontendApplicationBase::gotoMainScreenSlideTransitionNorthImpl()
     touchgfx::makeTransition<MainView, MainPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
+
+void FrontendApplicationBase::gotoMainScreenSlideTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenSlideTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenSlideTransitionSouthImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::SlideTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
 // Equalizer
 
 void FrontendApplicationBase::gotoEqualizerScreenCoverTransitionEast()
@@ -146,5 +160,18 @@ void FrontendApplicationBase::gotoScreenInputMenuScreenSlideTransitionSouth()
 void FrontendApplicationBase::gotoScreenInputMenuScreenSlideTransitionSouthImpl()
 {
     touchgfx::makeTransition<ScreenInputMenuView, ScreenInputMenuPresenter, touchgfx::SlideTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// ScreenPlayer
+
+void FrontendApplicationBase::gotoScreenPlayerScreenSlideTransitionNorth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreenPlayerScreenSlideTransitionNorthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoScreenPlayerScreenSlideTransitionNorthImpl()
+{
+    touchgfx::makeTransition<ScreenPlayerView, ScreenPlayerPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 

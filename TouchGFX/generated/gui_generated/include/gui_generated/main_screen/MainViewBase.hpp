@@ -16,6 +16,10 @@
 #include <touchgfx/containers/progress_indicators/CircleProgress.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/containers/progress_indicators/LineProgress.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
 {
@@ -65,12 +69,32 @@ protected:
     touchgfx::PainterRGB888 lineProgress1Painter;
     touchgfx::LineProgress lineProgress1_1;
     touchgfx::PainterRGB888 lineProgress1_1Painter;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB888 line1Painter;
+    touchgfx::Line line1_1;
+    touchgfx::PainterRGB888 line1_1Painter;
+    touchgfx::Line line1_1_1;
+    touchgfx::PainterRGB888 line1_1_1Painter;
+    touchgfx::BoxWithBorder boxWithBorder1_1_1;
+    touchgfx::Line line1_1_1_1;
+    touchgfx::PainterRGB888 line1_1_1_1Painter;
+    touchgfx::ButtonWithIcon buttonPlay;
+    touchgfx::Button buttonMus;
+    touchgfx::TextAreaWithOneWildcard textTempPower;
+    touchgfx::TextAreaWithOneWildcard textTempSound;
+    touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea1_1;
+    touchgfx::Image image1;
 
     /*
      * Wildcard Buffers
      */
     static const uint16_t TEXTVOLUME_SIZE = 3;
     touchgfx::Unicode::UnicodeChar textVolumeBuffer[TEXTVOLUME_SIZE];
+    static const uint16_t TEXTTEMPPOWER_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar textTempPowerBuffer[TEXTTEMPPOWER_SIZE];
+    static const uint16_t TEXTTEMPSOUND_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar textTempSoundBuffer[TEXTTEMPSOUND_SIZE];
 
 private:
 

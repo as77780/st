@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/RadioButton.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/RadioButtonGroup.hpp>
 
@@ -57,6 +58,7 @@ protected:
     touchgfx::RadioButton ButInput_2;
     touchgfx::RadioButton ButInput_3;
     touchgfx::Button buttonBack;
+    touchgfx::Box box1;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;

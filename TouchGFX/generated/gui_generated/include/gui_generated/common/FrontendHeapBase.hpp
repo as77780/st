@@ -14,7 +14,9 @@
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/SlideTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
 #include <touchgfx/transitions/SlideTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
@@ -30,6 +32,8 @@
 #include <gui/equalizer_screen/EqualizerPresenter.hpp>
 #include <gui/screeninputmenu_screen/ScreenInputMenuView.hpp>
 #include <gui/screeninputmenu_screen/ScreenInputMenuPresenter.hpp>
+#include <gui/screenplayer_screen/ScreenPlayerView.hpp>
+#include <gui/screenplayer_screen/ScreenPlayerPresenter.hpp>
 
 
 /**
@@ -57,7 +61,8 @@ public:
             touchgfx::meta::TypeList< MainView,
             touchgfx::meta::TypeList< EqualizerView,
             touchgfx::meta::TypeList< ScreenInputMenuView,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< ScreenPlayerView,
+            touchgfx::meta::Nil > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -74,7 +79,8 @@ public:
             touchgfx::meta::TypeList< MainPresenter,
             touchgfx::meta::TypeList< EqualizerPresenter,
             touchgfx::meta::TypeList< ScreenInputMenuPresenter,
-            touchgfx::meta::Nil > > > >
+            touchgfx::meta::TypeList< ScreenPlayerPresenter,
+            touchgfx::meta::Nil > > > > >
             > GeneratedPresenterTypes;
 
     /**

@@ -24,7 +24,7 @@ MainViewBase::MainViewBase() :
     Power_main.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
     Power_main.setAction(buttonCallback);
 
-    ButtonEqualizer.setXY(132, 205);
+    ButtonEqualizer.setXY(134, 205);
     ButtonEqualizer.setBitmaps(touchgfx::Bitmap(BITMAP_EQUALIZER_ID), touchgfx::Bitmap(BITMAP_EQUALIZER_ID));
     ButtonEqualizer.setAction(buttonCallback);
 
@@ -104,7 +104,7 @@ MainViewBase::MainViewBase() :
     lineProgress1.setProgressIndicatorPosition(0, 0, 184, 20);
     lineProgress1.setRange(0, 100);
     lineProgress1.setBackground(touchgfx::Bitmap(BITMAP_DARK_PROGRESSINDICATORS_BG_MEDIUM_PROGRESS_INDICATOR_BG_ROUND_0_DEGREES_ID));
-    lineProgress1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(43, 255, 0));
+    lineProgress1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(6, 119, 196));
     lineProgress1.setPainter(lineProgress1Painter);
     lineProgress1.setStart(174, 10);
     lineProgress1.setEnd(9, 10);
@@ -124,6 +124,80 @@ MainViewBase::MainViewBase() :
     lineProgress1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     lineProgress1_1.setValue(70);
 
+    line1.setPosition(300, 112, 52, 10);
+    line1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    line1.setPainter(line1Painter);
+    line1.setStart(10, 5);
+    line1.setEnd(42, 5);
+    line1.setLineWidth(4);
+    line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+
+    line1_1.setPosition(71, 200, 11, 57);
+    line1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    line1_1.setPainter(line1_1Painter);
+    line1_1.setStart(5, 12);
+    line1_1.setEnd(5, 45);
+    line1_1.setLineWidth(4);
+    line1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+
+    line1_1_1.setPosition(124, 200, 11, 57);
+    line1_1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    line1_1_1.setPainter(line1_1_1Painter);
+    line1_1_1.setStart(5, 12);
+    line1_1_1.setEnd(5, 45);
+    line1_1_1.setLineWidth(4);
+    line1_1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+
+    boxWithBorder1_1_1.setPosition(292, 194, 178, 68);
+    boxWithBorder1_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder1_1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder1_1_1.setBorderSize(5);
+
+    line1_1_1_1.setPosition(378, 200, 11, 57);
+    line1_1_1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    line1_1_1_1.setPainter(line1_1_1_1Painter);
+    line1_1_1_1.setStart(5, 12);
+    line1_1_1_1.setEnd(5, 45);
+    line1_1_1_1.setLineWidth(4);
+    line1_1_1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+
+    buttonPlay.setXY(309, 199);
+    buttonPlay.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_48_ID));
+    buttonPlay.setIconXY(14, 7);
+
+    buttonMus.setXY(395, 197);
+    buttonMus.setBitmaps(touchgfx::Bitmap(BITMAP_I64_ID), touchgfx::Bitmap(BITMAP_I64_ID));
+    buttonMus.setAction(buttonCallback);
+
+    textTempPower.setXY(396, 10);
+    textTempPower.setColor(touchgfx::Color::getColorFrom24BitRGB(242, 242, 242));
+    textTempPower.setLinespacing(0);
+    Unicode::snprintf(textTempPowerBuffer, TEXTTEMPPOWER_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID37).getText());
+    textTempPower.setWildcard(textTempPowerBuffer);
+    textTempPower.resizeToCurrentText();
+    textTempPower.setTypedText(touchgfx::TypedText(T_SINGLEUSEID36));
+
+    textTempSound.setXY(389, 38);
+    textTempSound.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textTempSound.setLinespacing(0);
+    Unicode::snprintf(textTempSoundBuffer, TEXTTEMPSOUND_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID39).getText());
+    textTempSound.setWildcard(textTempSoundBuffer);
+    textTempSound.resizeToCurrentText();
+    textTempSound.setTypedText(touchgfx::TypedText(T_SINGLEUSEID38));
+
+    textArea1.setXY(184, 21);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID40));
+
+    textArea1_1.setXY(247, 21);
+    textArea1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textArea1_1.setLinespacing(0);
+    textArea1_1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID41));
+
+    image1.setXY(213, 197);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_ETHON_ID));
+
     add(tiledImage1);
     add(boxWithBorder1_1);
     add(Power_main);
@@ -140,6 +214,18 @@ MainViewBase::MainViewBase() :
     add(circleProgress2_1);
     add(lineProgress1);
     add(lineProgress1_1);
+    add(line1);
+    add(line1_1);
+    add(line1_1_1);
+    add(boxWithBorder1_1_1);
+    add(line1_1_1_1);
+    add(buttonPlay);
+    add(buttonMus);
+    add(textTempPower);
+    add(textTempSound);
+    add(textArea1);
+    add(textArea1_1);
+    add(image1);
 }
 
 void MainViewBase::setupScreen()
@@ -183,5 +269,12 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When ButVolDown clicked call virtual function
         //Call FunVolDown
         FunVolDown();
+    }
+    else if (&src == &buttonMus)
+    {
+        //InteractionMus
+        //When buttonMus clicked change screen to ScreenPlayer
+        //Go to ScreenPlayer with screen transition towards North
+        application().gotoScreenPlayerScreenSlideTransitionNorth();
     }
 }
