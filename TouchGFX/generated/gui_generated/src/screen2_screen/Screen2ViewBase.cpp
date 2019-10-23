@@ -29,8 +29,8 @@ Screen2ViewBase::Screen2ViewBase() :
     buttonSettings.setAction(buttonCallback);
 
     ButPowerOn.setXY(11, 199);
-    ButPowerOn.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_POWERON_ID), touchgfx::Bitmap(BITMAP_POWERON_ID));
-    ButPowerOn.setIconXY(6, 6);
+    ButPowerOn.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_PO_ID), touchgfx::Bitmap(BITMAP_PO_ID));
+    ButPowerOn.setIconXY(5, 5);
     ButPowerOn.setAction(buttonCallback);
 
     add(tiledImage1);
