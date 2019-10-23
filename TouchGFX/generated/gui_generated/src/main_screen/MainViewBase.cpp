@@ -167,8 +167,8 @@ MainViewBase::MainViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_ETHON_ID));
 
     buttonPowOff.setXY(11, 199);
-    buttonPowOff.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID));
-    buttonPowOff.setIconXY(15, 15);
+    buttonPowOff.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_POWERON_ID), touchgfx::Bitmap(BITMAP_POWERON_ID));
+    buttonPowOff.setIconXY(6, 6);
     buttonPowOff.setAction(buttonCallback);
 
     buttonInput.setXY(68, 199);
