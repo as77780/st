@@ -3,6 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/screenplayer_screen/ScreenPlayerViewBase.hpp>
 #include "BitmapDatabase.hpp"
+#include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 ScreenPlayerViewBase::ScreenPlayerViewBase() :
     buttonCallback(this, &ScreenPlayerViewBase::buttonCallbackHandler)
@@ -15,8 +17,53 @@ ScreenPlayerViewBase::ScreenPlayerViewBase() :
     buttonBack.setBitmaps(touchgfx::Bitmap(BITMAP_IC_ID), touchgfx::Bitmap(BITMAP_IC_ID));
     buttonBack.setAction(buttonCallback);
 
+    buttonWithIcon1.setXY(17, 193);
+    buttonWithIcon1.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_GO_BACK_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_GO_BACK_32_ID));
+    buttonWithIcon1.setIconXY(14, 15);
+
+    buttonWithIcon2.setXY(167, 193);
+    buttonWithIcon2.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_GO_NEXT_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_GO_NEXT_32_ID));
+    buttonWithIcon2.setIconXY(14, 15);
+
+    buttonWithIcon3.setXY(93, 193);
+    buttonWithIcon3.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID));
+    buttonWithIcon3.setIconXY(19, 14);
+
+    buttonWithIcon4.setXY(240, 193);
+    buttonWithIcon4.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_STOP_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_STOP_32_ID));
+    buttonWithIcon4.setIconXY(14, 14);
+
+    box1.setPosition(393, 0, 87, 32);
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(43, 39, 39));
+
+    textArea1.setXY(400, 0);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(69, 250, 121));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID42));
+
+    buttonWithIcon5.setXY(17, 117);
+    buttonWithIcon5.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_HDD_ID), touchgfx::Bitmap(BITMAP_HDD_ID));
+    buttonWithIcon5.setIconXY(5, 5);
+
+    buttonWithIcon6.setXY(93, 117);
+    buttonWithIcon6.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_RADIO_ID), touchgfx::Bitmap(BITMAP_RADIO_ID));
+    buttonWithIcon6.setIconXY(5, 5);
+
+    buttonWithIcon7.setXY(167, 117);
+    buttonWithIcon7.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_BUD_ID), touchgfx::Bitmap(BITMAP_BUD_ID));
+    buttonWithIcon7.setIconXY(5, 5);
+
     add(tiledImage1);
     add(buttonBack);
+    add(buttonWithIcon1);
+    add(buttonWithIcon2);
+    add(buttonWithIcon3);
+    add(buttonWithIcon4);
+    add(box1);
+    add(textArea1);
+    add(buttonWithIcon5);
+    add(buttonWithIcon6);
+    add(buttonWithIcon7);
 }
 
 void ScreenPlayerViewBase::setupScreen()

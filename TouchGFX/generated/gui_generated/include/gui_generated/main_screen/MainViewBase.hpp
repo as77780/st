@@ -9,7 +9,6 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/RepeatButton.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
@@ -51,11 +50,8 @@ protected:
      */
     touchgfx::TiledImage tiledImage1;
     touchgfx::BoxWithBorder boxWithBorder1_1;
-    touchgfx::Button Power_main;
-    touchgfx::Button ButtonEqualizer;
     touchgfx::BoxWithBorder boxWithBorder3;
     touchgfx::DigitalClock digitalClock1;
-    touchgfx::Button buttonInput;
     touchgfx::BoxWithBorder boxWithBorder2;
     touchgfx::RepeatButton ButVolUP;
     touchgfx::RepeatButton ButVolDown;
@@ -71,20 +67,19 @@ protected:
     touchgfx::PainterRGB888 lineProgress1_1Painter;
     touchgfx::Line line1;
     touchgfx::PainterRGB888 line1Painter;
-    touchgfx::Line line1_1;
-    touchgfx::PainterRGB888 line1_1Painter;
-    touchgfx::Line line1_1_1;
-    touchgfx::PainterRGB888 line1_1_1Painter;
     touchgfx::BoxWithBorder boxWithBorder1_1_1;
     touchgfx::Line line1_1_1_1;
     touchgfx::PainterRGB888 line1_1_1_1Painter;
     touchgfx::ButtonWithIcon buttonPlay;
-    touchgfx::Button buttonMus;
     touchgfx::TextAreaWithOneWildcard textTempPower;
     touchgfx::TextAreaWithOneWildcard textTempSound;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea1_1;
     touchgfx::Image image1;
+    touchgfx::ButtonWithIcon buttonPowOff;
+    touchgfx::ButtonWithIcon buttonInput;
+    touchgfx::ButtonWithIcon buttonEqual;
+    touchgfx::ButtonWithIcon buttonPlayer;
 
     /*
      * Wildcard Buffers

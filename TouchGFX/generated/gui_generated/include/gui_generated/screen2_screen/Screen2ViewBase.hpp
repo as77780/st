@@ -8,8 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/clock/AnalogClock.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
@@ -28,9 +28,9 @@ protected:
      * Member Declarations
      */
     touchgfx::TiledImage tiledImage1;
-    touchgfx::Button buttonSettings;
-    touchgfx::Button Power;
     touchgfx::AnalogClock analogClock1;
+    touchgfx::ButtonWithIcon buttonSettings;
+    touchgfx::ButtonWithIcon ButPowerOn;
 
 private:
 

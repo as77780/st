@@ -9,6 +9,9 @@
 #include <gui/screenplayer_screen/ScreenPlayerPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class ScreenPlayerViewBase : public touchgfx::View<ScreenPlayerPresenter>
 {
@@ -27,6 +30,15 @@ protected:
      */
     touchgfx::TiledImage tiledImage1;
     touchgfx::Button buttonBack;
+    touchgfx::ButtonWithIcon buttonWithIcon1;
+    touchgfx::ButtonWithIcon buttonWithIcon2;
+    touchgfx::ButtonWithIcon buttonWithIcon3;
+    touchgfx::ButtonWithIcon buttonWithIcon4;
+    touchgfx::Box box1;
+    touchgfx::TextArea textArea1;
+    touchgfx::ButtonWithIcon buttonWithIcon5;
+    touchgfx::ButtonWithIcon buttonWithIcon6;
+    touchgfx::ButtonWithIcon buttonWithIcon7;
 
 private:
 

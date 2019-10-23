@@ -12,21 +12,13 @@ MainViewBase::MainViewBase() :
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
     tiledImage1.setBitmap(touchgfx::Bitmap(BITMAP_BLUE_TEXTURES_CARBON_FIBRE_ID));
-    tiledImage1.setPosition(0, 0, 480, 272);
+    tiledImage1.setPosition(-3, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
     boxWithBorder1_1.setPosition(7, 194, 183, 68);
     boxWithBorder1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
     boxWithBorder1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
     boxWithBorder1_1.setBorderSize(5);
-
-    Power_main.setXY(20, 205);
-    Power_main.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
-    Power_main.setAction(buttonCallback);
-
-    ButtonEqualizer.setXY(134, 205);
-    ButtonEqualizer.setBitmaps(touchgfx::Bitmap(BITMAP_EQUALIZER_ID), touchgfx::Bitmap(BITMAP_EQUALIZER_ID));
-    ButtonEqualizer.setAction(buttonCallback);
 
     boxWithBorder3.setPosition(7, 7, 149, 55);
     boxWithBorder3.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
@@ -39,10 +31,6 @@ MainViewBase::MainViewBase() :
     digitalClock1.displayLeadingZeroForHourIndicator(true);
     digitalClock1.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
     digitalClock1.setTime24Hour(10, 10, 0);
-
-    buttonInput.setXY(77, 205);
-    buttonInput.setBitmaps(touchgfx::Bitmap(BITMAP_ICO_ID), touchgfx::Bitmap(BITMAP_ICO_ID));
-    buttonInput.setAction(buttonCallback);
 
     boxWithBorder2.setPosition(292, 62, 69, 110);
     boxWithBorder2.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
@@ -132,22 +120,6 @@ MainViewBase::MainViewBase() :
     line1.setLineWidth(4);
     line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
-    line1_1.setPosition(71, 200, 11, 57);
-    line1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
-    line1_1.setPainter(line1_1Painter);
-    line1_1.setStart(5, 12);
-    line1_1.setEnd(5, 45);
-    line1_1.setLineWidth(4);
-    line1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-
-    line1_1_1.setPosition(124, 200, 11, 57);
-    line1_1_1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
-    line1_1_1.setPainter(line1_1_1Painter);
-    line1_1_1.setStart(5, 12);
-    line1_1_1.setEnd(5, 45);
-    line1_1_1.setLineWidth(4);
-    line1_1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-
     boxWithBorder1_1_1.setPosition(292, 194, 178, 68);
     boxWithBorder1_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
     boxWithBorder1_1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
@@ -162,12 +134,8 @@ MainViewBase::MainViewBase() :
     line1_1_1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
     buttonPlay.setXY(309, 199);
-    buttonPlay.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_48_ID));
-    buttonPlay.setIconXY(14, 7);
-
-    buttonMus.setXY(395, 197);
-    buttonMus.setBitmaps(touchgfx::Bitmap(BITMAP_I64_ID), touchgfx::Bitmap(BITMAP_I64_ID));
-    buttonMus.setAction(buttonCallback);
+    buttonPlay.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID));
+    buttonPlay.setIconXY(19, 14);
 
     textTempPower.setXY(396, 10);
     textTempPower.setColor(touchgfx::Color::getColorFrom24BitRGB(242, 242, 242));
@@ -198,13 +166,30 @@ MainViewBase::MainViewBase() :
     image1.setXY(213, 197);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_ETHON_ID));
 
+    buttonPowOff.setXY(11, 199);
+    buttonPowOff.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID));
+    buttonPowOff.setIconXY(15, 15);
+    buttonPowOff.setAction(buttonCallback);
+
+    buttonInput.setXY(68, 199);
+    buttonInput.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_RCA__ID), touchgfx::Bitmap(BITMAP_RCA__ID));
+    buttonInput.setIconXY(10, 10);
+    buttonInput.setAction(buttonCallback);
+
+    buttonEqual.setXY(125, 199);
+    buttonEqual.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_EQ_ID), touchgfx::Bitmap(BITMAP_EQ_ID));
+    buttonEqual.setIconXY(10, 10);
+    buttonEqual.setAction(buttonCallback);
+
+    buttonPlayer.setXY(396, 199);
+    buttonPlayer.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_PLAYER_ID), touchgfx::Bitmap(BITMAP_PLAYER_ID));
+    buttonPlayer.setIconXY(6, 6);
+    buttonPlayer.setAction(buttonCallback);
+
     add(tiledImage1);
     add(boxWithBorder1_1);
-    add(Power_main);
-    add(ButtonEqualizer);
     add(boxWithBorder3);
     add(digitalClock1);
-    add(buttonInput);
     add(boxWithBorder2);
     add(ButVolUP);
     add(ButVolDown);
@@ -215,17 +200,18 @@ MainViewBase::MainViewBase() :
     add(lineProgress1);
     add(lineProgress1_1);
     add(line1);
-    add(line1_1);
-    add(line1_1_1);
     add(boxWithBorder1_1_1);
     add(line1_1_1_1);
     add(buttonPlay);
-    add(buttonMus);
     add(textTempPower);
     add(textTempSound);
     add(textArea1);
     add(textArea1_1);
     add(image1);
+    add(buttonPowOff);
+    add(buttonInput);
+    add(buttonEqual);
+    add(buttonPlayer);
 }
 
 void MainViewBase::setupScreen()
@@ -235,28 +221,7 @@ void MainViewBase::setupScreen()
 
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &Power_main)
-    {
-        //PowerOff
-        //When Power_main clicked change screen to Screen2
-        //Go to Screen2 with screen transition towards West
-        application().gotoScreen2ScreenCoverTransitionWest();
-    }
-    else if (&src == &ButtonEqualizer)
-    {
-        //IntEqu
-        //When ButtonEqualizer clicked change screen to Equalizer
-        //Go to Equalizer with screen transition towards East
-        application().gotoEqualizerScreenCoverTransitionEast();
-    }
-    else if (&src == &buttonInput)
-    {
-        //InteractionToInput
-        //When buttonInput clicked change screen to ScreenInputMenu
-        //Go to ScreenInputMenu with screen transition towards South
-        application().gotoScreenInputMenuScreenSlideTransitionSouth();
-    }
-    else if (&src == &ButVolUP)
+    if (&src == &ButVolUP)
     {
         //InterVolUP
         //When ButVolUP clicked call virtual function
@@ -270,10 +235,31 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call FunVolDown
         FunVolDown();
     }
-    else if (&src == &buttonMus)
+    else if (&src == &buttonPowOff)
+    {
+        //PowerOff
+        //When buttonPowOff clicked change screen to Screen2
+        //Go to Screen2 with screen transition towards West
+        application().gotoScreen2ScreenCoverTransitionWest();
+    }
+    else if (&src == &buttonInput)
+    {
+        //InteractionToInput
+        //When buttonInput clicked change screen to ScreenInputMenu
+        //Go to ScreenInputMenu with screen transition towards South
+        application().gotoScreenInputMenuScreenSlideTransitionSouth();
+    }
+    else if (&src == &buttonEqual)
+    {
+        //IntEqu
+        //When buttonEqual clicked change screen to Equalizer
+        //Go to Equalizer with screen transition towards East
+        application().gotoEqualizerScreenCoverTransitionEast();
+    }
+    else if (&src == &buttonPlayer)
     {
         //InteractionMus
-        //When buttonMus clicked change screen to ScreenPlayer
+        //When buttonPlayer clicked change screen to ScreenPlayer
         //Go to ScreenPlayer with screen transition towards North
         application().gotoScreenPlayerScreenSlideTransitionNorth();
     }

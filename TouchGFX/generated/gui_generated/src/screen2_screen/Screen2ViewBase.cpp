@@ -13,14 +13,6 @@ Screen2ViewBase::Screen2ViewBase() :
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
-    buttonSettings.setXY(422, 10);
-    buttonSettings.setBitmaps(touchgfx::Bitmap(BITMAP_CONFIGURATION_ID), touchgfx::Bitmap(BITMAP_CONFIGURATION_ID));
-    buttonSettings.setAction(buttonCallback);
-
-    Power.setXY(20, 205);
-    Power.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_48_ID));
-    Power.setAction(buttonCallback);
-
     analogClock1.setXY(124, 20);
     analogClock1.setBackground(BITMAP_DARK_CLOCKS_BACKGROUNDS_CLOCK_CLASSIC_BACKGROUND_ID, 116, 116);
     analogClock1.setupSecondHand(BITMAP_DARK_CLOCKS_HANDS_CLOCK_CLASSIC_SECOND_HAND_ID, 4, 79);
@@ -31,10 +23,20 @@ Screen2ViewBase::Screen2ViewBase() :
     analogClock1.initializeTime24Hour(10, 10, 0);
     analogClock1.setAnimation(30, touchgfx::EasingEquations::backEaseOut);
 
+    buttonSettings.setXY(410, 9);
+    buttonSettings.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_SETTINGS_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_SETTINGS_32_ID));
+    buttonSettings.setIconXY(14, 14);
+    buttonSettings.setAction(buttonCallback);
+
+    ButPowerOn.setXY(11, 199);
+    ButPowerOn.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_POWER_32_ID));
+    ButPowerOn.setIconXY(15, 15);
+    ButPowerOn.setAction(buttonCallback);
+
     add(tiledImage1);
-    add(buttonSettings);
-    add(Power);
     add(analogClock1);
+    add(buttonSettings);
+    add(ButPowerOn);
 }
 
 void Screen2ViewBase::setupScreen()
@@ -51,10 +53,10 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Go to Screen1 with screen transition towards South
         application().gotoScreen1ScreenSlideTransitionSouth();
     }
-    else if (&src == &Power)
+    else if (&src == &ButPowerOn)
     {
         //PowerOn
-        //When Power clicked change screen to Main
+        //When ButPowerOn clicked change screen to Main
         //Go to Main with screen transition towards East
         application().gotoMainScreenCoverTransitionEast();
     }
