@@ -13,6 +13,16 @@ ScreenPlayerViewBase::ScreenPlayerViewBase() :
     tiledImage1.setPosition(0, 0, 480, 272);
     tiledImage1.setOffset(0, 0);
 
+    boxWithBorder1_1_1.setPosition(11, 188, 296, 68);
+    boxWithBorder1_1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder1_1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder1_1_1.setBorderSize(5);
+
+    boxWithBorder1_1.setPosition(11, 112, 223, 68);
+    boxWithBorder1_1.setColor(touchgfx::Color::getColorFrom24BitRGB(41, 37, 37));
+    boxWithBorder1_1.setBorderColor(touchgfx::Color::getColorFrom24BitRGB(3, 80, 94));
+    boxWithBorder1_1.setBorderSize(5);
+
     buttonBack.setXY(404, 193);
     buttonBack.setBitmaps(touchgfx::Bitmap(BITMAP_IC_ID), touchgfx::Bitmap(BITMAP_IC_ID));
     buttonBack.setAction(buttonCallback);
@@ -54,6 +64,8 @@ ScreenPlayerViewBase::ScreenPlayerViewBase() :
     buttonWithIcon7.setIconXY(5, 5);
 
     add(tiledImage1);
+    add(boxWithBorder1_1_1);
+    add(boxWithBorder1_1);
     add(buttonBack);
     add(buttonWithIcon1);
     add(buttonWithIcon2);

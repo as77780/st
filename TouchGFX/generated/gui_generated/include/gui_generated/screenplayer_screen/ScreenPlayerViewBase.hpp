@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/screenplayer_screen/ScreenPlayerPresenter.hpp>
 #include <touchgfx/widgets/TiledImage.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/Box.hpp>
@@ -29,6 +30,8 @@ protected:
      * Member Declarations
      */
     touchgfx::TiledImage tiledImage1;
+    touchgfx::BoxWithBorder boxWithBorder1_1_1;
+    touchgfx::BoxWithBorder boxWithBorder1_1;
     touchgfx::Button buttonBack;
     touchgfx::ButtonWithIcon buttonWithIcon1;
     touchgfx::ButtonWithIcon buttonWithIcon2;
