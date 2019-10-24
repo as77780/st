@@ -40,12 +40,13 @@ const uint16_t BITMAP_EQ_ID = 30;
 const uint16_t BITMAP_ETHON_ID = 31;
 const uint16_t BITMAP_HDD_ID = 32;
 const uint16_t BITMAP_IC_ID = 33;
-const uint16_t BITMAP_PLAYER_ID = 34;
-const uint16_t BITMAP_PO_ID = 35;
-const uint16_t BITMAP_RADIO_ID = 36;
-const uint16_t BITMAP_RCA__ID = 37;
-const uint16_t BITMAP_UP_ARROW_ID = 38;
-const uint16_t BITMAP_UP_ARROW_PRESSED_ID = 39;
+const uint16_t BITMAP_PLAY_ID = 34;
+const uint16_t BITMAP_PLAYER_ID = 35;
+const uint16_t BITMAP_PO_ID = 36;
+const uint16_t BITMAP_RADIO_ID = 37;
+const uint16_t BITMAP_RCA__ID = 38;
+const uint16_t BITMAP_UP_ARROW_ID = 39;
+const uint16_t BITMAP_UP_ARROW_PRESSED_ID = 40;
 
 namespace BitmapDatabase
 {

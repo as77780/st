@@ -10,33 +10,33 @@ TEXT_LOCATION_FLASH_PRAGMA
 KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE =
 {
     128, // T_SingleUseId1
-    11, // T_SingleUseId2
+    61, // T_SingleUseId2
     133, // T_SingleUseId3
     79, // T_SingleUseId4
-    11, // T_SingleUseId5
+    61, // T_SingleUseId5
     133, // T_SingleUseId6
     118, // T_SingleUseId7
     113, // T_SingleUseId9
-    35, // T_SingleUseId17
-    24, // T_SingleUseId18
+    33, // T_SingleUseId17
+    22, // T_SingleUseId18
     123, // T_SingleUseId19
     86, // T_SingleUseId20
     93, // T_SingleUseId21
-    11, // T_SingleUseId22
+    61, // T_SingleUseId22
     134, // T_SingleUseId23
-    11, // T_SingleUseId24
+    61, // T_SingleUseId24
     134, // T_SingleUseId25
-    11, // T_SingleUseId27
+    61, // T_SingleUseId27
     107, // T_SingleUseId28
-    46, // T_SingleUseId29
-    55, // T_SingleUseId30
+    44, // T_SingleUseId29
+    53, // T_SingleUseId30
     71, // T_SingleUseId31
     63, // T_SingleUseId32
-    11, // T_SingleUseId34
+    61, // T_SingleUseId34
     133, // T_SingleUseId35
-    13, // T_SingleUseId36
+    0, // T_SingleUseId36
     133, // T_SingleUseId37
-    0, // T_SingleUseId38
+    11, // T_SingleUseId38
     133, // T_SingleUseId39
     136, // T_SingleUseId40
     138, // T_SingleUseId41

@@ -134,10 +134,10 @@ MainViewBase::MainViewBase() :
     line1_1_1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
 
     buttonPlay.setXY(309, 199);
-    buttonPlay.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID), touchgfx::Bitmap(BITMAP_DARK_ICONS_PLAY_32_ID));
-    buttonPlay.setIconXY(19, 14);
+    buttonPlay.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_DARK_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), touchgfx::Bitmap(BITMAP_PLAY_ID), touchgfx::Bitmap(BITMAP_PLAY_ID));
+    buttonPlay.setIconXY(5, 5);
 
-    textTempPower.setXY(396, 10);
+    textTempPower.setXY(403, 10);
     textTempPower.setColor(touchgfx::Color::getColorFrom24BitRGB(242, 242, 242));
     textTempPower.setLinespacing(0);
     Unicode::snprintf(textTempPowerBuffer, TEXTTEMPPOWER_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID37).getText());
@@ -145,7 +145,7 @@ MainViewBase::MainViewBase() :
     textTempPower.resizeToCurrentText();
     textTempPower.setTypedText(touchgfx::TypedText(T_SINGLEUSEID36));
 
-    textTempSound.setXY(389, 38);
+    textTempSound.setXY(403, 38);
     textTempSound.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textTempSound.setLinespacing(0);
     Unicode::snprintf(textTempSoundBuffer, TEXTTEMPSOUND_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID39).getText());
