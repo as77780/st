@@ -12,6 +12,7 @@ void MainView::setupScreen()
     MainViewBase::setupScreen();
     TIM5->CCR1=100;
   	 GetTimeOut();
+  	image1.setAlpha(100);
 
 }
 
